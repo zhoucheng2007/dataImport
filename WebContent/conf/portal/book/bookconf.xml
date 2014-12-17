@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="book_edit_query_init" class="com.v6.portal.book.BookShowQueryPageInitCmd">
+		<property name="bookService">
+			<ref bean="bookService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="query" value="book/book_show_query_init.jsp" />
+			</map>
+		</property>
+		<property name="pageSize">
+			<value>10</value>
+		</property>
+	</bean>
+	<bean id="bookService" class="com.v6.portal.book.BookServiceImpl">
+		<property name="bookDomain">
+			<ref bean="bookDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+
+	<bean id="bookDomain" class="com.v6.portal.book.BookDomainImpl">
+	</bean>
+</beans>

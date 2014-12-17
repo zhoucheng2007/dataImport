@@ -1,0 +1,95 @@
+.banner {
+	width: 960px;
+	height: 275px;
+	background: url(../imgsr/banner-bj.jpg) bottom no-repeat;
+	position: relative;
+	margin: 0 auto;
+	z-index:1;
+}
+
+#banner-content {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 750px;;
+	height: 245px;;
+}
+
+.banner-item {
+	height: 220px;
+	width: 353px;
+	text-align: center;
+	cursor: pointer;
+}
+.bnbck{
+	height: 220px;
+	width: 350px;
+	background: transparent url(../imgs/banner-box.png) no-repeat;
+	display: none;
+}
+.banner img {
+	width: 100%;
+}
+
+.data-container {
+	position: absolute;
+	width: 90%;
+	top: 0px;
+	left: 15px;
+	height: 90%;
+	padding-top: 3em;
+}
+
+.banner-table {
+	color: #fff;
+	width: 100%;
+}
+
+.banner-table tr {
+	height: 2em;
+}
+
+.orgselect {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.data-title {
+	position: absolute;
+	top: 15px;
+	left: 5px;
+	color: #6FB7FF;
+	font-weight: bold;
+}
+
+.unit-desc {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #FFFFFF;
+}
+
+.banner-btn-container {
+	height: 30px;
+	padding-left: 270px;
+}
+
+.banner-btn {
+	width: 74px;
+	height: 25px;
+	background: url(../imgsr/bannerBtn.png) no-repeat;
+	float: left;
+	margin-left: 5px;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;
+}
+
+.banner-btn.active {
+	background: url(../imgsr/bannerBtnActive.png) no-repeat;
+}
+
+.banner-btn:hover {
+	background: url(../imgsr/bannerBtnActive.png) no-repeat;
+}

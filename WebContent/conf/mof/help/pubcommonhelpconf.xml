@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="mofService" class="org.loushang.mof.service.MOFServiceSupport">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<!--***************commonQuerySupport.xml************** -->
+	<!--***********************query start****************************************** -->
+	<bean id="pubcommonhelpquery" class="org.loushang.help.query.PubCommonHelpQueryPageInitCmd">
+		<property name="pubCommonHelpService">
+			<ref bean="pubCommonHelpService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="query" value="/jsp/mof/help/pub_common_help_query.jsp" />
+			</map>
+		</property>
+		<property name="pageSize">
+			<value>10</value>
+		</property>
+	</bean>
+	<!--***********************query end****************************************** -->
+	<!--***********************forward start*********************************** -->
+	<bean id="pubcommonhelpqueryforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="queryPageInit">jsp/mof/help/pub_common_help_query.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<!--***********************forward end*********************************** -->
+
+	<!--****viewSupport.xml************** -->
+	<bean id="pubCommonHelpView" class="org.loushang.help.view.PubCommonHelpView"
+		singleton="false" />
+
+
+	<!--******commandSupport.xml********** -->
+	<!--***********************cmd start********************************* -->
+	<bean id="pubcommonhelp" class="org.loushang.help.cmd.PubCommonHelpCmd"
+		singleton="false">
+		<property name="pubCommonHelpService">
+			<ref bean="pubCommonHelpService" />
+		</property>
+		<property name="view">
+			<ref bean="pubCommonHelpView" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="forinsert" value="/jsp/mof/help/pub_common_help_forinsert.jsp" />
+				<entry key="delete" value="pubcommonhelpquery.cmd" />
+				<entry key="detail" value="/jsp/mof/help/pub_common_help_detail.jsp" />
+				<entry key="forupdate" value="/jsp/mof/help/pub_common_help_forupdate.jsp" />
+				<entry key="insert" value="pubcommonhelpquery.cmd" />
+			</map>
+		</property>
+		<property name="beforIntercept">
+			<list>
+				<ref bean="pub_common_help_interceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<!--***********************cmd end********************************* -->
+
+	<!--*******************forwardSupport.xml********************** -->
+	<!--***********************help forward start*********************************** -->
+	<bean id="pubcommonhelpforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="detail">jsp/mof/help/pub_common_help_detail.jsp</prop>
+				<prop key="objectHelp">jsp/mof/help/helpObjects.jsp</prop>
+				<prop key="iframeHelp">jsp/mof/help/iframeObjects.jsp</prop>
+				<prop key="forinsert">jsp/mof/help/pub_common_help_forinsert.jsp</prop>
+				<prop key="forupdate">jsp/mof/help/pub_common_help_forupdate.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="pubcommonhelpforwardchain" class="org.loushang.waf.mvc.ChainForward">
+		<property name="mappings">
+			<map>
+				<entry key="success">
+					<ref bean="pubcommonhelpquery" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--***********************help forward end*********************************** -->
+
+
+
+	<!--*******************************serviceSupport.xml****************************************** 
+		<bean id="pubCommonHelpService" class="com.inspur.hsf.config.spring.proxy.SpringConsumerBean"> 
+		<property name="interfaceName" value="org.loushang.help.service.IPubCommonHelpService" 
+		/> </bean> <bean id="pubCommonHelpSingleTableService" class="com.inspur.hsf.config.spring.proxy.SpringConsumerBean"> 
+		<property name="interfaceName" value="org.loushang.help.service.IPubCommonHelpSingleTableService" 
+		/> </bean> <bean id="pubCommonHelpMoreTableService" class="com.inspur.hsf.config.spring.proxy.SpringConsumerBean"> 
+		<property name="interfaceName" value="org.loushang.help.service.IPubCommonHelpMoreTableService" 
+		/> </bean> -->
+
+	<!--*****************************enum***************************************** -->
+	<!-- PUBCOMMONHELP.ISDETAILSEL= 0:No,1:Yes PUBCOMMONHELP.ISMULTSEL= 0:No,1:Yes 
+		PUBCOMMONHELP.ISINDVL= 0:No,1:Yes -->
+	<!--***********************collentionSupport.xml*************************** -->
+	<bean id="PUBCOMMONHELP_ISDETAILSEL_COLLECTION" class="org.loushang.waf.data.EnumCollection">
+		<property name="enumName">
+			<value>PUB_COMMON_HELP.IS_DETAILSEL</value>
+		</property>
+		<property name="enumService">
+			<ref bean="enumService" />
+		</property>
+	</bean>
+	<bean id="PUBCOMMONHELP_IS_MULTSEL_COLLECTION" class="org.loushang.waf.data.EnumCollection">
+		<property name="enumName">
+			<value>PUB_COMMON_HELP.IS_MULTSEL</value>
+		</property>
+		<property name="enumService">
+			<ref bean="enumService" />
+		</property>
+	</bean>
+	<bean id="PUBCOMMONHELP_IS_INDVL_COLLECTION" class="org.loushang.waf.data.EnumCollection">
+		<property name="enumName">
+			<value>PUB_COMMON_HELP.IS_INDVL</value>
+		</property>
+		<property name="enumService">
+			<ref bean="enumService" />
+		</property>
+	</bean>
+
+	<!--***********************commandSupport.xml*************************** -->
+	<bean id="pub_common_help_interceptor" class="org.loushang.waf.interceptor.CollectionInterceptor">
+		<property name="collections">
+			<map>
+				<entry key="PUBCOMMONHELP_ISDETAILSEL_COLLECTION">
+					<ref bean="PUBCOMMONHELP_ISDETAILSEL_COLLECTION" />
+				</entry>
+				<entry key="PUBCOMMONHELP_ISMULTSEL_COLLECTION">
+					<ref bean="PUBCOMMONHELP_IS_MULTSEL_COLLECTION" />
+				</entry>
+				<entry key="PUBCOMMONHELP_ISINDVL_COLLECTION">
+					<ref bean="PUBCOMMONHELP_IS_INDVL_COLLECTION" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+
+	<!--******************************************************** -->
+
+	<!-- One table start -->
+	<bean id="pubcommonhelpsingletablegrid" class="org.loushang.help.cmd.PubSingleTableGridHelpCommand"
+		singleton="false">
+		<property name="pubCommonHelpService">
+			<ref bean="pubCommonHelpService" />
+		</property>
+		<property name="pubCommonHelpSingleTableService">
+			<ref bean="pubCommonHelpSingleTableService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="pubcommonhelpView">
+					<ref bean="pubcommonhelpuseforward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="pubcommonhelpsingletabletree" class="org.loushang.help.cmd.PubSingleTableTreeHelpCommand"
+		singleton="false">
+		<property name="pubCommonHelpService">
+			<ref bean="pubCommonHelpService" />
+		</property>
+		<property name="pubCommonHelpSingleTableService">
+			<ref bean="pubCommonHelpSingleTableService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="pubcommonhelpView">
+					<ref bean="pubcommonhelpuseforward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="pubcommonhelpsingletabletreesub" class="org.loushang.help.cmd.PubSingleTableTreeHelpCommand"
+		singleton="false">
+		<property name="pubCommonHelpService">
+			<ref bean="pubCommonHelpService" />
+		</property>
+		<property name="pubCommonHelpSingleTableService">
+			<ref bean="pubCommonHelpSingleTableService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="pubcommonhelpView">
+					<ref bean="pubcommonhelpsingletabletreesubforward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="pubcommonhelpsingletabletreesubforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="singletabletreehelp">jsp/mof/help/pub_common_help_singletabletreesub.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- One table end -->
+	<!-- Nulti tables start -->
+	<bean id="pubcommonhelpmoretablesqlgrid" class="org.loushang.help.cmd.PubMoreTableGridHelpCommand"
+		singleton="false">
+		<property name="pubCommonHelpService">
+			<ref bean="pubCommonHelpService" />
+		</property>
+		<property name="pubCommonHelpMoreTableService">
+			<ref bean="pubCommonHelpMoreTableService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="pubcommonhelpView">
+					<ref bean="pubcommonhelpuseforward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="pubcommonhelpmoretabletree" class="org.loushang.help.cmd.PubMoreTableTreeHelpCommand"
+		singleton="false">
+		<property name="pubCommonHelpService">
+			<ref bean="pubCommonHelpService" />
+		</property>
+		<property name="pubCommonHelpMoreTableService">
+			<ref bean="pubCommonHelpMoreTableService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="pubcommonhelpView">
+					<ref bean="pubcommonhelpuseforward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="pubcommonhelpmoretabletreesub" class="org.loushang.help.cmd.PubMoreTableTreeHelpCommand"
+		singleton="false">
+		<property name="pubCommonHelpService">
+			<ref bean="pubCommonHelpService" />
+		</property>
+		<property name="pubCommonHelpMoreTableService">
+			<ref bean="pubCommonHelpMoreTableService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="pubcommonhelpView">
+					<ref bean="pubcommonhelpmoretabletreesubforward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="pubcommonhelpmoretabletreesubforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="moretabletreehelp">jsp/mof/help/pub_common_help_moretabletreesub.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- Multi table end -->
+	<!-- common strat -->
+	<bean id="pubcommonhelpuseforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="singletablegridradiohelp">jsp/mof/help/pub_common_help_singletablegridradio.jsp</prop>
+				<prop key="singletablegridcheckboxhelp">jsp/mof/help/pub_common_help_singletablegridcheckbox.jsp</prop>
+				<prop key="singletabletreehelp">jsp/mof/help/pub_common_help_singletabletree.jsp</prop>
+				<prop key="moretabletreehelp">jsp/mof/help/pub_common_help_moretabletree.jsp</prop>
+				<prop key="moretablesqlgridcheckboxhelp">jsp/mof/help/pub_common_help_moretablecheckgrid.jsp</prop>
+				<prop key="moretablesqlgridradiohelp">jsp/mof/help/pub_common_help_moretablegridradio.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="pubcommonhelpchainforward" class="org.loushang.waf.mvc.ChainForward">
+		<property name="mappings">
+			<map>
+				<entry key="singletablegridhelp">
+					<ref bean="pubcommonhelpsingletablegrid" />
+				</entry>
+				<entry key="singletabletreehelp">
+					<ref bean="pubcommonhelpsingletabletree" />
+				</entry>
+				<entry key="moretablegridhelp">
+					<ref bean="pubcommonhelpmoretablesqlgrid" />
+				</entry>
+				<entry key="moretabletreehelp">
+					<ref bean="pubcommonhelpmoretabletree" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="pubcommonhelpcontrol" class="org.loushang.help.cmd.PubCommonHelpControlCmd">
+		<property name="pubCommonHelpService">
+			<ref bean="pubCommonHelpService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="pubcommonhelpChainView">
+					<ref bean="pubcommonhelpchainforward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!-- common end -->
+
+
+	<!--***********************query start****************************************** -->
+	<bean id="pubcommonhelptest" class="org.loushang.help.query.PubCommonHelpQueryPageInitCmd">
+		<property name="pubCommonHelpService">
+			<ref bean="pubCommonHelpService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="query" value="/jsp/mof/help/test.jsp" />
+			</map>
+		</property>
+		<property name="pageSize">
+			<value>10</value>
+		</property>
+	</bean>
+	<!--***********************query end****************************************** -->
+	<!--***********************forward start*********************************** -->
+	<bean id="pubcommonhelptestqueryforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="queryPageInit">jsp/mof/help/test.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<!--***********************forward end*********************************** -->
+
+	<!--************daoSupport.xml**************** -->
+	<bean id="pubCommonHelpDao" class="org.loushang.help.dao.jdbc.PubCommonHelpJdbcDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<bean id="pubCommonHelpSingleTableDao"
+		class="org.loushang.help.dao.jdbc.PubCommonHelpSingleTableJdbcDao"
+		singleton="false">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<bean id="pubCommonHelpMoreTableDao"
+		class="org.loushang.help.dao.jdbc.PubCommonHelpMoreTableJdbcDao"
+		singleton="false">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<!--*******************************serviceSupport.xml****************************************** -->
+	<bean id="pubCommonHelpService"
+		class="org.loushang.help.service.support.PubCommonHelpServiceImpl">
+		<property name="pubCommonHelpDomain">
+			<ref bean="pubCommonHelpDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+	<!-- <bean class="com.inspur.hsf.config.spring.proxy.SpringProviderBean"> 
+		<property name="interfaceName" value="org.loushang.help.service.IPubCommonHelpService" 
+		/> <property name="target"><ref bean="pubCommonHelpService"/></property> 
+		</bean> -->
+	<bean id="pubCommonHelpSingleTableService"
+		class="org.loushang.help.service.support.PubCommonHelpSingleTableServiceImpl">
+		<property name="pubCommonHelpSingleTableDomain">
+			<ref bean="pubCommonHelpSingleTableDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+	<!-- <bean class="com.inspur.hsf.config.spring.proxy.SpringProviderBean"> 
+		<property name="interfaceName" value="org.loushang.help.service.IPubCommonHelpSingleTableService" 
+		/> <property name="target"><ref bean="pubCommonHelpSingleTableService"/></property> 
+		</bean> -->
+	<bean id="pubCommonHelpMoreTableService"
+		class="org.loushang.help.service.support.PubCommonHelpMoreTableServiceImpl">
+		<property name="pubCommonHelpMoreTableDomain">
+			<ref bean="pubCommonHelpMoreTableDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+	<!-- <bean class="com.inspur.hsf.config.spring.proxy.SpringProviderBean"> 
+		<property name="interfaceName" value="org.loushang.help.service.IPubCommonHelpMoreTableService" 
+		/> <property name="target"><ref bean="pubCommonHelpMoreTableService"/></property> 
+		</bean> -->
+	<!--*****************************domainSupport.xml***************************************** -->
+	<bean id="pubCommonHelpDomain"
+		class="org.loushang.help.domain.support.PubCommonHelpDomainImpl">
+		<property name="pubCommonHelpDao">
+			<ref bean="pubCommonHelpDao" />
+		</property>
+	</bean>
+	<bean id="pubCommonHelpSingleTableDomain"
+		class="org.loushang.help.domain.support.PubCommonHelpSingleTableDomainImpl">
+		<property name="pubCommonHelpSingleTableDao">
+			<ref bean="pubCommonHelpSingleTableDao" />
+		</property>
+	</bean>
+	<bean id="pubCommonHelpMoreTableDomain"
+		class="org.loushang.help.domain.support.PubCommonHelpMoreTableDomainImpl">
+		<property name="pubCommonHelpMoreTableDao">
+			<ref bean="pubCommonHelpMoreTableDao" />
+		</property>
+	</bean>
+
+	<bean id="pubautocompletecmd" class="org.loushang.help.cmd.PubAutoCompleteCmd"
+		singleton="false">
+		<property name="pubCommonHelpService">
+			<ref bean="pubCommonHelpService" />
+		</property>
+		<property name="pubCommonHelpMoreTableService">
+			<ref bean="pubCommonHelpMoreTableService" />
+		</property>
+	</bean>
+
+</beans>

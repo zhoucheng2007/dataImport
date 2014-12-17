@@ -1,0 +1,228 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* 妯℃澘鏍峰紡*/
+
+body {
+	-webkit-text-size-adjust: none;
+	
+	background-color: #F0F0F0;
+	min-width: 320px;
+	margin: 0;
+	padding: 0;
+	font-family: "microsoft yahei", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #4D4D4D;
+}
+
+.table {
+	padding: 0;
+	margin: 22px 22px;
+	background-color: white;
+	-webkit-border-radius: 8px;
+}
+
+.f-bold{
+		font-weight:bold;
+}
+.main-title{
+		font-weight:bold;
+		font-size: 36px;
+		color: #FFF;
+}
+.subtitle{
+	text-align:left;
+	height:68px;
+	width:100%;
+    font-size: 32px;
+    color: #FFF;
+    background-image:url(sls/subtitle.png); 
+    background-repeat: repeat-x; 
+    line-height:68px;
+	font-weight:bold;
+}
+
+.color-000{
+		color: #000;
+}
+.color-f00{
+		color: #F00;
+}
+.color-009245{
+		color: #009245;
+}
+.color-c1272d{
+		color: #C1272D;
+}
+.color-ccc{
+		color: #CCC;
+}
+.color-888{
+		color: #888;
+}
+.color-fff{
+		color: #FFF;
+}
+.color-ec692d{
+		color:#ec692d;
+}
+.color-b3b3b3{
+		color:#b3b3b3;
+}
+.color-f67c2e{
+		color:#f67c2e;
+}
+.color-4d4c4d{
+		color:#4d4c4d;
+}
+
+.leftB{
+	margin:0px;
+	padding:0px;
+	width:6px;
+	height:68px;
+	background-image:url(sls/btn-left.png);
+float:left;
+}
+.rightB{
+	margin:0px;
+	padding:0px;
+	width:6px;
+	height:68px;
+	background-image:url(sls/btn-right.png);
+	float:left;
+}
+.centerB{
+	margin:0px;
+	padding:0px;
+	width:148px;
+	height:68px;
+	background-image:url(sls/btn-center.png);
+	background-repeat: repeat-x;
+	line-height:68px;
+	line-width:148px;
+	cursor:pointer;
+	float:left;
+}
+
+
+.signLeftB{
+	margin:0px;
+	padding:0px;
+	width:7px;
+	height:96px;
+	background-image:url(sls/sign-left.png);
+float:left;
+}
+.signRightB{
+	margin:0px;
+	padding:0px;
+	width:7px;
+	height:96px;
+	background-image:url(sls/sign-right.png);
+	float:left;
+}
+.signCenterB{
+	margin:0px;
+	padding:0px;
+	width:148px;
+	height:96px;
+	background-image:url(sls/sign-center.png);
+	background-repeat: repeat-x;
+	line-height:96px;
+	line-width:148px;
+	cursor:pointer;
+	float:left;
+}
+
+/*xmw澧炲姞*/
+/*甯﹁〃澶寸殑琛ㄦ牸鏍峰紡*/
+.headTable {
+	border-collapse:collapse;
+	border-spacing:0;
+	text-align:center;
+}
+.headTable thead{
+	border:0; 
+	background-color:#2474B8;
+	color:#FFFFFF;
+	letter-spacing:-4px;
+}
+.headTable thead tr {
+	height: 68px;
+}
+.headTable tbody tr{
+	border-bottom: 1px outset #BEBEBE;
+    border-bottom: 2px inset #FFFFFF;
+    height: 100px;
+}
+.headTable tbody tr:nth-child(even) {
+  background-color: #E6E6E6;
+}
+.headTable tbody tr th{
+	border-right:1px outset #BEBEBE;
+	border-right:2px inset #FFFFFF;
+}
+
+/* 甯哥敤鏍峰紡 */
+
+a {
+	text-decoration: none;
+	color: #67738A;
+}
+
+img,img a {
+	border: 0;
+	vertical-align: middle;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.h-line{
+	border-top:1px solid #BEBEBE;
+	border-bottom:1px inset #FFFFFF;
+}
+
+
+
+
+
+/* 涓€у寲鏍峰紡 */
+
+table .label-r {
+	text-align: right;
+}
+
+table .label-l {
+	text-align: left;
+	
+}
+
+.t25{
+	font-size: 25px;
+}
+
+.sp{  
+	width:300px;  
+	overflow: hidden;  
+	white-space:nowrap;  
+	text-overflow:ellipsis;  
+ }  
+
+div span select{
+	font-size: 27px;
+	font-weight:bold;
+	color:#4d4c4d;
+}
+
+ 

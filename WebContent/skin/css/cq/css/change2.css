@@ -1,0 +1,10 @@
+.bs{ position:relative; left:80px; top:18px;}
+.bs a{display:block; width:10px; height:9px; margin-right:10px; float:left; display:inline;}
+.bs .a1{ background:url(../imgs/hua.gif) no-repeat;}
+.bs .a2{ background:url(../imgs/lv2.gif) no-repeat;}
+.bs .a3{  background:url(../imgs/lan.gif) no-repeat;}
+.bnbck{
+	height: 220px;
+	width: 350px;
+	background: transparent url(../imgsg/banner-box.png) no-repeat;
+}

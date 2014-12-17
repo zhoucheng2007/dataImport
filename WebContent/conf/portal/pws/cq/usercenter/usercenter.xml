@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<!--***********************domain配置********************************************-->
+	<bean id="cqUserCenterDomain" class="com.v6.portal.pws.cq.usercenter.CqUserCenterDomain"> 
+	</bean>
+<!--***********************service配置*******************************************-->
+
+	<bean id="cqUserCenterService" class=" com.v6.portal.pws.cq.usercenter.CqUserCenterService"> 
+		<property name="cqUserCenterDomain"><ref bean="cqUserCenterDomain"/></property>   	
+		<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	</bean>
+<!--***********************翻页初始化特殊查询配置开始******************************************-->
+	<bean id="cqUserCenter" class="com.v6.portal.pws.cq.usercenter.CqUserCenterCmd">
+		<property name="cqUserCenterService"><ref bean="cqUserCenterService"/></property>
+	    <property name="forwards">
+	        <map>
+	            <entry key="getDetail" value="pws/cq/userCenter/detail.jsp"></entry>
+			</map>
+        </property>
+	</bean>	
+</beans>

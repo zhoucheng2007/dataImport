@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="bwfDaiBanTaskDomain"
+		class="com.v6.base.bwf.tasklist.taskinfo.domain.BwfDaiBanTaskDomain">
+	</bean>
+	<bean id="bwfYiBanTaskDomain"
+		class="com.v6.base.bwf.tasklist.taskinfo.domain.BwfYiBanTaskDomain">
+	</bean>
+
+	<bean id="bwfTaskExecution" class="com.v6.base.bwf.taskexecution.domain.BwfTaskExecution">
+		<property name="bwfDaiBanTaskDomain">
+			<ref bean="bwfDaiBanTaskDomain" />
+		</property>
+		<property name="bwfYiBanTaskDomain">
+			<ref bean="bwfYiBanTaskDomain" />
+		</property>
+	</bean>
+	<!-- 对外提供的适配器,无事务控制 -->
+	<bean id="bizWfTaskAdapter" class="com.v6.base.bwf.api.BizWfTaskAdapter"
+		singleton="false">
+		<property name="bwfTaskExecution">
+			<ref bean="bwfTaskExecution" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+</beans>
+
+   

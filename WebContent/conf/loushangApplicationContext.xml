@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="CommonServiceSupport" class="org.loushang.waf.BaseBeanConfigue">
+		<property name="mappingResources">
+			<list>
+				<value>/conf/commonServiceSupport.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- help -->
+	<bean id="HelpClientSupport" class="org.loushang.waf.BaseBeanConfigue">
+		<property name="mappingResources">
+			<list>
+				<value>/conf/mof/help/pubcommonhelpconf.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="global.forward" class="org.loushang.waf.mvc.GlobalForward">
+		<property name="mappings">
+			<map>
+				<entry key="error">
+					<ref bean="error" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="error" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="error">/jsp/error.jsp</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- ==================Frame-related configuration ends================== -->
+	<!-- JDBCConfigue -->
+	<bean id="JDBCConfigue" class="org.loushang.waf.BaseBeanConfigue">
+		<property name="mappingResources">
+			<list>
+				<value>/conf/jdbcSupport.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- jsp框架开发 -->
+	<bean id="jspquery" class="org.loushang.waf.mvc.PubQueryCommand">
+		<property name="dataFactory" ref="dataFactory" />
+	</bean>
+	<bean id="dataFactory" class="com.v6.data.DataFactory">
+	</bean>
+</beans>

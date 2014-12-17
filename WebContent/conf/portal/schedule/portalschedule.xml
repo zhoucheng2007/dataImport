@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<!--***** domain configuration *****-->
+	<bean id="portalScheduleDomain" class="com.v6.portal.schedule.ScheduleDomainImpl"> 	
+	</bean>
+
+<!--***** service configuration *****-->
+	<bean id="portalScheduleService" class="com.v6.portal.schedule.ScheduleServiceImpl">
+		<property name="portalScheduleDomain"><ref bean="portalScheduleDomain"/></property>   	
+		<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	</bean>
+
+
+</beans>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<!--***** query command configuration *****-->
+	<bean id="workflowlistCmd" class="com.v6.portal.bwfmonitor.WorkFlowListCmd">
+	    
+	    <property name="forwards">
+	    	<map>
+	        	<entry key="query" value="bwfmonitor/wflist.jsp" />
+			</map>
+		</property>	    
+	    <property name="pageSize"><value>10</value></property>
+	</bean>
+	
+	<!--***** base command configuration *****-->
+     <bean id="wfmonitorCmd" class="com.v6.portal.bwfmonitor.WorkFlowMonitorCmd" singleton="false">
+	    <property name="forwards">
+	    	<map>
+	        	<entry key="monitor" value="bwfmonitor/wfmonitor.jsp" />
+	        	<entry key="bwfDefaultMonitor" value="bwfmonitor/bwfDefaultMonitor.jsp" />
+	        	<entry key="bwfStatisMonitor" value="bwfmonitor/bwfStatisMonitor.jsp" />
+			</map>
+		</property>	    
+    </bean> 
+    <bean id="wfmonitorCount" class="com.v6.portal.bwfmonitor.WorkFlowMonitorCmd" singleton="false">
+    	<property name="forwards">
+    		<map>
+    		    <entry key="bwfDefaultMonitor" value="bwfmonitor/bwfCountDefault.jsp"/>
+    		</map>
+        </property>
+    </bean>
+	
+</beans>
+
+   

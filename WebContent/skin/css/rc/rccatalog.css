@@ -1,0 +1,145 @@
+.table{
+	width:100%;
+}
+.table td {
+	height: 30px;
+}
+
+.table th {
+	text-align: center;
+}
+
+.table td.tdleft {
+	background-color: #f5fafe;
+}
+
+.innertable {
+	width: 100%;
+	border: 0px;
+}
+
+.innertable td.tdleft {
+	background-color: #f5fafe;
+}
+
+.savebutton {
+	margin-top: 10px;
+}
+
+.search {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.rightsearch {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float:right;
+}
+
+.msg .ok {
+	border: none;
+	background-color: #ffffff;
+	color:#f60;
+}
+
+.msg .error {
+	border: none;
+	background-color: #ffffff;
+	color:#f60;
+}
+
+.page-message {
+	margin-bottom: 10px;
+	line-height:16px;
+	font-size: 14px;
+	font-weight:bold;
+}
+
+.click-cursor {
+	cursor: hand;
+}
+
+.click-cursor:hover {
+	color: #f60;
+	text-decoration: underline;
+}
+
+.click-completely {
+	color: #36c;
+	text-decoration: none;
+	cursor: hand;
+}
+
+.click-completely:hover {
+	color: #f60;
+	text-decoration: underline;
+}
+
+.btn {
+	height: 35;
+	BORDER-RIGHT: #7b9ebd 1px solid;
+	PADDING-RIGHT: 5px;
+	BORDER-TOP: #7b9ebd 1px solid;
+	PADDING-LEFT: 5px;
+	FONT-SIZE: 12px;
+	FILTER: progid :   DXImageTransform .   Microsoft . 
+		
+		Gradient(GradientType =   0, StartColorStr =   #ffffff, EndColorStr = 
+		 #cecfde);
+	BORDER-LEFT: #7b9ebd 1px solid;
+	CURSOR: hand;
+	COLOR: black;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: #7b9ebd 1px solid
+}
+#btnsearch{
+	height:20px;
+	width:36px;
+}
+.right{
+	float:right;
+}
+.pageBarContainer .left{
+	float:left;
+}
+.pageBarContainer .right{
+	float:right;
+}	
+.searchbg {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height:32px;
+	width:100%;
+	background:url('../../img/rc/titbg.png') repeat-x;
+	margin-left:2px;
+	margin-right:2px;
+}
+
+.searchbg s{
+    display:block;
+	width:2px;
+	height:32px;
+	float:left;
+	margin-left:-2px;
+	background:url('../../img/rc/btnL.png') no-repeat;
+}
+.searchbg b{
+	display:block;
+	width:2px;
+	height:32px;
+	float:right;
+	margin-right:-2px;
+	background:url('../../img/rc/btnR.png') no-repeat;
+}
+
+.btnbg{
+	border:0;
+	width:72px;
+	height:25px;
+	vertical-align:middle;
+	margin-top:4px;
+	margin-right:10px;
+	color:#ffffff;
+	background:url('../../img/rc/btnbg.png') no-repeat;
+ }

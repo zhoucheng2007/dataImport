@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+<!--***** service configuration *****-->
+    <bean id="rptRssService" class="com.inspur.hsf.config.spring.proxy.SpringConsumerBean">
+		<property name="interfaceName"><value>com.v6.portal.rptrss.IRptRssService</value></property>
+	</bean>	
+<!--***** base command configuration *****-->
+     <bean id="rptrss" class="com.v6.portal.rptrss.RptRss" singleton="false">
+     	<property name="rptRssService"><ref bean="rptRssService"/></property>   
+    </bean>    
+    
+</beans>
+
+   

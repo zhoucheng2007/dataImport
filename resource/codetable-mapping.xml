@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codetable> 
+	<code name="idtypecode" description="身份证件类型代码" table-name="COD_IDCERTYPECODE" field-code="IDCERTYPECODE" field-value="IDCERTYPENAME" filter="valid='01'"/>
+	<code name="regtypecode"  description="登记注册类型代码" table-name="COD_REGTYPECODE" field-code="rtrim(REGTYPE)" field-value="rtrim(REGTYPENAME)" filter="1=1"/>
+	<code name="taxpayertype"  description="企业类型" table-name="COD_ECONATURECODE" field-code="ECONATURECODE" field-value="ECONATURENAME" filter="valid='01'"/>
+	<code name="gbhycode"  description="国标（经营）行业代码" table-name="COD_CALLINGCODE" field-code="CALLINGCODE" field-value="CALLINGNAME" filter="valid='01'"/>
+	<code name="subjectrelationcode" description="隶属关系" table-name="COD_SUBJECTIONCODE" field-code="SUBJECTIONCODE" field-value="SUBJECTIONNAME" filter="valid='01'" />
+	<code name="accountingModecode"  description="核算方式代码--名称字典表" table-name="COD_BUSICOUNTMODE" field-code="BUSICOUNTMODECODE" field-value="BUSICOUNTMODENAME" filter="valid='01'"/>
+	<code name="sblx" description="申报类型类型代码 -- 名称" table-name="COD_DECLAREMODECODE" field-code="DECLAREMODECODE" field-value="DECLAREMODENAME" filter="valid='01'"/>
+	<code name="enterpriseFinanceSystemcode" description="适用财务制度" table-name="COD_ACCYEARCODE" field-code="ACCYEARCODE" field-value="ACCYEARNAME" filter="valid='01'" />
+	<code name="nsrztcode"  description="纳税人状态代码--名称字典表" table-name="COD_TAXPAYERSTATUSCODE" field-code="TAXPAYERSTATUSCODE" field-value="TAXPAYERSTATUSNAME" filter="valid='01'"/>
+	
+	<code name="yhfzjgcode"  description="银行代码--名称字典表" table-name="COD_BANKCODE" field-code="BANKCODE" field-value="BANKNAME" filter="valid='01'"/>
+	
+	<code name="sbhztcode"  description="社保户状态代码--名称字典表" table-name="DM_SBHZT" field-code="sbhzt_dm" field-value="sbhzt_mc" filter="xybz='Y'"/>
+	<code name="sbhbzcode"  description="社保户标志代码--名称字典表" table-name="dm_sbhbz" field-code="sbhbz_dm" field-value="sbhbz_mc" filter="xybz='Y'"/>
+	<code name="jkfsnamecode" description="缴款方式字典表--社保基金缴款方y式名称" table-name="dm_jkfs" field-code="JKFS_DM" field-value="JKFS_MC" filter="xybz='Y'"/>
+	<code name="taxconfirmtype" description="核定征收类型字典表" table-name="dm_hdzslx" field-code="hdzslx_dm" field-value="hdzslx_mc" filter="yxbz='Y'"/>
+	<code name="reportcode" description="申报表类型字典表" table-name="dm_wszl" field-code="wszl_dm" field-value="wszl_mc" filter="ywlx_dm='01'"/>
+	<code name="reportSbcx" description="申报表类型字典表"  table-name="dm_wszl" field-code="wszl_dm" field-value="wszl_mc" filter="ywlx_dm = '01' AND wszl_dm not in (10015, 10016, 10017, 10018,10004,10005,10006,10007,10008,10009,10010,10011,10014,10015,10016,10017,10018,10019,10020,10021,10024,10026,10027,10028,10029,10031)"/>
+	<!-- 云南个税网报只申报 月报 和 12万 -->
+	<code name="reportSbgscx" description="个税申报表类型字典表" table-name="dm_wszl" field-code="wszl_dm" field-value="wszl_mc" filter="ywlx_dm = '01' AND wszl_dm  in (10015 , 10018)"/>
+	<code name="sbztcode" description="申报状态代码表" table-name="dm_sbzt" field-code="sbzt_dm" field-value="sbzt_mc" filter="1 = 1"/>
+	<code name="jkfscode" description="缴款方式代码与是否发起实时扣款对应字典表" table-name="dm_jkfs" field-code="jkfs_dm" field-value="sskkbz" filter="xybz='Y'"/>
+	<code name="jkztCode" description="缴款状态代码-名称对照字典表" table-name="csky_returncode" field-code="code" field-value="message" filter=" 1=1"/>
+	<code name="DMEjbSidMap" description="征管EJB业务模块对应的调用方法" table-name="DM_EJB_SID" field-code="SID_DM" field-value="SERVICE_TYPE" filter=" 1=1 "/>
+	<code name="reportcodeAll" description="申报表类型字典表" table-name="dm_wszl" field-code="wszl_dm" field-value="wszl_mc" />
+	<code name="ywlxdm" description="业务类型代码" table-name="dm_ywlx" field-code="ywlx_dm" field-value="ywlx_mc" filter="xybz='Y'"/>
+	<code name="swdjReportCode" description="税务登记申请表类型代码表"       table-name="dm_wszl" field-code="wszl_dm" field-value="wszl_mc" filter="ywlx_dm = '04' and yxbz='Y' and wszl_dm>'40008' and '41007'>wszl_dm "/>
+	<code name="jcxxReportCode" description="基础信息登记登记申请表类型代码表" table-name="dm_wszl" field-code="wszl_dm" field-value="wszl_mc" filter="ywlx_dm = '05' and yxbz='Y'"/>
+	<code name="fpglReportCode" description="发票管理登记登记申请表类型代码表" table-name="dm_wszl" field-code="wszl_dm" field-value="wszl_mc" filter="ywlx_dm = '06' and yxbz='Y'"/>
+	<code name="wssqReportCode" description="文书申请登记登记申请表类型代码表" table-name="dm_wszl" field-code="wszl_dm" field-value="wszl_mc" filter="ywlx_dm = '07' and yxbz='Y'"/>
+	<code name="wsztCode" description="文书状态代码表" table-name="dm_wszt" field-code="wszt_dm" field-value="wszt_mc" filter="yxbz='Y'"/>
+	<code name="cbcccode" description="参保层次" table-name="Dm_cbjc" field-code="cbjc_dm" field-value="cbjc_mc" filter="xybz='Y'" />
+    <code name="COD_VCLCOLOR" description="车牌颜色" table-name="COD_VCLCOLOR" field-code="COLORCODE" field-value="COLORNAME" filter="1=1" />     
+    <code name="COD_VCLTYPECODE" description="车船类型" table-name="CCS_CCSTYPECODE" field-code="ccstypecode" field-value="ccstypename" filter="validfalg='01'" />
+    <code name="CCS_TAXCODE" description="车船税税目" table-name="cod_taxcode" field-code="TAXCODE" field-value="TAXNAME" filter=" TAXCODE >= '142101' and  TAXCODE  like '14%'" />
+	
+	<!--云南地税代码表新增 START-->
+	<code name="job" description="职业" table-name="TC_PUB_NATUREPERSONTRADE" field-code="TRADECODE" field-value="TRADENAME" filter="choiceflag='1'"/>
+	<code name="nationcode" description="国家代码字典表" table-name="cod_nationalitycode" field-code="nationalitycode" field-value="nationalityname" filter="valid='1'"/>
+	<code name="moneytypecode" description="外币名称字典表" table-name="COD_CURRENCYTYPECODE" field-code="currencytypecode" field-value="currencytypename" filter="valid='01' "/>
+	<code name="gsjsfscode" description="个税各税目计税方式对照表" table-name="COD_TAXCODE" field-code="taxcode" field-value="taxname||'@'||taxingmode" filter="useflag='01' and (taxcode like '06%') and taxcode not in ('069801','069901') and rateflag='00' "/>
+	<code name="gssmsljccode" description="所有个税税目税率级次对照表" table-name="pol_taxrate" field-code="rowid" field-value="taxcode||'@'||taxrate||'@'||taxrateright||'@'||qcdata" filter="taxtypecode ='06' and taxrate is not null "/>
+	<code name="smjsfscode" description="税目计税方式对照表" table-name="COD_TAXCODE" field-code="taxcode" field-value="taxingmode" filter="useflag='01' and rateflag='00' "/>
+	<code name="smsljccode" description="所有税目税率级次对照表" table-name="pol_taxrate" field-code="rowid" field-value="taxcode||'@'||taxrate||'@'||taxrateright||'@'||qcdata" filter=" taxrate is not null "/>
+	<code name="zdlbcode" description="占地类别字典表" table-name="COD_ABLTYPECODE" field-code="arbletypecode" field-value="arbletypename" filter="validflag='01' and nodetype='99' "/>
+	<code name="jmsgdlbcode" description="占地类别字典表" table-name="COD_ABLTYPECODE" field-code="arbletypecode" field-value="arbletypename" filter="validflag='01' "/>
+	<code name="gdsyxzcode" description="耕地使用性质字典表" table-name="COD_ABLUSECODE" field-code="arbleusecode" field-value="arbleusename" filter="validflag='01' "/>
+	<code name="gsjmxzcode" description="耕地占用税减免性质字典表" table-name="COD_DERATEREASONCODESUB" field-code="deratereasonsubcode" field-value="deratereasonsubname" filter="valid='01' and deratereasonsubcode like '02%'  "/>
+	<code name="taxtypecode" description="税种代码字典表" table-name="cod_taxcode" field-code="taxcode" field-value="taxname" filter="useflag='01' and rateflag='99'"/>
+	<code name="taxitemcode" description="税目代码字典表" table-name="cod_taxcode" field-code="taxcode" field-value="taxname" filter="useflag='01' and rateflag='00' and not taxcode like '%9801' and not taxcode like '%9901'"/> 
+	<code name="taxtypecodeExt_Sb" description="社保费费种字典表" table-name="f_cod_feeitem" field-code="fitemcode" field-value="fitemname" filter="node='01' and valid='01' "/>
+	<code name="feeitemcode_sbf" description="社保费费目字典表" table-name="f_cod_feeitem" field-code="fitemcode" field-value="fitemname" filter="node='00' and valid='01' "/>
+	<code name="taxtypecodeExt_Jj" description="工会经费费种" table-name="fo_cod_feeitem" field-code="fitemcode" field-value="fitemname" filter="node='01' and valid='01' "/>
+	<code name="feeitemcode_ghjf" description="工会经费费目" table-name="fo_cod_feeitem" field-code="fitemcode" field-value="fitemname" filter="node='00' and valid='01' "/>
+	<code name="jsmsyycode" description="减免原因" table-name="cod_deratereasoncode" field-code="deratereasoncode" field-value="deratereasonname" />
+	<code name="deeddevertcode"  description="契税权属类别--名称字典表" table-name="cod_deeddevertcod" field-code="deedtypecode" field-value="deedtypename" filter="validflag='01'"/>
+	<code name="jmsdeeddevertcode"  description="契税权属类别--名称字典表" table-name="cod_deeddevertcod" field-code="deedtypecode" field-value="deedtypename" filter="validflag='01' and nodetype!='01' "/>
+	
+	<code name="deedusecode"  description="契税土地使用类型--名称字典表" table-name="cod_deedusecode" field-code="deedusecode" field-value="deedusename" filter="validflag='01'"/>
+	<code name="qsjmxzcode" description="契税减免性质字典表" table-name="COD_DERATEREASONCODESUB" field-code="deratereasonsubcode" field-value="deratereasonsubname" filter="valid='01' and deratereasonsubcode like '01%'  "/>
+	<code name="gljgcode"  description="税务机关字典表" table-name="cod_taxorgcode" field-code="taxorgcode" field-value="taxorgname" filter="valid='01'"/>	
+	<code name="taxtypecodeExt_S" description="税种代码字典表--不包括社保和基金类的" table-name="cod_taxcode" field-code="taxcode" field-value="taxname" filter="useflag='01' and rateflag='99'"/>
+	<code name="taxitemcode" description="税目代码字典表--不包括社保和基金类的" table-name="cod_taxcode" field-code="taxcode" field-value="taxname" filter="useflag='01' and rateflag='00'"/>
+	<code name="taxTypeItemRelating" description="税种税目关联代码字典表" table-name="cod_taxcode" field-code="taxcode" field-value="taxcode||'@'||taxname" filter="useflag='01' and rateflag='00' and not taxcode like '%9801' and not taxcode like '%9901' "/>	
+	<code name="taxItemArticleitemRelating" description="营业税税目品目关联代码字典表" table-name="cod_taxcode" field-code="taxcode" field-value="substr(taxcode,0,4)||'@'||taxname||'@'||taxingmode" filter="taxcode like '03_%' and not taxcode like '039%' and rateflag='00'"/>
+	<code name="sklxcode" description="税款类型字典表" table-name="cod_taxclasscode" field-code="taxclasscode" field-value="taxclassname" filter="taxclasstype='01' or taxclasstype='00'"/>
+	<code name="zystypecode" description="资源税各税目名称对照表" table-name="COD_TAXCODE" field-code="taxcode" field-value="taxname" filter="useflag='01' and (taxcode like '07%') and taxcode !='07' and rateflag='00' "/>
+	<code name="deratecalecode" description="减免类型代码-名称字典表" table-name="cod_deratecalecode" field-code="deratecalecode" field-value="deratecalename"/>
+	<code name="ksdw" description="资源税课税单位--名称字典表" table-name="COD_QUANTITYUNIT" field-code="UNITCODE" field-value="UNITNAME" filter="valid='01'"/>
+	<code name="gdzys_zdyt" description="耕地占用税占地用途代码-名称字典表" table-name="COD_ABLPURPOSE" field-code="purposecode" field-value="purposename" filter="validflag='01'"/>
+	<code name="gazys_taxrate" description="耕地占用税税率表" table-name="pol_taxrate" field-code="rowid" field-value="taxrate" filter="taxcode='200101'"/>
+	<!--云南地税代码表新增 END -->
+	
+	<!-- 云南地税二期 预开发新增 begain -->
+	<code name="bankAccountTypecode" description="银行账户类型" table-name="COD_BANKACCOUNTUSEFLAGCODE" field-code="bankaccountuseflagcode" field-value="bankaccountuseflagname" filter="valid='01'" />
+	<code name="gzxjlbcode" description="工资薪金类别" table-name="dm_gzxjlb" field-code="gzxjlb_dm" field-value="gzxjlb_mc" filter="valid='1'" />
+	<code name="xtszcode" description="系统设置参数" table-name="dm_xtsz" field-code="xtsz_dm" field-value="xtsz_vl" filter="valid='1'" />
+	<code name="taxtypecodeExt_Sb2" description="社保费费种字典表" table-name="f_cod_feeitem" field-code="fitemcode" field-value="fitemname" filter="node='02' and valid='01' "/>
+	<code name="adminareacode" description="银行所属区域字典表" table-name="cod_adminareacode" field-code="adminareacode" field-value="adminareaname" filter="node='00' and valid='01' "/>
+	<code name="khyhcode"  description="银行代码--名称字典表" table-name="COD_BANKCODE" field-code="BANKCODE" field-value="BANKNAME||'@'||ADMINAREACODE" filter="valid='01'"/>	
+	<code name="sshycode"  description="所属行业代码" table-name="COD_CALLINGCODE2012" field-code="CALLINGCODE" field-value="CALLINGNAME||'@'||type" filter="node='03' and valid='01'"/>	
+	<code name="newsshycode"  description="所属行业代码[去掉特殊@]" table-name="COD_CALLINGCODE2012" field-code="CALLINGCODE" field-value="CALLINGNAME" filter="node='03' and valid='01'"/>	
+	
+	<code name="jfrdwlxcode"  description="缴费人单位类型代码" table-name="F_COD_PROPERTYPE" field-code="propertypecode" field-value="propertypename" filter="node='01'"/>	
+	<code name="jfrlxcode"  description="缴费人类型代码" table-name="F_COD_FEEPAYERTYPE" field-code="feepayertypecode" field-value="feepayertypename" filter="valid='01'"/>
+	<code name ="fpzlCode" description="发票种类" table-name="COD_FPZL" field-code="invoicecode" field-value="invoicename" filter="valid='01'"/>
+	
+	<!-- 云南地税无，后期删除 -->
+	<code name="taxpayertypecode" description="单位性质（税务登记）" table-name="tc_reg_taxpayertype" field-code="TAXPAYERTYPECODE" field-value="TAXCHECKTABLEBIGTYPECODE||'@'||TAXPAYERTYPENAME" filter="CHOICEFLAG='1'"/>
+	            
+	<code name="gszzCode" description="证照名称-税务登记" table-name="COD_BUSILICENCETYPECODE" field-code="busilicencetypecode" field-value="rtrim(busilicencetypename)" filter="valid='01'" />
+	<code name="dwxzCode" description="单位性质-税务登记" table-name="COD_PROPERTYPECODE " field-code="rtrim(propertypecode)" field-value="rtrim(propertypename)" filter="valid='01'" />
+	<code name="zjfsCode" description="折旧方式-税务登记" table-name="COD_DEPRECIATIONMODECODE " field-code="depreciationmodecode" field-value="rtrim(depreciationmodename)" filter="valid='01'" />
+	<code name="gsglbmCode" description="工商管理部门-税务登记" table-name="COD_BUSICHARGEDEPTCODE" field-code="busichargedeptcode" field-value="busichargedeptname" filter="valid='01'" />
+	<code name="ysglxsCode" description="预算管理形式-税务登记" table-name="COD_BUDGETMANAGEMODE" field-code="budgetmanagemodecode" field-value="rtrim(budgetmanagemodename)" filter="valid='01'" />
+	<code name="dztxCode" description="低值易耗品摊销办法-税务登记" table-name="COD_LOWVALUEEAMORTIZECODE" field-code="rtrim(lowvalueamortizecode)" field-value="rtrim(lowvalueamortizename)" filter="value='01'" />
+	<code name="glgxCode" description="关联关系-税务登记" table-name="COD_ORGRELATIONSHIPCODE" field-code="orgrelationshipcode" field-value="rtrim(orgrelationshipname)" filter="valid='01'" />
+	<code name="bbzlCode" description="会计报表种类-税务登记" table-name="COD_ACCREPORTTYPECODE" field-code="accreporttypecode" field-value="rtrim(accreporttypename)" filter="valid='01'" />
+	<code name="zbzlCode" description="账簿种类-税务登记" table-name="COD_ACCBOOKSETCODE" field-code="accbooksetcode" field-value="rtrim(accbooksetname)" filter="valid='01'" />
+	<code name="adminareacode_all" description="所属区域字典表" table-name="cod_adminareacode" field-code="adminareacode" field-value="adminareaname" filter="valid='01' "/>
+
+    <code name="jmxmdmb"  description="减免项目代码表" table-name="COD_DERATECLASSCODE" field-code="DERATECLASSCODE" field-value="DERATECLASSNAME" filter="valid='01'"/>	
+    <code name="jmxmdmb_zylilb"  description="减免项目代码表-综合利用类别" table-name="COD_DERATEZONGHELIYONG" field-code="RESOURCESCATEGORYCLASSIFYCODE" field-value="RESOURCESCATEGORYCLASSIFYNAME" filter="valid='01'"/>	
+    <code name="jmxmdmb_zylixq"  description="减免项目代码表-综合利用详情" table-name="COD_DERATEZONGHELIYONG" field-code="RESOURCESCATEGORYCODE" field-value="RESOURCESCATEGORYNAME" filter="valid='01'"/>	
+    <code name="jmxmdmb_xbdkfmlz"  description="减免项目代码表-西部大开发类别（西部鼓励类目录种）" table-name="COD_DERATEXIBUGULILEI" field-code="westencouragedclasscode" field-value="WESTENCOURAGEDCLASSNAME" filter="valid='01'"/>	
+    <code name="jmxmdmb_xbdkfmll"  description="减免项目代码表-西部大开发类别（西部鼓励类目录类）" table-name="COD_DERATEXIBUGULILEI" field-code="westencouragedcode" field-value="westencouragedname" filter="valid='01'"/>	
+    <code name="jmxmdmb_gxly3"  description="减免项目代码表-高薪领域（高薪领域第三大类）" table-name="COD_DERATEGAOXINLINGYU" field-code="HIGHTECHNOLOGYCODE" field-value="HIGHTECHNOLOGYNAME" filter="valid='01'"/>	
+    <code name="jmxmdmb_gxly2"  description="减免项目代码表-高薪领域（高薪领域第二大类）" table-name="COD_DERATEGAOXINLINGYU" field-code="HIGHTECHNOLOGYCLASSIFYCODE" field-value="HIGHTECHNOLOGYCLASSIFYNAME" filter="valid='01'"/>
+    <code name="jmxmdmb_gxly1"  description="减免项目代码表-高薪领域（高薪领域第一大类）" table-name="COD_DERATEGAOXINLINGYU" field-code="HIGHTECHNOLOGYHEADCODE" field-value="HIGHTECHNOLOGYHEADNAME" filter="valid='01'"/>
+    <code name="jmxmdmb_sblx"  description="减免项目代码表-设备类型" table-name="COD_DERATEZHUANYONGSHEBEI" field-code="DIRECTORYCATEGORYCLASSIFYCODE" field-value="DIRECTORYCATEGORYCLASSIFYNAME" filter="valid='01'"/>
+    <code name="jmxmdmb_sbxq"  description="减免项目代码表-设备详情" table-name="COD_DERATEZHUANYONGSHEBEI" field-code="DIRECTORYCATEGORYCODE" field-value="DIRECTORYCATEGORYNAME" filter="valid='01'"/>
+    
+	<code name="closeReasoncode" description="注销原因" table-name="TC_Reg_CloseReason" field-code="closereasoncode" field-value="closereasonname" filter="choiceflag='1'" />
+
+	<code name="adminareacode_fxsb" description="分项申报所属区域字典表" table-name="cod_adminareacode" field-code="adminareacode" field-value="adminareaname||'@'||fxsb" filter="valid='01'"/>
+
+	<!-- 
+	<code name="managetradecode" description="国民经济行业" table-name="tc_pub_managetrade" field-code="managecode" field-value="managetradename" filter="choiceflag='1'" />
+	<code name="unitCharactercode" description="单位性质" table-name="tc_reg_UnitCharacter" field-code="unitcharacter" field-value="unitcharactername" filter="choiceflag='1'" />
+	<code name="floatTypecode" description="筹资方式" table-name="tc_reg_FloatType" field-code="floattypecode" field-value="floattypename" filter="choiceflag='1'" />
+	<code name="bursarAccountModecode" description="会计电算化方式" table-name="TC_Reg_BursarAccountMode" field-code="bursaraccountmodecode" field-value="bursaraccountmodename" filter="choiceflag='1'" />
+	<code name="certIssueOrgcode" description="颁发机关" table-name="TC_Reg_CertIssueOrg" field-code="issueorgcode" field-value="issueorgname" filter="choiceflag='1'" />
+	<code name="certTypecode" description="证照类型" table-name="Tc_Reg_CertType" field-code="certtypecode" field-value="certtypename" filter="choiceflag='1'" />
+	<code name="buildAccountTypecode" description="建帐类别" table-name="TC_Reg_BuildAccountType" field-code="buildaccounttypecode" field-value="buildaccounttypename" filter="choiceflag='1'" />
+	<code name="temporarilyBookTypecode" description="临时登记类型" table-name="TC_Reg_TemporarilyBookType" field-code="temporarilybooktypecode" field-value="temporarilybooktypename" filter="choiceflag='1'" />
+	<code name="bankAccountQutcode" description="银行账户性质" table-name="Tc_Reg_BankAccountQut" field-code="bankaccountqutcode" field-value="bankaccountqutname" filter="choiceflag='1'" />
+	<code name="soclaborgdept"  description="社保社保经办机构字典表" table-name="Tc_Soc_LabOrgDept" field-code="orgcode" field-value="orgname||'@'||taxtypecode" filter="choiceflag=1 AND taxtypecode in('83','84','85','86','87')  "/>
+	<code name="derateitaxitemcode" description="减免依据" table-name="TC_Reg_DerateTaxItem" field-code="deratetaxitemcode" field-value="deratetaxitemname||'@'||taxtypecode" filter="choiceflag='1'" />
+	<code name="closeReasoncode" description="注销原因" table-name="TC_Reg_CloseReason" field-code="closereasoncode" field-value="closereasonname" filter="choiceflag='1'" />
+	 -->
+	<!-- 云南地税二期 预开发新增   END -->
+</codetable>

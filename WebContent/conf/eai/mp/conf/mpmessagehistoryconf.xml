@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--***********************dao configuration*********************************************** -->
+	<bean id="mpMessageHistoryDao" class="org.loushang.eai.mp.dao.jdbc.MpMessageHistoryJdbcDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<!--***********************domain configuration******************************************** -->
+
+	<bean id="mpMessageHistoryDomain"
+		class="org.loushang.eai.mp.domain.support.MpMessageHistoryDomainImpl">
+		<property name="mpMessageHistoryDao">
+			<ref bean="mpMessageHistoryDao" />
+		</property>
+		<property name="mpMessageHospitalDomain">
+			<ref bean="mpMessageHospitalDomain" />
+		</property>
+	</bean>
+	<!--***********************service configuration******************************************* -->
+
+	<bean id="mpMessageHistoryService"
+		class="org.loushang.eai.mp.service.support.MpMessageHistoryServiceImpl">
+		<property name="mpMessageHistoryDomain">
+			<ref bean="mpMessageHistoryDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+
+
+	<!--***********************Flip initialization special query configuration 
+		begin****************************************** -->
+	<bean id="mpmessagehistoryquery_page_init"
+		class="org.loushang.eai.mp.query.MpMessageHistoryQueryPageInitCmd">
+		<property name="mpMessageHistoryService">
+			<ref bean="mpMessageHistoryService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="speQuery">
+					<ref bean="mpmessagehistoryqueryforward" />
+				</entry>
+			</map>
+		</property>
+		<property name="parameters">
+			<map>
+				<entry key="msg_type_codeSearch">
+					<value>-1</value>
+				</entry>
+				<entry key="subjectSearch">
+					<value></value>
+				</entry>
+			</map>
+		</property>
+		<property name="refparameters">
+			<map>
+				<entry key="beginTime">
+					<value>org.loushang.eai.ref.DateBeginParameters</value>
+				</entry>
+				<entry key="endTime">
+					<value>org.loushang.eai.ref.DateNowParameters</value>
+				</entry>
+			</map>
+		</property>
+		<property name="beforIntercept">
+			<list>
+				<ref bean="mpmessagehistory_interceptor" />
+			</list>
+		</property>
+	</bean>
+	<!--***********************Flip initialization special query configuration 
+		end****************************************** -->
+	<!--***********************query page forward configuration begin*********************************** -->
+	<bean id="mpmessagehistoryqueryforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="queryPageInit">jsp/eai/mp/mp_message_history_query_init.jsp</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!--***********************query page forward configuration end*********************************** -->
+
+	<!--***********************view objects view configuration**************************************** -->
+	<bean id="mpMessageHistoryView" class="org.loushang.eai.mp.view.MpMessageHistoryView"
+		singleton="false" />
+
+	<!--***********************cmd configuration begin********************************************* -->
+	<bean id="mpmessagehistory" class="org.loushang.eai.mp.cmd.MpMessageHistoryCmd"
+		singleton="false">
+		<property name="mpMessageHistoryService">
+			<ref bean="mpMessageHistoryService" />
+		</property>
+		<property name="view">
+			<ref bean="mpMessageHistoryView" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="mpmessagehistoryView">
+					<ref bean="mpmessagehistoryforward" />
+				</entry>
+				<entry key="mpmessagehistoryViewChain">
+					<ref bean="mpmessagehistoryforwardchain" />
+				</entry>
+			</map>
+		</property>
+		<property name="beforIntercept">
+			<list>
+				<ref bean="mpmessagehistory_interceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<!--***********************cmd configuration end********************************************* -->
+	<bean id="mpmessagehistory_interceptor" class="org.loushang.waf.interceptor.CollectionInterceptor">
+		<property name="collections">
+			<map>
+				<entry key="mpMessageType">
+					<ref bean="mpMessageType" />
+				</entry>
+				<entry key="mpInceptManner">
+					<ref bean="mpInceptManner" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--***********************page forward configuration begin*********************************** -->
+	<bean id="mpmessagehistoryforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="detail">jsp/eai/mp/mp_message_history_detail.jsp</prop>
+				<prop key="forinsert">jsp/eai/mp/mp_message_history_forinsert.jsp</prop>
+				<prop key="forupdate">jsp/eai/mp/mp_message_history_forupdate.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="mpmessagehistoryforwardchain" class="org.loushang.waf.mvc.ChainForward">
+		<property name="mappings">
+			<map>
+				<entry key="success">
+					<ref bean="mpmessagehistoryquery_page_init" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--***********************page forward configuration end*********************************** -->
+</beans>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!--***********************useraudit*********************** -->
+
+	<bean id="userAuditRptDomain" class="com.v6.portal.cq.useraudit.UserAuditRptDomain"> </bean>
+	<bean id="userAuditRptService" class="com.v6.portal.cq.useraudit.UserAuditRptService"> 
+		<property name="userAuditRptDomain"><ref bean="userAuditRptDomain"/></property>   	
+		<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	</bean>
+	<bean id="userlogonauditreport" class="com.v6.portal.cq.useraudit.UserAuditRptCmd">
+	    <property name="userAuditRptService"><ref bean="userAuditRptService"/></property>
+		<property name="forwards">
+			<map>
+				<entry key="query" value="useraudit/user_logonaudit_query.jsp"/>
+			</map>
+		</property>
+	</bean>
+	<!--***********************useraudit*********************** -->
+</beans>

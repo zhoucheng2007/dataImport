@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+     <bean id="footpath" class="com.v6.portal.footpath.cmd.FootPathCmd" singleton="false">
+     	<property name="forwards">
+	    	<map>
+	        	<entry key="queryPage" value="footpath/index.jsp" />
+			</map>
+		</property>	 
+     </bean>
+</beans>

@@ -1,0 +1,185 @@
+.daiban_div{
+	margin-left:auto;
+	margin-right:auto;
+	width:960px;
+	min-height:800px;
+	
+}
+.daiban_title{
+	height:35px;
+	background:url("../imges/daiban_title.gif") 0px 0px no-repeat;
+}
+.daiban_title_search{
+	height:30px;
+	width:960px;
+	margin-top:-34px;
+}
+.daiban_row{
+	height:90px;
+	width:960px;
+	margin-top:10px;
+}
+.daiban_left{
+	width:111px;
+	height:90px;
+	float:left;
+}
+.daiban_center{
+	width:16px;
+	height:90px;
+	float:left;
+}
+.daiban_right{
+	width:833px;
+	height:90px;
+	float:left;
+}
+.daiban_right_left{
+	width:37px;
+	height:90px;
+	float:left;
+}
+.daiban_right_center{
+	width:706px;
+	height:89px;
+	float:left;
+	border-bottom:dashed #808080 1px;
+}
+.daiban_right_right{
+	width:85px;
+	height:89px;
+	float:left;
+	border-bottom:dashed #808080 1px;
+}
+.daiban_content{
+	width:500px;
+	height:50px;
+	margin-top:20px;
+}
+.daiban_content_time{
+	width:500px;
+	height:20px;
+	font-size:14px;
+	line-height:20px;
+}
+.daiban_content_title{
+	font-family: Verdana, Arial, Helvetica, AppleGothic, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	width:700px;
+	height:30px;
+	line-height:30px;
+}
+.daiban_content_title a{
+	color:black;
+	text-decoration:none;
+}
+.daiban_content_title a:hover{
+	color:#e18376;
+}
+.daiban_left_img_oa{
+	width:59px;
+	height:59px;
+	background:url("../imges/daiban_left_img_oa.gif") 0px 0px no-repeat;
+	margin-top:5px;
+	margin-left:17px;
+}
+.daiban_left_img_sns{
+	width:59px;
+	height:59px;
+	background:url("../imges/daiban_left_img_sns.gif") 0px 0px no-repeat;
+	margin-top:5px;
+	margin-left:17px;
+}
+.daiban_left_img_zr{
+	width:59px;
+	height:59px;
+	background:url("../imges/daiban_left_img_zr.gif") 0px 0px no-repeat;
+	margin-top:5px;
+	margin-left:17px;
+}
+.daiban_left_img_cw{
+	width:59px;
+	height:59px;
+	background:url("../imges/daiban_left_img_cw.png") 0px 0px no-repeat;
+	margin-top:5px;
+	margin-left:17px;
+}
+.daiban_left_img_schedule{
+	width:59px;
+	height:59px;
+	background:url("../imges/daiban_left_img_schedule.gif") 0px 0px no-repeat;
+	margin-top:5px;
+	margin-left:17px;
+}
+.daiban_quanquan{
+	width:16px;
+	height:16px;
+	background:url("../imges/quan.gif") 0px 0px no-repeat;
+}
+.daiban_shuxian{
+	width:6px;
+	height:74px;
+	background-color:#dadada;
+	margin-left:5px;
+}
+.daiban_right_right_btn{
+	width:80px;
+	height:30px;
+	margin-top:30px;
+	background:url("../imges/daiban_right_btn.gif");
+	cursor:pointer;
+}
+.daiban_search_input{
+	height:20px;
+	float:left;
+	margin-top:2px;
+	margin-left:15px;
+	line-height: 20px;
+	display:none;
+}
+.daiban_search_btn{
+	width:32px;
+	height:32px;
+	background:url("../imges/search_btnq.png")  0px 0px no-repeat;
+	float:left;
+	margin-left:5px;
+	display:none;
+}
+.daiban_search_btn:hover{
+	cursor:pointer;
+}
+.daiban_serch_div{
+	width:330px;
+	height:32px;
+	float:right;
+//	margin-right:250px;
+	margin-right:630px;
+}
+.daiban_serch_sel{
+//	height:24px;
+//	float:left;
+//	margin-top:3px;
+//	margin-left:15px;
+//	width:100px;
+	
+	height:32px;
+	float:left;
+	margin-top:1px;
+	margin-left:1px;
+	width:100px;
+	font-size:17px;
+	font-family:Microsoft YaHei;
+}
+.daiban_left_imgname{
+	width:70px;
+	height:21px;
+	margin-left:12px;
+	text-align:center;
+}
+.daibanname{
+	font-family:Microsoft YaHei;
+	font-weight:bold;
+	font-size:12px;
+	
+}

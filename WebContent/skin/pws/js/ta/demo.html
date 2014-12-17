@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="swfobject_2.2.js" type="text/javascript"></script>
+<script>
+	function refreshMapData(){
+		if(confirm("请更改'config.xml'中的数据,已经改完了吗? 这个按钮只有发布到web服务器上才好用,或者使用360浏览器")){
+			document.getElementById("myContent").refreshMapData();
+		}
+	}
+	swfobject.embedSWF("ta.swf", "myContent", "360", "260", "9.0.0", "expressInstall.swf",{xmlPath:"config.xml"});
+</script>
+</head>
+
+<body>
+<div id="myContent">
+</div>
+<input type="button" onclick="refreshMapData();" value="刷新地图数据" />
+</body>
+</html>

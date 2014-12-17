@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+<!--***** query command configuration *****-->
+	<bean id="ann_edit_query_init" class="com.v6.portal.announcementl.AnnEditQueryPageInitCmd">
+	    <property name="annService"><ref bean="annService"/></property>
+	    <property name="forwards">
+	    	<map>
+	        	<entry key="query" value="announcementl/ann_edit_query_init.jsp" />
+			</map>
+		</property>	    
+	    <property name="pageSize"><value>10</value></property>
+	</bean>
+	
+	<bean id="ann_show_query_init" class="com.v6.portal.announcementl.AnnShowQueryPageInitCmd">
+	    <property name="annService"><ref bean="annService"/></property>
+	    <property name="forwards">
+	    	<map>
+	        	<entry key="query" value="announcementl/ann_show_query_init.jsp" />
+			</map>
+		</property>	    
+	    <property name="pageSize"><value>10</value></property>
+	</bean>
+	
+	<bean id="set_ann_status" class="com.v6.portal.announcementl.SetAnnStatusCmd">
+	</bean>
+<!--***** base command configuration *****-->
+     <bean id="annCmd" class="com.v6.portal.announcementl.AnnCmd" singleton="false">
+	    <property name="annService"><ref bean="annService"/></property>
+	    <property name="forwards">
+	    	<map>
+	        	<entry key="forinsert" value="announcementl/ann_forinsert.jsp" />
+	        	<entry key="forupdate" value="announcementl/ann_forupdate.jsp" />
+	        	<entry key="insert" value="ann_edit_query_init.cmd" />
+	        	<entry key="update" value="annCmd.cmd?method=detail" />
+	        	<entry key="detail" value="announcementl/ann_detail.jsp" />
+	        	<entry key="delete" value="ann_edit_query_init.cmd" />
+	        	<entry key="myDetail" value="announcementl/ann_show_detail.jsp" />
+	        	<entry key="forAlertAnn" value="announcementl/for_portal_alert.jsp" />	        	
+			</map>
+		</property>	    
+    </bean>    
+	
+	<bean id="annDomain" class="com.v6.portal.announcementl.AnnDomain"> </bean>
+	<!--***** netty services configuration *****-->
+
+	
+	<bean id="annService" class="com.v6.portal.announcementl.AnnService"> 
+		<property name="annDomain"><ref bean="annDomain"/></property>   	
+		<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	</bean>
+	
+   <bean id="annService.netty" class="com.inspur.hsf.config.spring.proxy.SpringProviderBean">
+		<property name="interfaceName"><value>com.v6.portal.announcementl.IAnnService</value></property>
+		<property name="target"><ref bean="annService"/></property>
+	</bean>
+	
+	
+	
+	
+</beans>
+
+   

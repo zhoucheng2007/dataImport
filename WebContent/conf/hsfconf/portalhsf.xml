@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans> 
+  	<bean id="appPageHsfService.netty" class="com.inspur.hsf.config.spring.proxy.SpringProviderBean">
+		<property name="interfaceName">
+			<value>com.v6.portal.app.IAppPageService</value>
+		</property>
+		<property name="target">
+			<ref bean="appPageService"/>
+		</property>
+	</bean>
+	<bean id="portalScheduleHsfService.netty" class="com.inspur.hsf.config.spring.proxy.SpringProviderBean">
+		<property name="interfaceName">
+			<value>com.v6.portal.schedule.IScheduleService</value>
+		</property>
+		<property name="target">
+			<ref bean="portalScheduleService"/>
+		</property>
+	</bean>
+</beans>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<!--***** domain configuration *****-->
+	<bean id="appPageDomain" class="com.v6.portal.app.AppPageDomainImpl"> 
+	</bean>
+
+<!--***** service configuration *****-->
+	<bean id="appPageService" class="com.v6.portal.app.AppPageServiceImpl">
+		<property name="appPageDomain"><ref bean="appPageDomain"/></property>   	
+		<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	</bean>
+
+</beans>

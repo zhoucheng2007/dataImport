@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	/*background:url(../../usercenter/cqusercenterbg.png) no-repeat;*/
+	font-family:"Î¢ÈíÑÅºÚ","Microsoft YaHei",Verdana,Arial,"simsun","ËÎÌå","Microsoft Sans Serif", "Microsoft Tai Le", "Microsoft Uighur";
+	font-size:12px;
+}
+#headTitle{
+	font-size:14px;
+	font-weight:bold;
+	font-family:"Î¢ÈíÑÅºÚ","Microsoft YaHei",Verdana,Arial,"simsun","ËÎÌå","Microsoft Sans Serif", "Microsoft Tai Le", "Microsoft Uighur";
+}
+#top{
+	height:40px;
+	width:90%;
+}
+#top div{
+	width:200px;
+	margin-top:10px;
+	height:30px
+}
+#middle img{
+	width:280p;
+	height:260px;
+	margin-top:10px;
+	margin-left:80px;
+	margin-bottom:10px;
+}
+#bottom{
+	margin-top:40px;
+	width:75%;
+	height:25px;
+	margin-left:60px;
+}
+#uploadfile{
+	width:260px;
+	height:25px;
+}

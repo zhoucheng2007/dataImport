@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--***********************dao configuration*********************************************** -->
+	<bean id="productDao" class="org.loushang.demo.grid.dao.jdbc.ProductJdbcDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<!--***********************domain configuration******************************************** -->
+
+	<bean id="productDomain" class="org.loushang.demo.grid.domain.support.ProductDomainImpl">
+		<property name="productDao">
+			<ref bean="productDao" />
+		</property>
+	</bean>
+	<!--***********************service configuration******************************************* -->
+
+	<bean id="productService"
+		class="org.loushang.demo.grid.service.support.ProductServiceImpl">
+		<property name="productDomain">
+			<ref bean="productDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+
+
+	<!--***********************Flip initialization special query configuration 
+		begin****************************************** -->
+	<bean id="productquery_page_init" class="org.loushang.demo.grid.query.ProductQueryPageInitCmd">
+		<property name="productService">
+			<ref bean="productService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="speQuery">
+					<ref bean="productqueryforward" />
+				</entry>
+			</map>
+		</property>
+		<property name="beforIntercept">
+			<list>
+				<ref bean="product_interceptor" />
+			</list>
+		</property>
+		<property name="pageSize">
+			<value>10</value>
+		</property>
+	</bean>
+	<!--***********************Flip initialization special query configuration 
+		end****************************************** -->
+	<!--***********************query page forward configuration begin*********************************** -->
+	<bean id="productqueryforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="queryPageInit">jsp/demo/framework/grid/product_query_init.jsp</prop>
+
+			</props>
+		</property>
+	</bean>
+	<!--***********************query page forward configuration end*********************************** -->
+
+	<!--***********************View objects view configuration**************************************** -->
+	<bean id="productView" class="org.loushang.demo.grid.view.ProductView"
+		singleton="false" />
+
+	<!--***********************cmd configuration begin********************************************* -->
+	<bean id="product" class="org.loushang.demo.grid.cmd.ProductCmd"
+		singleton="false">
+		<property name="productService">
+			<ref bean="productService" />
+		</property>
+		<property name="view">
+			<ref bean="productView" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="productView">
+					<ref bean="productforward" />
+				</entry>
+				<entry key="productViewChain">
+					<ref bean="productforwardchain" />
+				</entry>
+			</map>
+		</property>
+		<!--Whether to intercept? -->
+		<property name="beforIntercept">
+			<list>
+				<ref bean="product_interceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="product_interceptor" class="org.loushang.waf.interceptor.CollectionInterceptor">
+		<property name="collections">
+			<map>
+				<entry key="PRODUCT_ITEMLEVEL_COLLECTION">
+					<ref bean="PRODUCT_ITEMLEVEL_COLLECTION" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--***********************cmd configuration end********************************************* -->
+
+	<!--***********************page forward configuration begin*********************************** -->
+	<bean id="productforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="detail">jsp/demo/framework/grid/product_detail.jsp</prop>
+				<prop key="forinsert">jsp/demo/framework/grid/product_forinsert.jsp</prop>
+				<prop key="forupdate">jsp/demo/framework/grid/product_forupdate.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="productforwardchain" class="org.loushang.waf.mvc.ChainForward">
+		<property name="mappings">
+			<map>
+				<entry key="success">
+					<ref bean="productquery_page_init" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--***********************page forward configuration end*********************************** -->
+
+	<bean id="PRODUCT_ITEMLEVEL_COLLECTION" class="org.loushang.waf.data.EnumCollection">
+		<property name="enumName">
+			<value>PRODUCT.ITEMLEVEL</value>
+		</property>
+		<property name="enumService">
+			<ref bean="enumService" />
+		</property>
+	</bean>
+
+</beans>

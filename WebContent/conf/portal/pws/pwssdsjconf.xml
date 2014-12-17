@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+     <bean id="pwssdsj" class="com.v6.portal.pws.sd.PwsMainCmd" singleton="false">
+      <property name="appPageService"><ref bean="appPageService"/></property>
+	    <property name="forwards">
+	    	<map>
+	        	<entry key="goHomePage" value="pws/sd/sdindex.jsp" />
+	        	<entry key="daibanmore" value="pws/sd/more_daiban.jsp" />
+                <entry key="daiyuemore" value="pws/sd/more_daiyue.jsp" />
+                <entry key="liuchengmore" value="pws/sd/more_liucheng.jsp" />
+                <entry key="kaoshimore" value="pws/sd/more_kaoshi.jsp" />
+                <entry key="chengjimore" value="pws/sd/more_chengji.jsp" />
+			</map>
+		</property>	    
+    </bean>    
+ <!--***** domain configuration *****-->
+	<bean id="simpleRepDomain" class="com.v6.portal.pws.sd.portal.SimpleRepDomainImpl"> 
+	</bean>
+
+<!--***** service configuration *****-->
+	<bean id="simpleRepService" class="com.v6.portal.pws.sd.portal.SimpleRepServiceImpl">
+		<property name="simpleRepDomain"><ref bean="simpleRepDomain"/></property>   	
+		<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	</bean>
+  
+    <bean id="coleadersd" class="com.v6.portal.pws.sd.portal.CoLeaderMainCmd" singleton="false">
+     <property name="simpleRepService"><ref bean="simpleRepService"/></property>
+      <property name="coLeaderService"><ref bean="coLeaderService"/></property>
+	    <property name="forwards">
+	    	<map>
+	        	<entry key="queryPage" value="pws/sd/co/coleader.jsp" />
+			</map>
+		</property>	    
+    </bean>
+    
+    
+      <!--***** domain configuration *****-->
+	<bean id="coLeaderDomain" class="com.v6.portal.pws.sd.portal.CoLeaderDomainImpl"> 
+	</bean>
+
+<!--***** service configuration *****-->
+	<bean id="coLeaderService" class="com.v6.portal.pws.sd.portal.CoLeaderServiceImpl">
+		<property name="coLeaderDomain"><ref bean="coLeaderDomain"/></property>   	
+		<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	</bean>
+
+</beans>
+

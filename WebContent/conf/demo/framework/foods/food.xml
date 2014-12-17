@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!--******************************dao configuration**************************************** -->
+	<bean id="xubiaoDao" class="org.loushang.demo.foods.dao.support.XubiaoJdbcDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<bean id="foodDao" class="org.loushang.demo.foods.dao.support.FoodJdbcDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<!--***********************domain configuration******************************************* -->
+
+	<bean id="xubiaoDomain"
+		class="org.loushang.demo.foods.domain.support.XubiaoDomainSupport">
+		<property name="xubiaoDao">
+			<ref bean="xubiaoDao" />
+		</property>
+		<property name="foodDao">
+			<ref bean="foodDao" />
+		</property>
+
+	</bean>
+	<!--**************************Service configuration**************************************** -->
+
+	<bean id="xubiaoService"
+		class="org.loushang.demo.foods.service.support.XubiaoServiceSupport">
+		<property name="xubiaoDomain">
+			<ref bean="xubiaoDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+
+	<!--***********************View objects view configuration***************************************** -->
+	<bean id="xubiaoView" class="org.loushang.demo.foods.view.XubiaoView"
+		singleton="false" />
+
+	<!--***********************cmd configuration begin******************************************** -->
+	<bean id="food" class="org.loushang.demo.foods.cmd.FoodCmd"
+		singleton="false">
+		<property name="xubiaoService">
+			<ref bean="xubiaoService" />
+		</property>
+		<property name="foodDao">
+			<ref bean="foodDao" />
+		</property>
+		<property name="view">
+			<ref bean="xubiaoView" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="foodView">
+					<ref bean="foodforward" />
+				</entry>
+			</map>
+		</property>
+		<property name="pageSize">
+			<value>10</value>
+		</property>
+	</bean>
+	<!--***********************cmd configuration end******************************************** -->
+
+	<!--***********************page forward configuration begin********************************** -->
+	<bean id="foodforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="forupdate">jsp/demo/framework/foods/food_forupdate.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<!--***********************page forward configuration end********************************** -->
+</beans>

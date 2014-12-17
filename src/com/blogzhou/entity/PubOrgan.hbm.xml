@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-9-24 15:31:13 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.blogzhou.entity.PubOrgan" table="PUB_ORGAN" schema="DB2INST1">
+        <id name="organId" type="string">
+            <column name="ORGAN_ID" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="pubOrganType"  type="string">
+            <column name="ORGAN_TYPE" length="10" not-null="true" />
+        </property>
+        <property name="organCode" type="string">
+            <column name="ORGAN_CODE" length="30" not-null="true" unique="true" />
+        </property>
+        <property name="organName" type="string">
+            <column name="ORGAN_NAME" length="80" not-null="true" />
+        </property>
+        <property name="shortName" type="string">
+            <column name="SHORT_NAME" length="40" />
+        </property>
+        <property name="inUse" type="char">
+            <column name="IN_USE" length="1" not-null="true" />
+        </property>
+        <property name="ctime" type="timestamp">
+            <column name="CTIME" length="26" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

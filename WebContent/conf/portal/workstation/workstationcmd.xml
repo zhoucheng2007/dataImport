@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+     <bean id="workstationcmd" class="com.v6.portal.workstation.WorkStationCmd" singleton="false">
+    </bean>    
+ 
+</beans>
+

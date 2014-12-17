@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<!--serverJdbcSupport-->
+<!--In Websphere or Weblogic environment-->
+	<!--myBatis sqlSessionFactory configuration DataCenterDB-->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="configLocation">
+			<value>classpath:configuration.xml</value>
+		</property>
+	</bean>
+
+    <!--myBatis sqlSessionFactory configuration V6 slaveDB     -->
+  <!--  <bean id="hdSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource">
+            <ref bean="hdDataSource" />
+        </property>
+        <property name="configLocation">
+            <value>classpath:configuration.xml</value>
+        </property>
+    </bean>
+ -->
+<!-- In Tomcat environment,jndiName is java:comp/env/jdbc/loushang. -->
+    <!--
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName"><value>java:comp/env/jdbc/v6td</value></property>
+    </bean> 
+    -->
+
+<!-- jdbc  datasource configuration db2   without JNDI -->
+    <!-- -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"><value>com.ibm.db2.jcc.DB2Driver</value></property>
+        <property name="url"><value>jdbc:db2://10.36.98.232:50000/v6db</value></property>
+        <property name="username"><value>db2inst1</value></property>
+        <property name="password"><value>db2inst1</value></property>
+    </bean>
+</beans>

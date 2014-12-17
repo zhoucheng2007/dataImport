@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="cloudsMemoryDomain" class="com.v6.base.cloudsmemory.CloudsMemoryDomain">
+	</bean>
+	<!-- -->
+	<bean id="cloudsMemoryService" class="com.v6.base.cloudsmemory.CloudsMemoryService"
+		singleton="false">
+		<property name="cloudsMemoryDomain">
+			<ref bean="cloudsMemoryDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+</beans>
+
+   

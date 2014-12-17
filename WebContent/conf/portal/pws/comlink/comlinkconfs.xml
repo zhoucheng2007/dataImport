@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <bean id="comLinkDomain" class="com.v6.portal.pws.hn.comlink.ComLinkDomain"> </bean>
+    <bean id="comLinkService" class="com.v6.portal.pws.hn.comlink.ComLinkService"> 
+        <property name="comLinkDomain"><ref bean="comLinkDomain"/></property>     
+        <property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+    </bean>
+
+</beans>

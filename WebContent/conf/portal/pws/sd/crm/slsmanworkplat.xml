@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+     <bean id="SlsmanMainPageCmd" class="com.v6.portal.pws.sd.crm.slsmanworkplat.SlsmanMainPageCmd" singleton="false">
+	    <property name="forwards">
+	    	<map>
+	        	<entry key="queryPage" value="pws/sd/crm/slsmanworkplat/slsman_main_page.jsp" />
+	        	<entry key="goHomePage" value="pws/sd/crm/slsmanworkplat/slsman_main_page.jsp" />
+			</map>
+		</property>	    
+    </bean>
+</beans>
+

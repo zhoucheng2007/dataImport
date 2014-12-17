@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="sTaskInfoDao"
+		class="org.loushang.waf.ext.service.servicetask.ServiceTaskInfoJdbcDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<bean id="sTaskInfoDomain"
+		class="org.loushang.waf.ext.service.servicetask.ServiceTaskInfoDomainImpl">
+		<property name="taskInfoDao">
+			<ref bean="sTaskInfoDao" />
+		</property>
+	</bean>
+	<bean id="sTaskInfoService"
+		class="org.loushang.waf.ext.service.servicetask.ServiceTaskInfoServiceImpl">
+		<property name="taskInfoDomain">
+			<ref bean="sTaskInfoDomain" />
+		</property>
+	</bean>
+	<bean id="servicetaskinfoquery" class="org.loushang.waf.mvc.ServiceTaskInfoQueryCommand"
+		singleton="false">
+		<property name="taskInfoService">
+			<ref bean="sTaskInfoService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="taskinfoview">
+					<ref bean="staskinfoforward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="staskinfoforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="query">/jsp/taskinfo/taskinfo_query.jsp</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

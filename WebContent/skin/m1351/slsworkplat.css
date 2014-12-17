@@ -1,0 +1,590 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*字体和颜色*/
+
+/*
+.t0{
+	font-size: 24px;
+}
+.t1{
+	font-size: 21px;改成 fonts5
+}
+.t2{
+	font-size: 18px;改成fonts6
+}
+.t3{
+	font-size: 17px;改成fonts7
+}
+.t4{
+	font-size: 16px;改成fonts7
+}
+*/
+
+
+.ffb{
+	font-family:"黑体"; 
+}
+.f-bold{
+		font-weight:bold;
+}
+
+/* .fonts1{
+	font-size: 24px;
+}
+.fonts2{
+	font-size: 22px;
+}
+.fonts3{
+	font-size: 20px;
+}
+.fonts4{
+	font-size: 18px;
+}
+.fonts5{
+	font-size: 16px;
+}
+.fonts6{
+	font-size: 14px;
+}
+.fonts7{
+	font-size: 12px;
+}
+.fonts8{
+	font-size: 10px;
+} */
+
+.fonts1{
+	font-size: 1.5em;
+}
+.fonts2{
+	font-size: 1.375em;
+}
+.fonts3{
+	font-size: 1.25em;
+}
+.fonts4{
+	font-size: 1.125em;
+}
+.fonts5{
+	font-size: 1em;
+}
+.fonts6{
+	font-size: 0.875em;
+}
+.fonts7{
+	font-size: 0.75em;
+}
+.fonts8{
+	font-size: 0.625em;
+}
+
+.color-000{
+		color: #000;
+}
+.color-f00{
+		color: #F00;
+}
+.color-009245{
+		color: #009245;
+}
+.color-c1272d{
+		color: #C1272D;
+}
+.color-ccc{
+		color: #CCC;
+}
+.color-888{
+		color: #888;
+}
+.color-fff{
+		color: #FFF;
+}
+.color-f96b28{
+		color:#F96B28;
+}
+.color-b3b3b3{
+		color:#b3b3b3;
+}
+.color-4d4d4d{
+		color:#4d4d4d;
+}
+
+/* 模板样式*/
+
+body {
+	-webkit-text-size-adjust: none;
+	
+	background-color: #F0F0F0;
+	min-width: 320px;
+	margin: 0;
+	padding: 0;
+	font-family: "microsoft yahei", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #4D4D4D;
+}
+
+.table {
+	padding: 0;
+	margin: 3% 3%;
+	background-color: white;
+	-webkit-border-radius: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+
+.subtitle{
+	text-align:left;
+	height:34px;
+	width:100%;
+	/* font-size: 16px; */
+    font-size: 1em; 
+   /* background-image:url(sls/subtitle.png); 
+   	  background-repeat: repeat-x; 
+   */
+      background-image:-webkit-gradient(linear,0% 0%,0% 100%,
+				color-stop(0,#145A96),
+				color-stop(0.4,#2979BB),
+				color-stop(1,#2979B6));
+    line-height:34px;
+	font-weight:bold;
+	font-family:"黑体";
+	 color: #FFF;
+}
+
+.button {
+	 border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+   	-webkit-border-radius: 2px;
+  	-moz-border-radius: 2px ;
+ 	border-radius: 2px ;
+    color: #fff  ;
+    cursor: pointer;
+    display: inline-block;
+    outline:none;
+    font-weight: bold;
+    line-height: 1;
+    overflow: visible;
+    padding: 5% 41% 4% 41%;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25); 
+    /* font-size: 20px; */
+    font-size: 1.25em;
+    background-image: linear-gradient(bottom, #f96b28 100%,  #f7a134 0%);
+     background-image: -moz-linear-gradient(top, #f96b28,#f96b28,#f7a134,#f7a134);
+     background-image: -webkit-gradient(linear, left top, left bottom, from(#f7a134), to(#f96b28));
+}
+/* .button:hover {
+	background-image: -moz-linear-gradient(top, #f7a134,#f7a134,#f96b28,#f96b28); 
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f96b28), to(#f7a134));
+    background-image: linear-gradient(bottom, #f96b28 100%,  #f7a134 0%);
+} */
+
+
+/*xmw增加*/
+/*带表头的表格样式*/
+.headTable {
+	border-collapse:collapse;
+	border-spacing:0;
+	text-align:center;
+}
+.headTable thead{
+	border:0; 
+	background-color:#ccc;
+	color:#4d4d4d;
+}
+.headTable thead tr {
+	height: 34px;
+}
+.headTable tbody tr{
+	border-bottom: 1px #BEBEBE;
+    border-bottom: 2px outset #FFFFFF;
+    height: 60px;
+}
+.headTable tbody tr th{
+	border-right:1px #BEBEBE;
+	border-right:2px outset #FFFFFF;
+}
+.headTable tbody tr:nth-child(even) {
+  background-color: #E6E6E6;
+}
+
+
+/*信息采集页面样式*/
+.cgt_detail table {
+	border-collapse:collapse;
+}
+.cgt_detail table tr {
+	height:60px;
+	border-top:1px #BEBEBE;
+	border-top:2px outset #FFFFFF;
+}
+.cgt_detail table tr .rightBorder{
+	border-right:1px #BEBEBE;
+	border-right:2px outset #FFFFFF;
+	
+}
+
+.cgt_detail table input[type="tel"] {
+	/* font-size:18px; */
+	font-size:1.125em;
+	width: 66px;
+	border: 1px solid #E5E5E5;
+}
+
+
+/* 常用样式 */
+
+a {
+	text-decoration: none;
+	color: #67738A;
+}
+
+img,img a {
+	border: 0;
+	vertical-align: middle;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.h-line{
+	border-top:1px solid #D2D2D2;
+	border-bottom:1px inset #FFFFFF;
+}
+
+
+
+
+
+/* 个性化样式 */
+
+table .label-r {
+	text-align: right;
+}
+
+table .label-l {
+	text-align: left;
+	
+}
+
+.sp{  
+	overflow: hidden;  
+	white-space:nowrap;  
+	text-overflow:ellipsis;  
+ }
+
+
+/*标题栏 头标题*/
+.header1 {
+	border-bottom: 1px #286eab solid;
+	display: block;
+ 	position: fixed;  
+ 	top: 0px; 
+ 	left: 0px; 
+	height: 49px; 
+	color: #fff;
+	background:#2697DB; 
+	overflow: hidden;
+	font-weight:bold;
+	padding: 0px;
+	width: 100%;
+	z-index:99999;
+}
+.hidheader {
+	width: 100%;
+/* 	background: url("/skin/m1351/sls/lan1.png") repeat-x; */
+	height: 49px;
+}
+.header1 .back {
+	position: absolute;
+	top: 3px;
+	left: 5px;
+	margin-top:0px;
+	padding: 0px;
+	width: 56px;
+	height: 44px;
+	text-align: left;
+	z-index: 2;
+}
+.header1 .arr_l {
+	position: absolute; 
+	left: 61px;
+	line-height: 49px;
+	width: 10%;
+	height: 100%;
+	text-align: right;
+ 	z-index: 1; 
+}
+.header1 .header_tittle {
+	position: absolute;
+	left:0px;
+	top:0px;
+	text-align: center;
+	width: 100%;
+	/* font-size: 20px; */
+	font-size: 1.25em;
+	line-height: 49px;
+}
+.header1 .arr_r {
+	line-height: 49px;
+	position: absolute;
+	right: 61px;
+	text-align: left;
+	width: 10%;
+	height: 100%;
+	z-index: 1;
+}
+.header1 .save { 
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	height: 44px;
+	width: 56px;
+	text-align: right;
+	z-index: 1;
+ } 
+.header1 .save .right_tittle { 
+ 	 position:absolute; 
+ 	 width:100%; 
+   	 height:100%; 
+	 right:0px;
+ 	 top:0px;
+ 	 text-align: center;
+ 	 overflow:hidden;
+ 	 /* font-size: 18px; */
+ 	 font-size: 1.125em;
+ 	 line-height: 43px;
+ 	 z-index: 1;
+ } 
+
+
+
+
+
+
+
+
+
+
+
+
+/* 头标题*/
+/* .header {
+	display: block;
+	position: relative;
+	height: 65px;
+	line-height: 65px;
+	color: #fff;
+	background:#2697DB;
+	text-align: right;
+	overflow: hidden;
+	border-bottom: 1px solid #cccccc;
+	font-weight:bold;
+	font-size: 24px;
+}
+
+.header-btn {
+	position: relative;
+}
+
+.header-btn a {
+	display: inline-block;
+	vertical-align: middle;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 5px;
+	color: #fff;
+	font-size: .875em;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	webkit-box-shadow: 0 1px 2px #ccc inset;
+	box-shadow: 0 1px 2px #ccc inset;
+}
+
+.header .logo {
+	width: 54%;
+	text-align: right;
+}
+
+.header .back {
+	color: #fff;
+}
+
+.header .back span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: url(mobile/down.png) 0 0 no-repeat;
+	margin: 0 5px 0 0;
+} */
+
+
+/*单选框和复选框 checkBox *//* Radio Buttons */
+
+input[type='checkbox']
+{
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  background: url("sls/check.png") no-repeat scroll center top transparent;
+  border-radius: 0px;
+  font: inherit;
+  margin:  0 3px 0 7px;
+   text-shadow: 0 1px 0 rgb(240, 240, 240);
+  top:0px; 
+  border:0px solid white;/*去掉黑边  */
+}
+input[type='radio'] {
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  background: url("sls/radio.png") no-repeat scroll center top transparent;
+  border-radius: 0px;
+  border:0px solid white;/*去掉黑边  */
+  font: inherit;
+  margin: 0 3px 0 7px;
+  text-shadow: 0 1px 0 rgb(240, 240, 240);
+  top:0px;
+}
+
+input[type='checkbox'] {
+  bottom: 0px;
+  height: 25px;
+  position: relative;
+  vertical-align: middle;
+  width: 25px;
+}
+
+input[type='radio'] {
+  /* OVERRIDE */
+  border-radius: 100%;
+  bottom: 0px;
+  height: 25px;
+  position: relative;
+  vertical-align: middle;
+  width: 25px;
+}
+
+/* checkbox Checked ********************************************************************/
+
+input[type='checkbox']:checked::before {
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  background: url("sls/checked.png") no-repeat top left transparent;
+  content: '';
+  display: block;
+  height:25px;
+   width: 25px;
+   
+}
+
+input[type='radio']:checked::before {
+   -webkit-appearance: none;
+  -webkit-user-select: none;
+  background: url("sls/radioed.png") no-repeat scroll center bottom transparent;
+  content: '';
+  display: block;
+  height: 25px;
+   width: 25px;
+}
+
+/*checkbox  Hover **********************************************************************
+
+input[type='checkbox']:enabled:hover,
+input[type='radio']:enabled:hover {
+   background-image: -webkit-linear-gradient(#f0f0f0, #f0f0f0 38%, #e0e0e0); 
+   border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12),
+      inset 0 1px 2px rgba(255, 255, 255, 0.95);
+  color: #331899; 
+}*/
+
+/*checkbox  Active *********************************************************************/
+
+input[type='checkbox']:enabled:active,
+input[type='radio']:enabled:active {
+ /*  background-image: -webkit-linear-gradient(#e7e7e7, #e7e7e7 38%, #d7d7d7); */
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/*checkbox  Disabled *******************************************************************/
+
+input[type='checkbox']:disabled,
+input[type='radio']:disabled {
+  opacity: .5;
+}
+
+/* checkbox Focus **********************************************************************/
+
+
+input[type='checkbox']:enabled:focus,
+input[type='radio']:enabled:focus {
+  /* OVERRIDE */
+  -webkit-transition: border-color 200ms;
+  /* We use border color because it follows the border radius (unlike outline).
+   * This is particularly noticeable on mac. */
+  border-color: rgb(77, 144, 254);
+  outline: none;
+}
+
+/* Checkbox/radio helpers ******************************************************
+ *
+ * .checkbox and .radio classes wrap labels. Checkboxes and radios should use
+ * these classes with the markup structure:
+ *
+ *   <div class="checkbox">
+ *     <label>
+ *       <input type="checkbox"></input>
+ *       <span>
+ *     </label>
+ *   </div>
+ */
+
+.checkbox,
+.radio {
+  margin: 0.65em 0.65em;
+}
+
+.checkbox label,
+.radio label {
+  /* Don't expand horizontally: <http://crbug.com/112091>. */
+ display: -webkit-inline-box;
+   margin: 1px 0 0px 0 0;
+}
+
+.checkbox label input ~ span,
+.radio label input ~ span {
+  -webkit-margin-start: 0.6em;
+   border-color: rgb(77, 144, 254);
+   border-wide:2px;
+  /* Make sure long spans wrap at the same horizontal position they start. */
+  display: block;
+}
+
+.checkbox label:hover,
+.radio label:hover {
+  color: black;
+}
+
+label > input[type=checkbox]:disabled ~ span,
+label > input[type=radio]:disabled ~ span {
+  color: #999;
+}
+
+
+
+
+
+
+

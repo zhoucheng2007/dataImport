@@ -1,0 +1,153 @@
+.eu-icon-full_screen,.eu-icon-exit_full_screen,.eu-icon-mini-cancel,.eu-icon-essh,.eu-icon-jfit_logo,.ext-icon-cross,.ext-icon-zoom,.ext-icon-zoom_in,.ext-icon-zoom_out,.eu-icon-next,.eu-icon-gears,.eu-icon-application,.eu-icon-user,.eu-icon-user_red,.eu-icon-lock,.eu-icon-group,.eu-icon-date,.eu-icon-calendar,.eu-icon-bug,.eu-icon-email,.eu-icon-folder,.eu-icon-book,.eu-icon-computer,.eu-icon-database,.eu-icon-disk,.eu-icon-help,.eu-icon-link,.eu-icon-server,.eu-icon-film,.eu-icon-map,.eu-icon-monitor,.eu-icon-printer,.eu-icon-camera,.eu-icon-television,.eu-icon-ipod,.eu-icon-vcard,.eu-icon-world,.eu-icon-chart_bar,.eu-icon-chart_curve,.eu-icon-chart_line,.eu-icon-chart_pie,.eu-icon-back,.eu-icon-filter,.eu-icon-announcement,.eu-icon-msg_more,.eu-icon-star_blue,.eu-icon-star_gray,.eu-icon-star_yellow,.eu-icon-work_blue,.eu-icon-mail_compose,.eu-icon-mail_delete,.eu-icon-mail_delete_complete,.eu-icon-mail_find,.eu-icon-mail_forward,.eu-icon-mail_mark_read,.eu-icon-mail_purple,.eu-icon-mail_reply,.eu-icon-mail_reply_sender,.eu-icon-mail_restore,.eu-icon-mail_send,.eu-icon-mail_send_op,.eu-icon-mail_nuread,.eu-icon-mail_view,.eu-icon-mail_write,.eu-icon-done,.eu-icon-key,.eu-icon-over,.eu-icon-start,.eu-icon-todo,.eu-icon-work{background: url('icons/icon.png') no-repeat;}
+/* 自定义新增图标 */
+.eu-icon-full_screen{ background-position:0px 0px;}
+
+.eu-icon-exit_full_screen { background-position:-26px 0px;}
+
+.eu-icon-mini-cancel { background-position:-130px 0px;}
+
+.eu-icon-essh { background-position:-52px 0px;}
+
+.eu-icon-jfit_logo {background-position:-78px 0px;}
+
+.ext-icon-cross {background-position:0px 26px;}
+
+.ext-icon-zoom {background-position:-26px -26px;}
+
+.ext-icon-zoom_in {background-position:-52px -26px;}
+
+.ext-icon-zoom_out {background-position:-78px -26px;}
+
+.eu-icon-next {background-position:-104px 0px;}
+
+.eu-icon-gears {background-position:0px -52px;}
+
+.eu-icon-application {background-position:-26px -52px;}
+
+.eu-icon-user {background-position:-52px -52px;}
+
+.eu-icon-user_red {background-position:-78px -52px;}
+
+.eu-icon-lock {background-position:-104px -52px;}
+
+.eu-icon-group {background-position:-130px -52px;}
+
+.eu-icon-date {background-position:-156px -52px;}
+
+.eu-icon-calendar {background-position:-182px -52px;}
+
+.eu-icon-bug {background-position:-208px -52px;}
+
+.eu-icon-email {background-position:0px -78px;}
+
+.eu-icon-folder {background-position:-26px -78px;}
+
+.eu-icon-book {background-position:-52px -78px;}
+
+.eu-icon-computer {background-position:-78px -78px;}
+
+.eu-icon-database {background-position:-104px -78px;}
+
+.eu-icon-disk {background-position:-130px -78px;}
+
+.eu-icon-help {background-position:-156px -78px;}
+
+.eu-icon-link {background-position:-182px -78px;}
+
+.eu-icon-server {background-position:-208px -78px;}
+
+.eu-icon-film {background-position:0px -104px;}
+
+.eu-icon-map {background-position:-26px -104px;}
+
+.eu-icon-monitor {background-position:-52px -104px;}
+
+.eu-icon-printer {background-position:-78px -104px;}
+
+.eu-icon-camera {background-position:-104px -104px;}
+
+.eu-icon-television {background-position:-130px -104px;}
+
+.eu-icon-ipod {background-position:-156px -104px;}
+
+.eu-icon-vcard {background-position:-182px -104px;}
+
+.eu-icon-world {background-position:-208px -104px;}
+
+.eu-icon-chart_bar {background-position:0px -130px;}
+
+.eu-icon-chart_curve {background-position:-26px -130px;}
+
+.eu-icon-chart_line {background-position:-52px -130px;}
+
+.eu-icon-chart_pie {background-position:-78px -130px;}
+
+
+
+
+
+
+.eu-icon-back{background-position:0px -156px;}
+
+.eu-icon-filter{background-position:-26px -156px;}
+
+.eu-icon-announcement{background-position:-52px -156px;}
+
+.eu-icon-msg_more{background-position:-78px -156px;}
+
+.eu-icon-star_blue{background-position:-104px -156px;}
+
+.eu-icon-star_gray{background-position:-130px -156px;}
+
+.eu-icon-star_yellow{background-position:-156px -156px;}
+
+.eu-icon-work_blue{background-position:-182px -156px;}
+
+.eu-icon-mail_compose{background-position:-208px -156px;}
+
+.eu-icon-mail_delete{background-position:-234px -156px;}
+
+.eu-icon-mail_delete_complete{background-position:-260px -156px;}
+
+.eu-icon-mail_find{background-position:-286px -156px;}
+
+.eu-icon-mail_forward{background-position:-312px -156px;}
+
+.eu-icon-mail_mark_read{background-position:-338px -156px;}
+
+.eu-icon-mail_purple{background-position:-364px -156px;}
+
+.eu-icon-mail_reply{background-position:-390px -156px;}
+
+.eu-icon-mail_reply_sender{background-position:-416px -156px;}
+
+.eu-icon-mail_restore{background-position:0px -182px;}
+
+.eu-icon-mail_send{background-position:-26px -182px;}
+
+.eu-icon-mail_send_op{background-position:-52px -182px;}
+
+.eu-icon-mail_nuread{background-position:-78px -182px;}
+
+.eu-icon-mail_view{background-position:-104px -182px;}
+
+.eu-icon-mail_write{background-position:-130px -182px;}
+
+.eu-icon-done{background-position:-156px -182px;}
+
+.eu-icon-key{background-position:-182px -182px;}
+
+.eu-icon-over{background-position:-208px -182px;}
+
+.eu-icon-start{background-position:-234px -182px;}
+
+.eu-icon-todo{background-position:-260px -182px;}
+
+.eu-icon-work{background-position:-286px -182px;}
+
+.eu-icon-setting{
+    background:url('icons/setting.png') no-repeat center center;
+}
+.eu-icon-more{
+    background:url('icons/more.png') no-repeat center center;
+}

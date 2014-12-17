@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--***** service configuration ***** -->
+
+	<bean id="incrementDomain" class="com.inspur.hsf.config.spring.proxy.SpringConsumerBean">
+		<property name="interfaceName">
+			<value>com.v6.base.idwithoutbsp.IIncrementDomain</value>
+		</property>
+	</bean>
+
+</beans>

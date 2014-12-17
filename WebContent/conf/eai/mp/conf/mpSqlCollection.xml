@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="mpInceptManner" class="org.loushang.waf.data.SqlCollection">
+		<property name="sql">
+			<value>SELECT RECEIVE_MANNER_CODE,RECEIVE_MANNER_NAME FROM
+				MP_INCEPT_MANNER</value>
+		</property>
+		<property name="ds">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<bean id="mpMessageType" class="org.loushang.waf.data.SqlCollection">
+		<property name="sql">
+			<value>SELECT MSG_TYPE_CODE,MSG_TYPE_NAME FROM MP_MESSAGE_TYPE</value>
+		</property>
+		<property name="ds">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	<bean id="mpSubscriberType" class="org.loushang.waf.data.SqlCollection">
+		<property name="sql">
+			<value>SELECT SUBSCR_TYPE_CODE,SUBSCR_TYPE_NAME FROM
+				MP_SUBSCRIBER_TYPE</value>
+		</property>
+		<property name="ds">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+</beans>

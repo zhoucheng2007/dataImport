@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="v6ReportSaveAsExcelCmd" class="com.v6.base.v6report.saveasexcel.V6ReportSaveAsExcelCmd"
+		singleton="false">
+	</bean>
+</beans>
+    
+    

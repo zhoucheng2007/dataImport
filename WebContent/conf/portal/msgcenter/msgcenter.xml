@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+     <bean id="msgcenterbase" class="com.v6.portal.msgcenter.MsgCenterCmd" singleton="false">
+     	<property name="forwards">
+	    	<map>
+	        	<entry key="queryPageInit" value="msgcenter/index.jsp" />
+			</map>
+		</property>	 
+     </bean>    
+ 
+</beans>
+

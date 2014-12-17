@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--***** service configuration ***** -->
+
+	<bean id="v6CacheService" class="com.inspur.hsf.config.spring.proxy.SpringConsumerBean">
+		<property name="interfaceName">
+			<value>com.v6.base.cache.ICacheService</value>
+		</property>
+
+	</bean>
+
+	<bean id="v6CacheClientService" class="com.v6.base.cache.CacheClientService">
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+
+	<!--***** 高速服务配置 ***** -->
+	<bean id="v6cacheclient.netty" class="com.inspur.hsf.config.spring.proxy.SpringProviderBean">
+		<property name="interfaceName">
+			<value>com.v6.base.cache.ICacheClientService</value>
+		</property>
+		<property name="target">
+			<ref bean="v6CacheClientService" />
+		</property>
+	</bean>
+
+</beans>

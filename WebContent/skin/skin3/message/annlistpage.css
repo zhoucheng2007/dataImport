@@ -1,0 +1,20 @@
+ .noread-statue-mail{
+   line-height:30px;
+   width:30px;
+   height:12px;
+   background:url(mail01.png) center no-repeat;
+   display:inline-block;   
+ }
+.read-statue-mail{
+   line-height:30px;
+   width:30px;
+   height:12px;
+   display:inline-block;  
+   background:url(mail02.png) center no-repeat;
+ }
+.ann-title-icon{
+   display:inline-block;
+   width:14px;
+   height:14px;
+   background:url() center no-repeat;
+}

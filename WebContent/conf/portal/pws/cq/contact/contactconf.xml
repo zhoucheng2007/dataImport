@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean id="queryContactCommand" class="com.lc.d3.lync.contact.QueryContactCmd" >
+		<property name="contactDaoImpl"><ref bean="contactDaoImpl"/></property>
+		<property name="forwards">
+	        <map>
+	            <entry key="dcmain"><ref bean="dcmainqueryContactforward"/></entry>
+	        </map>
+		</property>
+	</bean>
+	
+	<bean id="contactDaoImpl" class="com.lc.d3.lync.contact.ContactDaoImpl" >
+		<property name="dataSource"><ref bean="lyncDataSource"/></property>
+	</bean>
+	
+	<bean id="dcmainqueryContactforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+	    <property name="mappings">
+			<props>
+			    <prop key="main">jsp/com/lc/d3/lync/contact/contact.jsp</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

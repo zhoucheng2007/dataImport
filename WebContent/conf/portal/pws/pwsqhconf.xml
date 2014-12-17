@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+     <bean id="pwsqh" class="com.v6.portal.pws.qh.PwsMainCmd" singleton="false">
+        <property name="appPageService"><ref bean="appPageService"/></property>
+      
+        <property name="forwards">
+            <map>
+                
+                <entry key="goHomePage" value="pws/qh/index/qhindex.jsp" />
+                <entry key="schedule" value="pws/qh/index/schedule.jsp" />
+                <entry key="daibanmore" value="pws/qh/more_task.jsp" />
+            </map>
+        </property>     
+    </bean>    
+</beans>
+ 

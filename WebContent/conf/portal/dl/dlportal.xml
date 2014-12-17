@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<!--***** domain configuration *****-->
+	<bean id="mainPageDomain" class="com.v6.portal.dl.MainPageDomainImpl"> 
+	</bean>
+
+<!--***** service configuration *****-->
+	<bean id="mainPageService" class="com.v6.portal.dl.MainPageServiceImpl">
+		<property name="mainPageDomain"><ref bean="mainPageDomain"/></property>   	
+		<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	</bean>
+	<bean id="sendMailService" class="com.v6.portal.dl.mail.SendMailServiceImpl">	
+		<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	</bean>
+</beans>

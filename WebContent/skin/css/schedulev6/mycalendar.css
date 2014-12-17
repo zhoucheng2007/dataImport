@@ -1,0 +1,325 @@
+body{
+	background: url(mycalendar/bj.jpg) no-repeat;
+}
+.container-content{
+	width: 1105px;
+	margin: 10px  auto;
+}
+.calendar-bar{
+	float: left;
+	width: 190px;
+}
+
+#calendar {
+	font-size: 14px;
+	width: 900px;
+	float: right;
+}
+.calendar-bar .createBottom{
+	width: 152px;
+	height: 30px;
+	margin-left:20px;
+	background: url(mycalendar/create01.png) no-repeat;
+}
+.calendar-bar .createBottom:hover{
+	background: url(mycalendar/create02.png) no-repeat;
+}
+.calendar-bar .topline{
+	background: url(mycalendar/topline.png) repeat-x ;
+	height: 2px;
+	margin-top: 5px;
+}
+.calendar-bar .titlebar{
+	height: 23px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.calendar-bar .titlebar s{
+	height:13px;
+	width:13px;
+	background: url(mycalendar/openac01.png) no-repeat;
+	float: left;
+}
+.calendar-bar .titlebar b{
+	height:13px;
+	width:13px;
+	background: url(mycalendar/openba02.png) no-repeat;
+	float: right;
+}
+.calendar-bar .cloes s{
+	background: url(mycalendar/openac02.png) no-repeat;
+}
+.calendar-bar .cloes b{
+	background: url(mycalendar/openba01.png) no-repeat;
+}
+.calendar-bar .titlebar span{
+	font-size: 14px;
+	font-weight:bold;
+}
+.calendar-bar .schsearch{
+	height: 24px;
+	border: 1px #d3d3d3 solid;
+	background-color: #fff;
+}
+.calendar-bar .schsearch input{
+	width: 140px;
+	border: 0;
+	float: left;
+}
+.calendar-bar .schsearch div{
+	width: 15px;
+	height: 15px;
+	background: url(mycalendar/shsearch.png) no-repeat;
+	float: right;
+	margin: 5px 5px 0 0;
+	cursor: pointer;
+}
+.calendar-bar ul li{
+	height:24px;
+	line-height:24px;
+	background: url(mycalendar/lidian.png) no-repeat;
+	background-position: 3px 10px;
+	color: #0d7cc1;
+}
+.calendar-bar ul li span{
+	float: left;
+	margin-left: 10px;
+}
+.calendar-bar ul li div{
+	float: left;
+	width: 120px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-left: 5px;
+}
+.calendar-bar .othersch{
+	height: 24px;
+	border: 1px #d3d3d3 solid;
+	background-color: #fff;
+}
+.calendar-bar .othersch input{
+	width: 140px;
+	border: 0;
+	float: left;
+}
+.calendar-bar .othersch div{
+	width: 15px;
+	height: 15px;
+	background: url(mycalendar/manico.png) no-repeat;
+	float: right;
+	margin: 5px 5px 0 0;
+	cursor: pointer;
+}
+#txtCalendarName{
+	background: url(mycalendar/slogo.png) no-repeat;
+	padding-left: 22px;
+	background-position: 0px 8px;
+	background-color: #fff;
+}
+#txtAddress{
+	background: url(mycalendar/place.png) no-repeat;
+	padding-left: 22px;
+	background-position: 0px 8px;
+	background-color: #fff;
+}
+#txtDesc{
+	height: 36px;
+	overflow-y:auto;
+	background: url(mycalendar/illus.png) no-repeat;
+	padding-left: 22px;
+	background-position: 0px 8px;
+	background-color: #fff;
+}
+.pubdivepick{
+	margin-top: 5px;
+}
+#diatopTitle{
+	position:absolute;
+	width:330px;
+	height:270px;
+	background:#fff;
+	z-index:12;
+	overflow:hidden;
+	border:1px #e0e0e0 solid;
+	box-shadow:0 0 14px #bababa;
+	-webkit-box-shadow:0 0 14px #bababa;
+	-moz-box-shadow:0 0 14px #bababa;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px
+	}
+#diatopTitle>div{
+	margin-left: 10px;
+}
+#diatopTitle .detailtitle{
+	font-weight: bold;
+	height: 35px;
+	line-height: 34px;
+}
+#diatopTitle .detailtime{
+	height: 35px;
+}
+#diatopTitle .detailplace{
+	height: 35px;
+}
+#diatopTitle .detailman{
+	height: 50px;
+}
+#diatopTitle .detailexp{
+	height: 35px;
+}
+#diatopTitle .detailaction{
+	height: 42px;
+	line-height: 42px;
+	width: 300px;
+	font-weight:bold;
+	margin: 0px auto;
+	border-top: 1px #d4e5f6 solid;
+}
+.dialogclose{
+	float: right;
+	width: 13px;
+	height: 10px;
+	background: url(mycalendar/chargeClose_x.png) no-repeat;
+	
+}
+.dialogclose:hover{
+	background-position: 0px -10px;
+}
+.timeul{
+	position: absolute;
+	height: 150px;
+	width: 60px;
+	overflow-y:auto;
+	left: 0px;
+	display: none;
+}
+.timeul ul{
+
+}
+.timeul li{
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+	cursor: pointer;
+}
+.timeul li:hover{
+	background-color:blue;
+	color: #fff;
+}
+.timeul .active{
+	background-color:blue;
+	color: #fff;
+}
+.searchBtnsel{
+    background:url("/skin/skin2/allPicture.png") no-repeat -289px 0px ;
+	display: inline-block;
+	width:27px;
+	height:27px;
+	cursor:pointer;
+	hide-focus: expression(this.hideFocus=true);  /* for ie 5+ */
+	outline: none;  /* for firefox 1.5 + */
+}
+.opLeft{
+	float: left;
+	width: 370px;
+	height:250px;
+	border: 1px #ccc solid;
+}
+.opRight{
+	float: left;
+	width: 275px;
+	height:250px;
+	border: 1px #ccc solid;
+	margin-left: 5px;
+}
+.bartop{
+	height:30px;
+	line-height: 30px;
+	background-color: #eee;
+	text-align: center;
+	border-bottom: 1px #ccc solid;
+}
+.bartop li{
+	width:184px;
+	float: left;
+	cursor: pointer;
+}
+.bartop .active{
+	background-color: #0066cc;
+}
+.letterArea span{
+	color: #0066cc;
+	margin-left: 6px;
+	cursor: pointer;
+}
+.letterArea .both{
+	font-weight: bold;
+	font-size: 20px;
+}
+.userListdiv{
+	height: 190px;
+	overflow-y: scroll; 
+	background-color: #fff;
+}
+.userList li{
+	height: 25px;
+	line-height:25px;
+	position: relative;
+}
+.userList .addaction{ 
+	position: absolute;
+	right: 10px;
+	cursor: pointer;
+}
+.userList .barname{
+	position: absolute;
+	left: 100px;
+}
+.userList .baruserid{
+	margin-left: 5px;
+}
+.userList li:hover{
+	background-color: #bfdbfa;
+}
+.checkuserListdiv{
+	height: 213px;
+	overflow-y: scroll; 
+	background-color: #fff;
+}
+.checkuserList li{
+	height: 25px;
+	line-height:25px;
+	position: relative;
+}
+.checkuserList li:hover{
+	background-color: #bfdbfa;
+}
+.checkuserList .deletecation{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+.checkuserList .barname{
+	position: absolute;
+	left: 130px;
+	
+}
+#gettsdialog{
+	display: none; 
+	font-family:'宋体','Microsoft Yahei','SimSun',sans-serif !important;
+	font-size: 13px;
+}
+#searchBar{
+	height:30px;
+}
+#searchBar LABEL{
+	vertical-align:middle;height:27px;line-height:27px;
+}
+#searchBar INPUT{
+	vertical-align:top;
+}
+#searchBar button{
+	vertical-align:top;width:28px;height:27px;
+}

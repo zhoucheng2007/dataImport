@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!--***** query command configuration ***** -->
+
+	<bean id="autocomplete" class="com.v6.base.autocomplete.AutoCompleteInput">
+		<property name="forwards">
+			<map>
+				<entry key="query" value="" />
+			</map>
+		</property>
+	</bean>
+</beans>

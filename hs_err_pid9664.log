@@ -1,0 +1,135 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1441792 bytes for offset table expansion
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (blockOffsetTable.cpp:83), pid=9664, tid=10856
+#
+# JRE version:  (7.0_71-b14) (build )
+# Java VM: Java HotSpot(TM) Client VM (24.71-b01 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x01921000):  JavaThread "Unknown thread" [_thread_in_vm, id=10856, stack(0x00610000,0x00660000)]
+
+Stack: [0x00610000,0x00660000],  sp=0x0065f83c,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1911e4]
+V  [jvm.dll+0x18aff5]
+V  [jvm.dll+0x79b00]
+V  [jvm.dll+0x7a0a6]
+V  [jvm.dll+0x883fc]
+V  [jvm.dll+0x8fa93]
+V  [jvm.dll+0x88985]
+V  [jvm.dll+0x87473]
+V  [jvm.dll+0x918c3]
+V  [jvm.dll+0x1407f4]
+V  [jvm.dll+0x16341c]
+V  [jvm.dll+0xca7bf]
+C  [javaw.exe+0x13ce]
+C  [javaw.exe+0x1e40]
+C  [javaw.exe+0xa601]
+C  [javaw.exe+0xa68b]
+C  [kernel32.dll+0x4ee1c]
+C  [ntdll.dll+0x637eb]
+C  [ntdll.dll+0x637be]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x01921000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=10856, stack(0x00610000,0x00660000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x009c0000 - 0x009ef000 	D:\Program Files\Java\jdk1.7.0_71\bin\javaw.exe
+0x77740000 - 0x7787c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x77000000 - 0x770d4000 	C:\Windows\system32\kernel32.dll
+0x759e0000 - 0x75a2b000 	C:\Windows\system32\KERNELBASE.dll
+0x75a60000 - 0x75b00000 	C:\Windows\system32\ADVAPI32.dll
+0x75b90000 - 0x75c3c000 	C:\Windows\system32\msvcrt.dll
+0x75fc0000 - 0x75fd9000 	C:\Windows\SYSTEM32\sechost.dll
+0x76c50000 - 0x76cf2000 	C:\Windows\system32\RPCRT4.dll
+0x76f30000 - 0x76ff9000 	C:\Windows\system32\USER32.dll
+0x771b0000 - 0x771fe000 	C:\Windows\system32\GDI32.dll
+0x77880000 - 0x7788a000 	C:\Windows\system32\LPK.dll
+0x76d10000 - 0x76dad000 	C:\Windows\system32\USP10.dll
+0x74540000 - 0x746de000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2\COMCTL32.dll
+0x77360000 - 0x773b7000 	C:\Windows\system32\SHLWAPI.dll
+0x76c30000 - 0x76c4f000 	C:\Windows\system32\IMM32.DLL
+0x75ee0000 - 0x75fac000 	C:\Windows\system32\MSCTF.dll
+0x54a00000 - 0x54abf000 	D:\Program Files\Java\jdk1.7.0_71\jre\bin\msvcr100.dll
+0x54670000 - 0x549f9000 	D:\Program Files\Java\jdk1.7.0_71\jre\bin\client\jvm.dll
+0x6d100000 - 0x6d107000 	C:\Windows\system32\WSOCK32.dll
+0x77170000 - 0x771a5000 	C:\Windows\system32\WS2_32.dll
+0x76d00000 - 0x76d06000 	C:\Windows\system32\NSI.dll
+0x72e70000 - 0x72ea2000 	C:\Windows\system32\WINMM.dll
+0x75c40000 - 0x75c45000 	C:\Windows\system32\PSAPI.DLL
+0x73c40000 - 0x73c4c000 	D:\Program Files\Java\jdk1.7.0_71\jre\bin\verify.dll
+0x67240000 - 0x67260000 	D:\Program Files\Java\jdk1.7.0_71\jre\bin\java.dll
+0x67210000 - 0x6723a000 	D:\Program Files\Java\jdk1.7.0_71\jre\bin\jdwp.dll
+0x71990000 - 0x71997000 	D:\Program Files\Java\jdk1.7.0_71\jre\bin\npt.dll
+0x672c0000 - 0x672d3000 	D:\Program Files\Java\jdk1.7.0_71\jre\bin\zip.dll
+0x6fc20000 - 0x6fd0b000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:63171 -Xms1024M -Xmx1024M -XX:PermSize=256M -XX:MaxPermSize=256M -Dfile.encoding=UTF-8 
+java_command: org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 63169 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -classNames test.springheadannotition.SpringHeadTest
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\Program Files\Java\jdk1.6.0_45
+CLASSPATH=.;D:\Program Files\Java\jdk1.6.0_45\lib;D:\Program Files\Java\jdk1.6.0_45\lib\dt.jar;D:\Program Files\Java\jdk1.6.0_45\lib\tools.jar
+PATH=D:\Program Files\Java\jdk1.7.0_71\jre\bin;D:/Program Files/Java/jdk1.6.0_45/bin/../jre/bin/client;D:/Program Files/Java/jdk1.6.0_45/bin/../jre/bin;D:/Program Files/Java/jdk1.6.0_45/bin/../jre/lib/i386;D:\ruby\bin;C:\Program Files\SepanderSoft;C:\Program Files\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\amd\ATI.ACE\Core-Static;D:\Program Files\TortoiseSVN\bin;D:\Program Files\apache-maven-3.2.1\bin;D:\Program Files\Java\jdk1.6.0_45\bin;C:\Program Files\nodejs\;C:\Users\feng\AppData\Roaming\npm\;D:\Program Files;D:\Program Files\eclipse;
+USERNAME=feng
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 37 Stepping 2, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 3651136k(270232k free), swap 8726976k(1133908k free)
+
+vm_info: Java HotSpot(TM) Client VM (24.71-b01) for windows-x86 JRE (1.7.0_71-b14), built on Sep 26 2014 16:30:49 by "java_re" with unknown MS VC++:1600
+
+time: Tue Nov 25 15:14:12 2014
+elapsed time: 0 seconds
+

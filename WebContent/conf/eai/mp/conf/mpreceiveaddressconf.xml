@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--***********************dao configuration*********************************************** -->
+	<bean id="mpReceiveAddressDao" class="org.loushang.eai.mp.dao.jdbc.MpReceiveAddressJdbcDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<!--***********************domain configuration******************************************** -->
+
+	<bean id="mpReceiveAddressDomain"
+		class="org.loushang.eai.mp.domain.support.MpReceiveAddressDomainImpl">
+		<property name="mpReceiveAddressDao">
+			<ref bean="mpReceiveAddressDao" />
+		</property>
+		<property name="mpReceiveAddressId">
+			<ref bean="mpReceiveAddressId" />
+		</property>
+	</bean>
+	<!--***********************service configuration******************************************* -->
+
+	<bean id="mpReceiveAddressService"
+		class="org.loushang.eai.mp.service.support.MpReceiveAddressServiceImpl">
+		<property name="mpReceiveAddressDomain">
+			<ref bean="mpReceiveAddressDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+
+
+	<!--***********************Flip initialization special query configuration 
+		begin****************************************** -->
+	<bean id="mpreceiveaddressquery_page_init"
+		class="org.loushang.eai.mp.query.MpReceiveAddressQueryPageInitCmd">
+		<property name="mpReceiveAddressService">
+			<ref bean="mpReceiveAddressService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="speQuery">
+					<ref bean="mpreceiveaddressqueryforward" />
+				</entry>
+			</map>
+		</property>
+		<property name="pageSize">
+			<value>10</value>
+		</property>
+		<property name="beforIntercept">
+			<list>
+				<ref bean="mpreceiveaddress_interceptor" />
+			</list>
+		</property>
+	</bean>
+	<!--***********************Flip initialization special query configuration 
+		end****************************************** -->
+	<!--***********************query page forward configuration begin*********************************** -->
+	<bean id="mpreceiveaddressqueryforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="queryPageInit">jsp/eai/mp/mp_receive_address_query_init.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<!--***********************query page forward configuration end*********************************** -->
+
+	<!--***********************view objects view configuration**************************************** -->
+	<bean id="mpReceiveAddressView" class="org.loushang.eai.mp.view.MpReceiveAddressView"
+		singleton="false" />
+
+	<!--***********************cmd configuration begin********************************************* -->
+	<bean id="mpreceiveaddress" class="org.loushang.eai.mp.cmd.MpReceiveAddressCmd"
+		singleton="false">
+		<property name="mpReceiveAddressService">
+			<ref bean="mpReceiveAddressService" />
+		</property>
+		<property name="view">
+			<ref bean="mpReceiveAddressView" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="mpreceiveaddressView">
+					<ref bean="mpreceiveaddressforward" />
+				</entry>
+				<entry key="mpreceiveaddressViewChain">
+					<ref bean="mpreceiveaddressforwardchain" />
+				</entry>
+			</map>
+		</property>
+		<property name="beforIntercept">
+			<list>
+				<ref bean="mpreceiveaddress_interceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<!--***********************cmd configuration end********************************************* -->
+	<bean id="mpreceiveaddress_interceptor" class="org.loushang.waf.interceptor.CollectionInterceptor">
+		<property name="collections">
+			<map>
+				<entry key="mpSubscriberType">
+					<ref bean="mpSubscriberType" />
+				</entry>
+				<entry key="mpInceptManner">
+					<ref bean="mpInceptManner" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--***********************page forward configuration begin*********************************** -->
+	<bean id="mpreceiveaddressforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="detail">jsp/eai/mp/mp_receive_address_detail.jsp</prop>
+				<prop key="forinsert">jsp/eai/mp/mp_receive_address_forinsert.jsp</prop>
+				<prop key="forupdate">jsp/eai/mp/mp_receive_address_forupdate.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="mpreceiveaddressforwardchain" class="org.loushang.waf.mvc.ChainForward">
+		<property name="mappings">
+			<map>
+				<entry key="success">
+					<ref bean="mpreceiveaddressquery_page_init" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--***********************page forward configuration end*********************************** -->
+</beans>

@@ -1,0 +1,3224 @@
+@charset "UTF-8";
+.noPermit { display: none !important }
+.ownPermit { }
+html { overflow-y: scroll }
+body {
+    font-family : "宋体","Microsoft Yahei","SimSun",sans-serif !important;
+    font-size : 13px !important;
+    color: #fffff;
+    background-color:#ffffff;
+    padding-bottom:30px !important;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,
+img { border: 0 ;vertical-align:top;}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+li { list-style: none }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-size: 100% }
+h1 { font-size: 18px }
+h2 { font-size: 16px }
+h3 { font-size: 14px }
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+input,
+button,
+textarea,
+select { *font-size: 100% }
+select,
+input,
+button,
+textarea { font: 100% }
+table {
+    font-size: inherit;
+    font: 100%;
+}
+u { cursor: pointer }
+.hand { cursor: pointer }
+/* layout */
+.layouthead { }
+.layoutcenter {
+    width: 1024px;
+    margin: 0 auto;
+}
+.layoutfoot {
+    width: 100%;
+    background: #9fd1f2;
+    padding-bottom: 20px;
+}
+.layouttdleft {
+    width: 150px;
+    vertical-align: top;
+    background: #d6e8f0;
+}
+.layouttdcenter {
+    width: 800px;
+    width: 830px;/*ie7*/
+    vertical-align: top;
+    align: left;
+}
+.layouttdright {
+    vertical-align: top;
+    align: left;
+} 
+pre,
+code,
+kbd,
+samp,
+tt { }
+small { font-size: 100% }
+
+a {
+    text-decoration: none;
+   /*   padding-bottom: 1px; */
+  /*   border-bottom: 1px solid #36c;  */
+    color: #36c;
+    cursor: pointer;
+}
+
+
+a:hover {
+    color: #f60;
+   /*  border-bottom: 1px solid #f60; */
+    cursor: pointer;
+}
+/* a {
+    text-decoration: none;
+     padding-bottom: 1px;
+    border-bottom: 1px solid #36c;
+    color: #36c;
+    cursor: pointer; 
+}
+a:hover {
+    color: #f60;
+    border-bottom: 1px solid #f60;
+    cursor: pointer;
+} */
+.flexigrid td a {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #747474;
+    color: #343434;
+}
+.flexigrid td a:hover {
+    color: #36c;
+    border-bottom: 1px solid #36c;
+}
+.flexigrid thead a {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border: none;
+    color: #343434;
+}
+.flexigrid thead a:hover {
+    color: #36c;
+    padding-bottom: 1px;
+    border: none;
+}
+abbr,
+acronym {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+ins { text-decoration: none }
+del { text-decoration: line-through }
+hr {
+    color: #D1D7DC;
+    background-color: #D1D7DC;
+    border: none;
+    height: 1px;
+}
+
+
+.baseButton {
+    margin-left: 10px;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    *padding: 6px ; /*ie7*/
+    *padding-left: 8px;
+    nowhitespace: afterproperty;
+    *padding-right: 8px;
+    /*ie7*/
+    display: inline-block;
+    font-size: 12px;
+   /* background-color:rgb(77, 152, 186); */
+    /*background: url("button/bg.png") no-repeat left top;*/
+    vertical-align: middle;
+    border: 0px solid #3eb1f0;
+    color: white;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type='button'],
+input[type='submit'],
+button,
+.abutton {
+	
+	
+   border:0px;
+   
+}
+
+/* input[type='button']:hover,
+input[type='submit']:hover,
+button:hover,
+.abutton:hover {
+   
+    background: #1a94d7;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+ 
+} */
+input[type='text'],textarea{
+	margin-left:10px;
+	padding-left:5px;	
+}
+input[type='text']:focus,textarea:focus{
+	border:1px solid #579d0c;
+    -moz-box-shadow:0px 1px 2px #579d0c inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0px 1px 2px #579d0c inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:0px 1px 2px #579d0c inset;
+}
+.queryTable input[type='text'],.queryTable textarea,.queryTable button,.queryTable select{
+	margin-left:5px;
+}
+label {
+    font-size: 13px;
+    /*line-height: 24px;*/
+    color: #8a8a8a8a;
+    white-sapce: nowrap;
+}
+
+a.help {
+    width: 15px;
+    height: 16px;
+    background: url("flexgrid/bangzhu.png") no-repeat;
+    position: absolute;
+    z-index: 1;
+    margin-top: 6px;
+    margin-left: 6px;
+    border: 0px;
+}
+
+img.expExcel {
+    width: 16px;
+    height: 16px;
+    background: url("flexgrid/excel.jpg") no-repeat;
+    margin-left: 6px;
+    margin-right: 6px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    border: 0;
+}
+
+span.expExcel {
+    width: 16px;
+    height: 16px;
+    background: url("flexgrid/excelNowPage.png") no-repeat;
+    margin-left: 6px;
+    margin-right: 6px;
+    text-align: center;
+    cursor:pointer;
+    display: inline-block;
+    border: 0;
+    vertical-align: middle;
+}
+span.expExcelAll{
+	cursor:pointer;
+    width: 16px;
+    height: 16px;
+    background: url("flexgrid/excelAll.png") no-repeat;
+    margin-left: 6px;
+    margin-right: 6px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    border: 0;
+}
+a.moreQueryCaseIconOpen {
+    width: 51px;
+    height: 18px;
+    float: right;
+    margin-top: 0px;
+    margin-right: 0px;
+     background:url("allPicture.png") no-repeat -563px 0px ;
+    display: inline-block;
+    *margin-left:-10px;/*ie7*/
+    *position:absolute;/*绝对定位是为了几角ie7下float:right会换行的问题*/
+    *top:0px;
+}
+a.moreQueryCaseIconClose {
+    width: 51px;
+    height: 18px;
+    float: right;
+    margin-top: 0px;
+    margin-right: 0px;
+     background:url("allPicture.png") no-repeat -511px 0px ;
+    display: inline-block;
+    *margin-left:-10px;/*ie7*/
+    
+    *position:absolute;/*绝对定位是为了几角ie7下float:right会换行的问题*/
+    *top:0px;
+}
+.moreQueryCaseIconContainer {
+    background: white;
+    height: 6px;
+}
+/* begin query page */
+label.pageLable {
+	background:url("titleMark.png") no-repeat 0px center;
+    font-size: 14px;
+    word-spacing:100px;
+    color:#428000;
+    padding:8px;
+    
+    padding-left:18px;
+    float:left;
+    Letter-spacing:3px;
+    font-weight:bold;
+}
+label.pageMiddleLable {
+	background:url("titleMark.png") no-repeat 0px center;
+    font-size: 14px;
+    word-spacing:100px;
+    color:#428000;
+    padding:8px;
+    margin-left:10px;
+    padding-left:18px;
+    float:left;
+    Letter-spacing:3px;
+    font-weight:bold;
+}
+.left {float: left }
+.right {float: right }
+.aligncenter {text-align: center;}
+.alignleft {text-align: left;}
+.alignright {text-align:right;}
+.divBody {
+    /* 	width: 820px;;*/
+   margin-left:24px;
+   margin-right:24px;
+}
+.illustrateContainer {
+    /* 	width: 820px;;*/
+    margin-left: 30px;
+    margin-top: 50px;
+   /*  color:rgb(168,196,230); */
+   color:#747474;
+}
+
+
+.correlationContainer{
+	
+	
+}
+.correlationIcon{
+	
+	width: 13px;
+    height: 16px;
+    background: url("button/11.png") no-repeat;
+    margin-left: 6px;
+    margin-right: 0px; 
+     margin-top: -8px;
+      
+     text-align: center; 
+    vertical-align: middle;
+     display: inline-block;
+    border: 0; 
+}
+img.correlation:hover
+	{
+	
+	background-position:0px;
+	}
+.correlationKeyContainer{
+	
+	
+}
+.correlationkey	{
+	
+	display:inline-block;
+	margin-left:30px;
+}
+.correlationVertline_Key{
+	
+	display:inline-block;
+	margin-left:10px;
+	padding-left:10px;
+	border-left-width:2px;
+	border-left-style: solid;
+	border-left-color:#747474
+}
+.correlationTable{
+	width:98%;
+    margin-left: 4%;
+    margin-top:10px;
+	
+}
+.text_overflow{
+	width:300px; 
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis; 
+	overflow:hidden;
+	padding:4px 10px 4px 0px;
+}
+
+.text_overflow:hover {
+    color: #3eb1f0;
+    cursor: pointer;
+}
+
+.queryTableContainer {
+    width: 100%;
+    margin-top: 4px;
+    display: inline-block;
+    position:relative;
+    border-top:1px #cdd5e0 solid;
+    color:#343434;
+}
+.queryTableleft {
+    width: 95%;
+    float: left;
+    
+}
+.queryTable{
+    float:left;
+    margin-left:18px;
+    color:#343434;
+    margin-top:5px;
+}
+.queryTable select{
+	height:24px;
+	}
+.deatilTableMore{
+    float:left;
+    margin-left:18px;
+    color:#343434;
+    margin-top:5px;
+}
+.queryTableright {
+    width: 5%;
+    float: right;
+}
+table .queryTable tr {height:35px;}
+table .queryTable tr.cutLineTr{
+  height:25px;
+}
+table .queryLabelTd {
+    text-align: right;
+    height: 35px;
+    white-space: nowrap;
+    padding-left:10px;
+}
+
+table .queryLabelTd:first-child{
+    text-align: right;
+    height: 35px;
+    white-space: nowrap;
+    padding-left:0px;
+}
+table .queryLabelHeadTd {
+    text-align: right;
+    padding-right: 10px;
+    height: 35px;
+}
+table .queryCaseTd {
+    height: 35px;
+    text-align: left;
+    margin-top: 10px;
+}
+.jNiceCheckbox{
+ padding-left:10px;
+}
+.buttonContainer {
+    text-align: right;
+    margin-top: 5px;
+    padding-right:20px;
+}
+.buttonRightContainer {
+    text-align: right;
+    margin-top:16px;
+    height:33px;
+}
+.pageBarContainer {
+    margin-top: 5px;
+    margin-top: 5px\9; /* all ie */
+    border:2px solid white;//fix ie8 9 can't width 100%,be care of white color must set the same with page background,but can't fix ie7,ie7 must make sure only one pageBarContainer sytel div in this jsp
+}
+
+/* end query page */
+u.employee,
+u.item,
+u.cust {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #36c;
+    color: #36c;
+}
+u.employee:hover,
+u.item:hover,
+u.cust:hover {
+    color: #36c;
+    border-bottom: 1px solid #36c;
+}
+.flexigrid u.employee,
+.flexigrid u.item,
+.flexigrid u.cust {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #000;
+    color: #343434;
+}
+.flexigrid u.employee:hover,
+.flexigrid u.item:hover,
+.flexigrid u.cust:hover {
+    text-decoration: none;
+    padding-bottom: 1px;
+    color: #36c;
+    border-bottom: 1px solid #36c;
+}
+a u.employee,
+a u.item a,
+a u.cust a,
+u.employee a,
+u.item a,
+u.cust a {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #36c;
+    color: #36c;
+}
+a u.employee:hover,
+a u.item:hover,
+a u.cust:hover,
+u.employee a:hover,
+u.item a:hover,
+u.cust a:hover {
+    color: #36c;
+    border-bottom: 1px solid #36c;
+}
+.flexigrid  a u.employee,
+.flexigrid a u.item a,
+.flexigrid a u.cust a,
+.flexigrid u.employee a,
+.flexigrid u.item a,
+.flexigrid u.cust a {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 0px solid #000;
+}
+.flexigrid a u.employee:hover,
+.flexigrid a u.item:hover,
+.flexigrid a u.cust:hover,
+.flexigrid u.employee a:hover,
+.flexigrid u.item a:hover,
+.flexigrid u.cust a:hover {
+    color: #36c;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border: none;
+}
+.ui-helper-reset a,
+.ui-helper-reset a:hover { border-bottom: 0px solid #f60 }
+/* begin loading ctrl */
+.loadingImg { background-image: url("loading/icon_waiting.gif") }
+/* end loading ctrl */
+.hengxian {
+    background: url("flexgrid/hengxian.png") repeat;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 40px;
+}
+input.dateImg {
+    background-image: url("datepicker/rili.png");
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+}
+input[type='text'] {
+    width: 140px;
+    height: 23px;
+    line-height: 23px;
+    border: 1px;
+    border-style: double solid  solid solid;
+    /* 	border-style: dotted solid double dashed;  */  
+    /* 	background-color: transparent;  */
+    border-color: #ccc;
+    cursor: default;
+    display: inline;
+    color: #333333;
+    font-size: 13px;
+}
+/*
+input.help{
+    background-image: url("flexgrid/bangzhu.jpg");
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+        overflow:hidden;
+    padding-right:25px;
+    width:115px ;
+   
+}
+*/
+input.help{
+    overflow:hidden;
+    width:140px ;
+    border:0px;
+    margin-left:0px !important;
+}
+.inputHelpDiv{
+   /* background-image: url("flexgrid/bangzhu.jpg");
+    background-position: 98% 50%;
+    background-repeat: no-repeat;*/
+    overflow:hidden;
+    border: 1px;
+    border-style: double solid  solid solid;
+    /* 	border-style: dotted solid double dashed;  */  
+    /* 	background-color: transparent;  */
+    border-color: #ccc;
+    margin-left:10px;
+    padding-right:25px;
+    display:inline-bolck;
+}
+.inputRightHelpDiv{
+  background:url("flexgrid/bangzhu.jpg") no-repeat right 50%;
+  width:25px;
+ position:relative;
+  
+}
+/*editgrid中help图标样式begin*/
+.grid_help{
+    overflow:hidden;
+    wdith:98%;
+    /* 	border-style: dotted solid double dashed;  */  
+    /* 	background-color: transparent;  */
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+}
+.helpImg{
+	background-image: url("flexgrid/bangzhu.jpg");
+	background-position:50%,50%;
+	background-repeat:no-repeat;
+    /* 	border-style: dotted solid double dashed;  */  
+    /* 	background-color: transparent;  
+    display:inline-block;
+    *display:inline;
+    zoom:1;*/ 
+    z-index:22;
+    width:16px;
+    height:20px;
+    top:-22px;
+    position:relative;
+}
+/*editgrid中help图标样式end*/
+/*  RADIO and checkbox  ////////////////////////////////////// */
+.jRadioWrapper {
+    /*float: left; */
+    z-index: 0;
+}
+.jNiceRadio {
+    background: url("selectbox/radio.png") no-repeat top;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    top: -3px;
+    left: 0px;
+}
+.jNiceCheckbox {
+    background: url("selectbox/checkbox.png") no-repeat top;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    top: -3px;
+    left: 0px;
+}
+.ui-multiselect-checkboxes label .jNiceCheckbox {
+    /* fixed multiselect.js in ie7 display a little topper under font-size: 12px */;
+   *top: 4px;
+}
+/*safria chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	.ui-multiselect-checkboxes label .jNiceCheckbox { top: 0px }
+}
+.ui-multiselect-checkboxes,
+.ui-multiselect { font-size: 12px }
+.jNiceChecked { background-position: bottom }
+.jNiceWrapper select {
+    margin: 0px;
+    padding: 0px;
+    border: currentColor;
+}
+.jNiceSelectWrapper {
+    left: 0px;
+    top: 0px;
+    height: 17px;
+    position: absolute;
+    z-index: 2;
+}
+.jNiceWrapper {
+    position: relative;
+    padding-right: 5px;
+    padding-right: 20px\9; /*ie8 9 IE10pp4*/
+    *padding-right: 20px; /*ie7*/
+}
+.jNiceWrapper input { moz-outline: none }
+.jNiceHidden {
+    /* position: absolute;;
+    z-index: -1;*/
+    opacity: 0;
+    /* display: none; */
+    display: \9; /* all ie */
+    width: 0px\9; /* all ie */
+    height: 0px\9; /* all ie */
+}
+/*select combo */
+.ui-multiselect {
+    padding: 2px 0 2px 4px;
+    text-align: left;
+    height:25px;
+}
+.ui-multiselect span.ui-icon { float: right }
+.ui-multiselect-single .ui-multiselect-checkboxes input {
+    position: absolute !important;
+    top: auto !important;
+    left: -9999px;
+}
+.ui-multiselect-single .ui-multiselect-checkboxes label { padding: 5px !important }
+.ui-multiselect-header {
+    margin-bottom: 3px;
+    padding: 3px 0 3px 4px;
+}
+.ui-multiselect-header ul { font-size: 0.9em }
+.ui-multiselect-header ul li {
+    float: left;
+    padding: 0 10px 0 0;
+}
+.ui-multiselect-header a { text-decoration: none }
+.ui-multiselect-header a:hover { text-decoration: underline }
+.ui-multiselect-header span.ui-icon { float: left }
+.ui-multiselect-header li.ui-multiselect-close {
+    float: right;
+    text-align: right;
+    padding-right: 0;
+}
+.ui-multiselect-menu {
+    display: none;
+    padding: 3px;
+    position: absolute;
+    z-index: 10000;
+    text-align: left;
+}
+.ui-multiselect-checkboxes { position: relative /* fixes bug in IE6、7 */; overflow-y:auto }
+.ui-multiselect-checkboxes label {
+    cursor: pointer;
+    display: block;
+    border: 1px solid transparent;
+    padding: 3px 1px;
+}
+.ui-multiselect-checkboxes label input {
+    position: relative;
+    top: 1px;
+}
+.ui-multiselect-checkboxes li {
+    clear: both;
+    font-size: 0.9em;
+    padding-right: 3px;
+}
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid;
+}
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label a {
+    display: block;
+    padding: 3px;
+    margin: 1px 0;
+    text-decoration: none;
+}
+/* remove label borders in IE6 because IE6 does not support transparency */
+.ui-multiselect-checkboxes label { border: none }
+/* fengfeng add begin 20120516  include style.css's content */
+h1,
+h2,
+p { margin: 10px 0 }
+.hidden { visibility: hidden }
+.message {
+    padding: 10px;
+    margin: 15px 0;
+    display: block;
+    text-align: left;
+}
+.message-title {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+.message-body { margin-top: 4px }
+/* .error, .notice, .success { padding:.8em; margin-bottom:1em; border:2px solid #ddd }_NO__DOTCOMMA__AFTER__*/
+/* .error { background:#FBE3E4; color:#8a1f11; border-color:#FBC2C4 }_NO__DOTCOMMA__AFTER__*/
+.notice {
+    background: #FFF6BF;
+    color: #514721;
+    border-color: #FFD324;
+}
+.success {
+    background: #E6EFC2;
+    color: #264409;
+    border-color: #C6D880;
+}
+.error a { color: #8a1f11 }
+.notice a { color: #514721 }
+.success a { color: #264409 }
+/* fengfeng add end 20120516 include style.css's content */
+
+/* fengfeng add begin 20120516 include jquery.multiselect.filter.css's content */
+.ui-multiselect-hasfilter ul {
+    position: relative;
+    top: 2px;
+}
+.ui-multiselect-filter {
+    float: left;
+    margin-right: 10px;
+    font-size: 11px;
+}
+.ui-multiselect-filter input {
+    width: 100px;
+    font-size: 10px;
+    margin-left: 5px;
+    height: 15px;
+    padding: 2px;
+    border: 1px solid #292929;
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+}
+/* fengfeng add end 20120516 include jquery.multiselect.filter.css's content */
+
+/* begin validate contral */
+label.error {
+    background: white;
+    border: 0px;
+    padding: 0px;
+    margin-bottom: 0px;
+    color: red !important;
+    margin-left: 5px !important;
+    display: none;
+}
+.error {
+    background: white;
+    border: 0px;
+    padding: 0px;
+    margin-bottom: 0px;
+    color: red !important;
+    margin-left: 5px !important;
+    display: none;
+}
+/*textarea在校验的时候为空会消失*/
+textarea.error{
+   display: inline;
+   border: 1px;
+   border-style: double solid  solid solid;
+   /* 	border-style: dotted solid double dashed;  */  
+   /* 	background-color: transparent;  */
+   border-color: #ccc;
+}
+/*password在校验的时候为空会消失*/
+input[type='password'].error{
+	 display: inline;
+   border: 1px;
+   border-style: double solid  solid solid;
+   /* 	border-style: dotted solid double dashed;  */  
+   /* 	background-color: transparent;  */
+   border-color: #ccc;
+
+}
+/* end validate contral */
+/* 
+ * jQuery UI Datepicker 1.8.18
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+.ui-datepicker {
+    width: 17em;
+    padding: .2em .2em 0;
+    display: none;
+}
+/*
+ *增加时间组件样式begin
+ *add by zhaowj
+ */
+.ui-datepicker .timepicker-hour{
+position:absolute;
+background:white;
+width:98%;
+font-size:0.95em;
+}
+.ui-datepicker .timepicker-hour table tr td {
+cursor:pointer;
+}
+/*
+ *增加时间组件样式end
+ *add by zhaowj
+ */
+.ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover { top: 1px }
+.ui-datepicker .ui-datepicker-prev { left: 2px }
+.ui-datepicker .ui-datepicker-next { right: 2px }
+.ui-datepicker .ui-datepicker-prev-hover { left: 1px }
+.ui-datepicker .ui-datepicker-next-hover { right: 1px }
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    top: 50%;
+    margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+    font-size: 1em;
+    margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month-year { width: 100% }
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year { width: 49% }
+.ui-datepicker table {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    margin: 0 0 .4em;
+}
+.ui-datepicker th {
+    padding: .7em .3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0;
+}
+.ui-datepicker td {
+    border: 0;
+    padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+    display: block;
+    padding: .2em;
+    text-align: right;
+    text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+    background-image: none;
+    margin: .7em 0 0 0;
+    padding: 0 .2em;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+    float: right;
+    margin: .5em .2em .4em;
+    cursor: pointer;
+    padding: .2em .6em .3em .6em;
+    width: auto;
+    overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float: left }
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi { width: auto }
+.ui-datepicker-multi .ui-datepicker-group { float: left }
+.ui-datepicker-multi .ui-datepicker-group table {
+    width: 95%;
+    margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group { width: 50% }
+.ui-datepicker-multi-3 .ui-datepicker-group { width: 33.3% }
+.ui-datepicker-multi-4 .ui-datepicker-group { width: 25% }
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width: 0 }
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width: 0 }
+.ui-datepicker-multi .ui-datepicker-buttonpane { clear: left }
+.ui-datepicker-row-break {
+    clear: both;
+    width: 100%;
+    font-size: 0em;
+}
+/* RTL support */
+.ui-datepicker-rtl { direction: rtl }
+.ui-datepicker-rtl .ui-datepicker-prev {
+    right: 2px;
+    left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+    left: 2px;
+    right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+    right: 1px;
+    left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+    left: 1px;
+    right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane { clear: right }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float: right }
+.ui-datepicker-rtl .ui-datepicker-group { float: right }
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header {
+    border-right-width: 0;
+    border-left-width: 1px;
+}
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+    border-right-width: 0;
+    border-left-width: 1px;
+}
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.ui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display: block; /*sorry for IE5_NO__DOTCOMMA__AFTER__*/ position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}
+/* 
+alert css
+ */
+#popup_container {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    min-width: 270px; /* Dialog will be no smaller than this */
+    max-width: 600px; /* Dialog will wrap after this width */
+    background: #FFF;
+    border: solid 0px #3EB1F0;
+    color: #000;
+    /*-moz-border-radius: 5px;;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;*/
+}
+#popup_title {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    height: 14px;
+    width: 100%;
+    color: transparent;
+    background: url(alert/title.jpg) repeat 0px bottom;
+    border: solid 0px #FFF;
+    border-bottom: solid 0px #999;
+    cursor: default;
+    padding: 0em;
+    margin: 0em;
+}
+#popup_content {
+    background: 16px 16px no-repeat url(alert/info.gif);
+    padding: 1em 1.75em;
+    margin: 0em;
+}
+#popup_content.alert { background-image: url(alert/important.gif) }
+#popup_content.jsuccess { background-image: url(alert/success.png) }
+#popup_content.jerror { background-image: url(alert/error.png) }
+#popup_content.confirm { background-image: url(alert/important.gif) }
+#popup_content.prompt { background-image: url(alert/help.gif) }
+#popup_message { padding: 12px 5px 10px 48px }
+#popup_panel {
+    text-align: right;
+    margin: 1em 0em 0em 1em;
+}
+#popup_panel input {
+    margin: 0px;
+    padding: 0px;
+    width: 50px;
+    height: 25px;
+}
+#popup_panel input:focus {
+    background: #1a94d7;
+    margin: 0px;
+    padding: 0px;
+    width: 50px;
+    height: 25px;
+}
+#popup_prompt { margin: .5em 0em }
+#popupMaskAlert {
+    position: absolute;
+    z-index: 200;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    /* this hack is so it works in IE: ;
+    * I find setting the color in the css gives me more flexibility : ;
+    * than the PNG solution.: ;*/
+    background-color: transparent;
+    /* this hack is for opera support: ;
+    * you can uncomment the background-image if you don't care about opera.: ;
+    * this gives you the flexibility to use any bg color that you want, instead of the png: ;*/
+    background-image: url("help/maskBG.png"); /*  // For browsers Moz, Opera, etc. */
+    background-repeat: repeat;
+    display: none;
+}
+/**
+ * POPUP CONTAINER STYLES
+ */
+#popupMask {
+    position: fixed;
+    z-index: 1005;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    /* this hack is so it works in IE: ;
+    * I find setting the color in the css gives me more flexibility : ;
+    * than the PNG solution.: ;*/
+    background-color: transparent !important;
+    /* this hack is for opera support: ;
+    * you can uncomment the background-image if you don't care about opera.: ;
+    * this gives you the flexibility to use any bg color that you want, instead of the png: ;*/
+    background-image: url("help/maskBG.png") !important; /* // For browsers Moz, Opera, etc. */
+    background-repeat: repeat;
+    display: none;
+}
+#popupContainer {
+    /* 	opacity: 1; */
+    /* filter: alpha(opacity=100); */
+}
+
+.floatWindowOuter
+{
+    display:none;
+    position:absolute;
+    z-index:11;
+    backgroud:transparent;
+    border:0px solid black;
+}
+.floatWindow
+{
+    width:auto; 
+    height:auto; 
+    border-width:1px;
+    border-color:transparent;
+    border-style: solid;
+}
+
+.floatWindowOnArrow
+{
+    position: absolute;
+    z-index: 100;
+    background-image: url("tagtip/OnArrow.png");
+    background-repeat:no-repeat;
+    background-position: 6px 0px;
+    WIDTH: 30px; 
+    HEIGHT: 10px; 
+}
+
+.floatWindowUnArrow
+{
+    position: absolute;
+    z-index: 100;
+    background-image: url("tagtip/UnArrow.png");
+    background-repeat:no-repeat;
+    background-position: 6px 0px;
+    WIDTH: 30px; 
+    HEIGHT: 10px; 
+ 	margin-top:-2px;
+}
+
+.floatWindowOn
+{
+    margin-TOP: 6px;
+    border-width:3px;
+    border-color:#ededed;
+    border-style: solid;
+}
+
+.floatWindowUn
+{
+    margin-bottom: -2px;
+    border-width:3px;
+    border-color:#ededed;
+    border-style: solid;
+}
+
+.floatWindowBody
+{
+    border-width:1px;
+    border-color:#cccccc;
+    border-style: solid;
+    BACKGROUND-COLOR: #ffffff; 
+}
+.content-main{
+	margin: 0px auto;
+}
+.content-center{
+	height:auto;
+	font-family : "SimSun",sans-serif;
+    font-size : 12px;
+	color: #333333;
+}
+.content-center>div{
+	width: 304px;
+}
+.content-con .spliter{
+	margin-left:10px;
+	margin-right:10px;
+}
+#top-disc{
+	width: 100%;
+	height: 100px;
+}
+#top-disc s{
+	width:64px;
+	height:64px;
+	margin-left:10px;
+	margin-top:5px;
+	float: left;
+}
+#top-disc>div{
+	width: 215px;
+	float: right;
+}
+#top-disc>div>div{
+	line-height: 25px;
+}
+#top-disc .position{
+	width:13px;
+	height:25px;
+	background:url(tagtip/position.png);
+	position: absolute;
+	margin-top: 3px;
+	cursor:pointer;
+}
+#top-disc .name{
+	color: #0a8cd2;
+}
+#top-disc img{
+	position: absolute;
+	top: 5px;
+}
+#cen-disc{
+	padding-left: 20px;
+}
+#cen-disc div{
+	height: 25px;
+	line-height: 25px;
+}
+#cen-disc .date span{
+	float: left;
+}
+#cen-disc .date b{
+	width:20px;
+	height:24px;
+	background:url(tagtip/sgb.png);
+	margin-left:10px;
+	float: left;
+	cursor:pointer;
+}
+#cen-disc ul{
+	height: 25px;
+}
+#cen-disc ul li{
+	float: left;
+	line-height: 25px;
+	margin-right: 10px;
+}
+#foo-link{
+	padding-left: 20px;
+	padding-bottom:10px;
+}
+#foo-link ul{
+	height: 25px;
+}
+#foo-link ul li{
+	float: left;
+	line-height: 25px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* Rule 2 of css/1.css */
+.x-window { ZOOM: 1 }
+/* Rule 4 of css/1.css */
+.x-window-bwrap {
+    Z-INDEX: 1;
+    ZOOM: 1;
+    POSITION: relative;
+}
+/* Rule 5 of css/1.css */
+.x-window-bwrap { OVERFLOW: hidden }
+/* Rule 6 of css/1.css */
+.x-window-bl {
+    PADDING-LEFT: 6px;
+    BACKGROUND: url(help/default/window/left-corners.png) no-repeat 0px bottom;
+    ZOOM: 1;
+}
+/* Rule 7 of css/1.css */
+.x-window-br {
+    PADDING-RIGHT: 6px;
+    BACKGROUND: url(help/default/window/right-corners.png) no-repeat right bottom;
+    ZOOM: 1;
+}
+/* Rule 8 of css/1.css */
+.x-window-bc {
+    BACKGROUND: url(help/default/window/bottom-center.png) repeat-x 0px bottom;
+    ZOOM: 1;
+}
+/* Rule 9 of css/1.css */
+.x-window-bc .x-window-footer {
+    FONT-SIZE: 0px;
+    PADDING-BOTTOM: 6px;
+    LINE-HEIGHT: 0;
+    ZOOM: 1;
+}
+/* Rule 31 of css/1.css */
+.x-window-ml {
+    PADDING-LEFT: 6px;
+    BACKGROUND: url(help/default/window/middle-left.png) repeat-y 0px 0px;
+    ZOOM: 1;
+}
+/* Rule 32 of css/1.css */
+.x-window-mr {
+    PADDING-RIGHT: 6px;
+    BACKGROUND: url(help/default/window/middle-right.png) repeat-y right 0px;
+    ZOOM: 1;
+}
+/* Rule 33 of css/1.css */
+.x-window-mc {
+    BORDER-RIGHT: #99bbe8 1px solid;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: #99bbe8 1px solid;
+    PADDING-LEFT: 0px;
+    BACKGROUND: #dfe8f6;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    FONT: 11px tahoma, arial, helvetica, sans-serif;
+    BORDER-LEFT: #99bbe8 1px solid;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #99bbe8 1px solid;
+}
+/* Rule 34 of css/1.css */
+.x-window-plain .x-window-mc {
+    BORDER-RIGHT: #dfe8f6 1px solid;
+    BORDER-TOP: #a3bae9 1px solid;
+    BACKGROUND: #cad9ec;
+    BORDER-LEFT: #a3bae9 1px solid;
+    BORDER-BOTTOM: #dfe8f6 1px solid;
+}
+/* Rule 36 of css/1.css */
+.x-window-dlg .x-window-mc {
+    BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BORDER-RIGHT-WIDTH: 0px;
+}
+/* Rule 57 of css/1.css */
+.x-window-tl {
+    PADDING-LEFT: 6px;
+    Z-INDEX: 1;
+    BACKGROUND: url(help/default/window/top-left.png) no-repeat 0px 0px;
+    ZOOM: 1;
+    POSITION: relative;
+}
+/* Rule 58 of css/1.css */
+.x-window-tr {
+    PADDING-RIGHT: 6px;
+    BACKGROUND: url(help/default/window/top-right.png) no-repeat right 0px;
+}
+/* Rule 59 of css/1.css */
+.x-window-tc {
+    BACKGROUND: url(help/default/window/top-center.png) repeat-x 0px 0px;
+    OVERFLOW: hidden;
+    ZOOM: 1;
+}
+/* Rule 60 of css/1.css */
+.x-unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+}
+/* Rule 61 of css/1.css */
+.x-window-header {
+    OVERFLOW: hidden;
+    ZOOM: 1;
+}
+/* Rule 62 of css/1.css */
+.x-window-tl .x-window-header {
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 4px;
+    FONT: bold 11px tahoma, arial, verdana, sans-serif;
+    COLOR: #15428b;
+    PADDING-TOP: 5px;
+}
+/* Rule 63 of css/1.css */
+.x-window-draggable { CURSOR: default }
+/* Rule 64 of css/1.css */
+.x-unselectable * {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+}
+/* Rule 65 of css/1.css */
+.x-window-header-text { CURSOR: pointer }
+/* Rule 66 of css/1.css */
+.x-window-draggable .x-window-header-text { CURSOR: default }
+/* Rule 67 of css/1.css */
+.x-window-dlg .x-window-header-text { FONT-SIZE: 12px }
+/* Rule 68 of css/1.css */
+.x-tool {
+    BACKGROUND: url(help/default/window/tool-sprites.png) no-repeat;
+    FLOAT: right;
+    MARGIN-LEFT: 2px;
+    OVERFLOW: hidden;
+    WIDTH:22px;
+    CURSOR: pointer;
+    HEIGHT:22px;
+}
+.x-tool:hover {
+    BACKGROUND: url(help/default/window/tool-sprites-hover.png) no-repeat;
+    FLOAT: right;
+    MARGIN-LEFT: 2px;
+    OVERFLOW: hidden;
+    WIDTH:22px;
+    CURSOR: pointer;
+    HEIGHT:22px;
+}
+/* Rule 69 of css/1.css */
+.x-tool-close { BACKGROUND-POSITION: 0px 0px }
+/* begin detail page*/
+.dotLine {
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 8px;
+    color: black;
+    width: 100%;
+}
+.boxContainer {
+    border-top: 1px solid #cdd5e0;
+    margin: 6px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.boxDetailContainer{
+  width:100%;
+  padding-top:50px;
+}
+.valueCla {
+    display: block;
+    height: 27px;
+    line-height: 27px;
+    border-bottom: 1px dotted black;
+}
+.vLine { border-right: 1px solid #cdd5e0 }
+
+/* end detail page*/
+	
+	
+	
+/* 	liuZhiliang */
+	
+	/* button*/
+	
+.baseButton {
+    margin-left: 10px;
+/*     padding: 8px; */
+    height:31px;
+    padding-left: 15px;
+    padding-right: 15px;
+     *padding: 6px ; /*ie7*/ 
+    *padding-left: 8px;
+    nowhitespace: afterproperty;
+    *padding-right: 8px;
+    /*ie7*/
+    display: inline-block;
+    font-size: 12px;
+    background-color:rgb(77, 152, 186); 
+    /*background: url("button/bg.png") no-repeat left top;*/
+    vertical-align: middle;
+    border: 0px solid #3eb1f0;
+    color: white;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.baseButton:hover {
+   
+    background:rgb(35,187,227); /* #1a94d7; */
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+ 
+}
+
+/* yellow button */
+.yellow {
+ 	background-color:rgb(255,196,77);
+	background-image: url("button/yellow.png");
+	}
+.yellow:hover{
+	
+	background-color:rgb(247,161,46);
+	}
+	
+
+/* fixed background righticon */
+.rightBottomIconButton{
+	
+	margin: 0px;
+	height:31px;
+	width:100px; 
+    padding: 8px;
+    padding-top:10px;
+/*  padding-right: 15px;  */
+    *padding: 6px ; /*ie7*/
+    *padding-left: 8px;
+    nowhitespace: afterproperty;
+    *padding-right: 8px;
+    /*ie7*/
+    display: inline-block;
+    font-size: 12px;
+    /*background: url("button/bg.png") no-repeat left top;*/
+    vertical-align: middle;
+  /*background-color: #3eb1f0; */
+ /* background-color:rgb(77, 152, 186); */
+    border: 0px solid #3eb1f0;
+    color: white;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+	 text-decoration: none;
+	 text-align:center;
+	  text-indent:-10px;
+	  
+	background-image: url("button/button+blog.png");
+  /*   background-position: 96% 90%; */
+    background-repeat: no-repeat;
+	
+}
+.rightBottomIconButton:hover{
+	/* background: #1a94d7;*/
+}
+
+
+/* arrowbutton   div */
+.topBackButton{
+   letter-spacing:2px;
+   display: inline-block; 
+   white-space: nowrap; 
+   float:left; 
+}
+.topBackButtonHead{
+   height:29px;
+   width:12px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -107px 0px ;
+   background-repeat: no-repeat; 
+   cursor: pointer;
+   vertical-align:bottom;
+}
+.topBackButtonBody{
+  position:relative;
+  top:0px;
+  left:-1px;
+  padding:0px 10px 0px 10px;
+   height:29px;
+   display: inline-block; 
+   white-space: nowrap; 
+   text-align:center;
+   line-height: 29px;
+    background:url("allPicture.png") no-repeat 0px -120px ;
+   vertical-align:bottom;
+   cursor: pointer;
+   color: #2670a2;
+   font-size: 12px; 
+}
+.topBackButtonRoot{
+   position:relative;
+   left:-1px;
+   top:0px;
+   height:29px;
+   width:5px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -122px 0px ;
+   background-repeat: no-repeat; 
+   vertical-align:bottom;
+   cursor: pointer;
+   -webkit-border-radius:0px 2px 2px 0px;
+   -moz-border-radius:0px 2px 2px 0px;
+   border-radius:0px 2px 2px 0px;
+}
+
+.topBackButtonHeadHover{
+	height:29px;
+    width:12px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -127px 0px ;
+   background-repeat: no-repeat; 
+    cursor: pointer;
+   vertical-align:bottom;
+	}
+.topBackButtonBodyHover{	 
+   position:relative;
+   top:0px;
+   padding:0px 10px 0px 10px;
+   height:29px;
+   left:-1px;
+   display: inline-block; 
+   white-space: nowrap; 
+   text-align:center;
+   line-height: 29px;
+   background:url("allPicture.png") no-repeat 0px -150px ;
+   background-repeat: repeat-x; 
+   vertical-align:bottom;
+   cursor: pointer;
+   color: #2670a2;
+   font-size: 12px;
+	}
+.topBackButtonRootHover{
+    position:relative;
+    top:0px;
+    height:29px;
+    width:5px;
+    left:-1px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -142px 0px ;
+   background-repeat: no-repeat; 
+    vertical-align:bottom;
+     cursor: pointer;
+      -webkit-border-radius:0px 2px 2px 0px;
+    -moz-border-radius:0px 2px 2px 0px;
+    border-radius:0px 2px 2px 0px; 
+	}
+	
+	
+.topBackButtonHeadClick{
+   height:29px;
+   width:12px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -147px 0px ;
+   background-repeat: no-repeat; 
+   cursor: pointer;
+   vertical-align:bottom;
+	}
+.topBackButtonBodyClick{
+	 
+   position:relative;
+   top:0px;
+   padding:0px 10px 0px 10px;
+   height:29px;
+   left:-1px;
+   display: inline-block; 
+   white-space: nowrap; 
+   text-align:center;
+   line-height: 29px;
+   background:url("allPicture.png") no-repeat 0px -180px ;
+   vertical-align:bottom;
+   cursor: pointer;
+   color: #2670a2;
+   font-size: 12px;
+	}
+.topBackButtonRootClick{
+   position:relative;
+   top:0px;
+   height:29px;
+   width:5px;
+   left:-1px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -162px 0px ;
+   background-repeat: no-repeat; 
+    vertical-align:bottom;
+     cursor: pointer;
+      -webkit-border-radius:0px 2px 2px 0px;
+    -moz-border-radius:0px 2px 2px 0px;
+    border-radius:0px 2px 2px 0px; 
+	}
+	
+/* button: right bottom corner has an dot icon */
+
+.topAssistButton{
+ Letter-spacing:2px;
+ display: inline-block; 
+ white-space: nowrap; 
+ margin-left:16px;
+}
+.topAssistButtonBody{
+   Letter-spacing:2px;
+   position:relative;
+   top:0px;
+   left:-1px;
+   padding:0px 10px 0px 10px;
+   height:29px;
+   display: inline-block; 
+   white-space: nowrap; 
+   text-align:center;
+   line-height: 29px;
+   background:url("allPicture.png") no-repeat 0px -30px ;
+   vertical-align:bottom;
+   cursor: pointer;
+   color: white;
+   font-size: 12px; 
+}
+.topAssistButtonRoot{
+   position:relative;
+  top:0px;
+  left:-3px;
+   height:29px;
+   width:8px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -167px 0px ;
+   background-repeat: no-repeat; 
+    vertical-align:bottom;
+     cursor: pointer;
+      -webkit-border-radius:0px 2px 2px 0px;
+    -moz-border-radius:0px 2px 2px 0px;
+    border-radius:0px 2px 2px 0px;
+}
+.topAssistButtonBodyHover{
+  position:relative;
+  top:0px;
+  left:-1px;
+  padding:0px 10px 0px 10px;
+   height:29px;
+   display: inline-block; 
+   white-space: nowrap; 
+   text-align:center;
+   line-height: 29px;
+  background:url("allPicture.png") no-repeat 0px -60px ;
+   vertical-align:bottom;
+   cursor: pointer;
+   color: white;
+   font-size: 12px; 
+}
+.topAssistButtonBodyClick{
+  position:relative;
+  top:0px;
+  left:-1px;
+  padding:0px 10px 0px 10px;
+   height:29px;
+   display: inline-block; 
+   white-space: nowrap; 
+   text-align:center;
+   line-height: 29px;
+   background:url("allPicture.png") no-repeat 0px -90px ;
+   vertical-align:bottom;
+   cursor: pointer;
+   color: white;
+   font-size: 12px; 
+}
+.topAssistButtonRootHover{
+   position:relative;
+  top:0px;
+  left:-3px;
+   height:29px;
+   width:8px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -176px 0px ;
+   background-repeat: no-repeat; 
+    vertical-align:bottom;
+     cursor: pointer;
+      -webkit-border-radius:0px 2px 2px 0px;
+    -moz-border-radius:0px 2px 2px 0px;
+    border-radius:0px 2px 2px 0px;
+}
+.topAssistButtonRootClick{
+   position:relative;
+   top:0px;
+   left:-3px;
+   height:29px;
+   width:8px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -185px 0px ;
+   background-repeat: no-repeat; 
+   vertical-align:bottom;
+   cursor: pointer;
+   -webkit-border-radius:0px 2px 2px 0px;
+   -moz-border-radius:0px 2px 2px 0px;
+   border-radius:0px 2px 2px 0px;
+}
+/*-----zhaowj-----
+---向右箭头按钮样式开始---*/
+/* arrowbutton   div */
+.topOrderButton{
+   Letter-spacing:2px;
+   display: inline-block; 
+   white-space: nowrap; 
+   padding-left: 5px\0\9;
+   margin-left:-15px;
+   margin-left:0px\0\9;/*ie8,ie9*/
+   +margin-left:-8px;/*ie7下*/
+}
+.rightFirstTopOrderButtonHead{
+   height:29px;
+   width:4px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -9px 0px ;
+   background-repeat: no-repeat; 
+   cursor: pointer;
+   vertical-align:bottom;
+}
+.topOrderButtonHead{
+   margin-left:-18px\0\9;
+   *margin-left:1px;
+   height:29px;
+   width:8px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat 0px 0px ;
+   background-repeat: no-repeat; 
+   cursor: pointer;
+   vertical-align:bottom;  
+}
+.topOrderButtonBody{
+   position:relative;
+   left:-1px;
+   top:0px;
+   padding:0px 10px 0px 10px;
+   height:29px;
+   display: inline-block; 
+   white-space: nowrap; 
+   text-align:center;
+   line-height: 29px;
+   background:url("allPicture.png") repeat-x 0px -30px ;
+   
+   vertical-align:bottom;
+   cursor: pointer;
+   color: white;
+   font-size: 12px; 
+     
+}
+.topOrderButtonRoot{
+   position:relative;
+   left:-3px;
+   top:0px;
+   height:29px;
+   width:12px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -21px 0px ;
+   background-repeat: no-repeat; 
+   vertical-align:bottom;
+   cursor: pointer;
+   -webkit-border-radius:0px 2px 2px 0px;
+   -moz-border-radius:0px 2px 2px 0px;
+   border-radius:0px 2px 2px 0px;
+}
+.rightFirstTopOrderButtonHeadHover{
+   height:29px;
+   width:4px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -44px 0px ;
+   background-repeat: no-repeat; 
+   cursor: pointer;
+   vertical-align:bottom;
+	
+}
+.rightFirstTopOrderButtonHeadClick{
+   height:29px;
+   width:4px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -80px 0px ;
+   background-repeat: no-repeat; 
+   cursor: pointer;
+   vertical-align:bottom;	
+}
+.topOrderButtonHeadHover{
+   margin-left:-18px\0\9;
+   *margin-left:1px;
+   height:29px;
+   width:8px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -35px 0px ;
+   background-repeat: no-repeat; 
+   cursor: pointer;
+   vertical-align:bottom;			
+}
+.topOrderButtonHeadClick{
+   margin-left:-18px\0\9;
+    *margin-left:1px;
+   height:29px;
+   width:8px;
+   display: inline-block; 
+   white-space: nowrap; 
+   background:url("allPicture.png") no-repeat -71px 0px ;
+   background-repeat: no-repeat; 
+   cursor: pointer;
+   vertical-align:bottom;	
+}
+.topOrderButtonBodyHover{
+   position:relative;
+   left:-1px;
+   top:0px;
+   padding:0px 10px 0px 10px;
+   height:29px;
+   display: inline-block; 
+   white-space: nowrap; 
+   text-align:center;
+   line-height: 29px;
+   background:url("allPicture.png") no-repeat 0px -60px ;
+   vertical-align:bottom;
+   cursor: pointer;
+   color: white;
+   font-size: 12px; 
+		
+}
+.topOrderButtonBodyClick{
+   position:relative;
+   left:-1px;
+   top:0px;
+   padding:0px 10px 0px 10px;
+   height:29px;
+   display: inline-block; 
+   white-space: nowrap; 
+   text-align:center;
+   line-height: 29px;
+   background:url("allPicture.png") no-repeat 0px -90px ;
+   background-repeat: repeat-x; 
+   vertical-align:bottom;
+   cursor: pointer;
+   color: white;
+   font-size: 12px; 
+}
+.topOrderButtonRootHover{
+  position:relative;
+   left:-3px;
+  top:0px;
+  height:29px;
+  width:12px;
+  display: inline-block; 
+  white-space: nowrap; 
+  background:url("allPicture.png") no-repeat -56px 0px ;
+   background-repeat: no-repeat; 
+    vertical-align:bottom;
+     cursor: pointer;
+      -webkit-border-radius:0px 2px 2px 0px;
+    -moz-border-radius:0px 2px 2px 0px;
+    border-radius:0px 2px 2px 0px;
+	
+}
+.topOrderButtonRootClick{
+  position:relative;
+   left:-3px;
+  top:0px;
+  height:29px;
+  width:12px;
+  display: inline-block; 
+  white-space: nowrap; 
+ background:url("allPicture.png") no-repeat -92px 0px ;
+  background-repeat: no-repeat; 
+  vertical-align:bottom;
+  cursor: pointer;
+  -webkit-border-radius:0px 2px 2px 0px;
+  -moz-border-radius:0px 2px 2px 0px;
+  border-radius:0px 2px 2px 0px;
+}
+
+
+
+
+/*
+.rightArrowButton{  
+   display: inline-block; 
+   white-space: nowrap; 
+   padding-left: 10px;
+}
+
+.rightArrowButtonNotFirst{
+   padding-left: 0px !important;
+   margin-left:-10px;
+   float:right;
+   *float:none;
+}
+.rightFirstArrowButtonBodyClick{
+	   background-image: url("button/rightArrowClick_first.png")!important;
+}
+.rightArrowButtonBodyClick{
+	background-image: url("button/rightArrowClick.png")!important;
+}
+.rightFirstArrowButtonBodyHover{
+	   background-image: url("button/rightArrowHover_first.png")!important;
+}
+.rightArrowButtonBodyHover{
+	background-image: url("button/rightArrowHover.png")!important;
+}
+.rightFirstArrowButtonBody{	  
+  left:-4px;
+  top:0px;
+  padding:0px 24px 0px 25px;
+   height:31px;
+   display: inline-block; 
+   white-space: nowrap; 
+   text-align:center;
+   line-height: 31px;
+   background-image: url("button/rightArrow_first.png");
+   vertical-align:bottom;
+   cursor: pointer;
+   repeate:no-repeat;
+   color: white;
+   font-size: 12px;
+  width:72px;
+ }
+.rightArrowButtonBody{	  
+  left:-2px;
+  top:0px;
+  padding:0px 21px 0px 21px;
+   height:31px;
+   display: inline-block; 
+   white-space: nowrap; 
+   text-align:center;
+   line-height: 31px;
+   background-image: url("button/rightArrow.png");
+   vertical-align:bottom;
+   cursor: pointer;
+   repeate:no-repeat;
+   color: white;
+   font-size: 12px;
+   width:72px;
+} */
+/*-----zhaowj-----
+---向右箭头按钮样式结束---*/
+.foldContentView{
+	margin-top:-5px;
+    position:relative;
+    width:850px; 
+    
+}
+
+.foldTitle{
+
+    /*  background-color:rgb(227,229,228); */
+     height:24px;
+    
+     
+}
+.fold{
+float:left;
+margin-left:10px;
+}
+.foldContent{
+
+/*     background-color:rgb(227,229,228); */
+overflow:hidden;
+margin-bottom:10px;
+}
+a.foldIcon{
+
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin-top: 0px;
+   /*  margin-right: 10%; */
+    background-color:blue;
+     background: url("button/fold.png") no-repeat;
+    display: inline;
+}
+a.foldIconOpen {
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin-top: 0px;
+   /*  margin-right: 10%; */
+    background-color:blue;
+     background: url("button/fold.png") no-repeat;
+    display: inline;
+}
+a.unfoldIcon {
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin-top: 0px;
+  /*   margin-right: 10%; */
+    background-color:blue;
+     background: url("button/unfold.png") no-repeat;
+    display: inline;
+}
+
+a.foldIcon12{
+  
+    width: 5%;
+    height: 24px;
+    float: right;
+    margin-top: 0px;
+    background-color:blue;
+     background: url("images/fold.png") no-repeat;
+    display: inline;
+
+}
+.fold_head{
+	background-color:#bbd7e5;
+	height:1px;
+	width:40px;
+	margin-top:8px;
+	margin-right:8px;
+	float:left;
+	
+	}
+.fold_Body{
+	background-color:#bbd7e5;
+	height:1px;
+	width:70%;
+	margin-top:8px;
+	margin-right:8px;
+	float:right;
+	}
+	
+.fold_end{
+	background-color:#bbd7e5;
+	height:1px;
+	width:40px;
+	margin-top:8px;
+	margin-right:8px;
+	float:right;	
+	}
+	
+
+img:hover{
+
+ cursor: pointer;
+ background-position:-1px;
+
+}
+	
+/* autocomplete begin*/
+.ac_results {
+	padding: 0px;
+	border: 1px solid WindowFrame;
+	background-color: Window;
+	overflow: hidden;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results iframe {
+	display:none;/*sorry for IE5*/
+	display/**/:block;/*sorry for IE5*/
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+	filter:mask();
+	width:3000px;
+	height:3000px;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	font: menu;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.ac_loading {
+	background : Window url('./indicator.gif') right center no-repeat;
+}
+
+.ac_over {
+	background-color: Highlight;
+	color: HighlightText;
+}
+/* autocomplete end */
+.cutLine{
+    padding: 0 0.1px 0;
+   	line-height: 10px;
+   	height:15px;
+   	*line-height: 15px;
+   	*vertical-align:top;
+    margin-bottom:5px;
+    float:left;
+    color: #747474;
+   /* border-left: 36px solid #c1c1c1;
+    border-right: 658px solid #c1c1c1;*/
+    *position:relative;/*ie7*/
+    padding-right:11px;    
+}
+.cutLine:hover{
+  color: #3eb1f0;
+}
+.cutLine a{
+	position:absolute;
+	padding-right:10px;
+	line-height:20px;
+}
+.cutline tr{
+ height:18px;
+}
+.searchBtn{
+    background:url("allPicture.png") no-repeat -289px 0px ;
+	display: inline-block;
+	position:absolute;
+	bottom:4px;
+	right:15px;
+	width:28px;
+	height:27px;
+	cursor:pointer;
+	hide-focus: expression(this.hideFocus=true);  /* for ie 5+ */
+	outline: none;  /* for firefox 1.5 + */
+}
+.searchBtn:hover{
+   background:url("allPicture.png") no-repeat -318px 0px ;
+}
+.searchBtn:hover:focus{
+	 background:url("allPicture.png") no-repeat -347px 0px ;
+	}
+
+.headerLabel{
+	
+}
+.centerLabel{
+	margin-left:25px;
+}
+/*
+select{
+	width:150px;
+	height:25px;
+	line-hegith:25px;
+	overflow:hidden;
+	margin-left:10px;
+	padding-left:5px;
+}*/
+
+#tabContainer
+{
+    background:#d5d5d5;
+    border-bottom:1px solid #333;
+    padding-bottom:3px;
+    width:720px;
+    margin:0 auto;
+}
+#tabContainer ul{
+	padding:15px 0px 5px 0px;
+	margin:5px 0px 5px 0px;
+	list-style:none;
+	background:#f1f1f1;
+	border-bottom:1px solid #999;
+	line-height:120%;
+}
+	
+#tabContainer li
+{
+    display:inline;
+    margin-left:10px;
+}
+
+#tabContainer a
+{
+    background:#d5d5d5;
+    color:#555;
+    padding:5px 10px 5px 10px;
+    border:1px solid #999;
+    line-height:normal 
+}
+#tabContainer ul li a:hover{
+	background:#ccc;
+	color:#666
+}
+
+#tabContainer a.on
+{
+	background:#fff;
+    
+    padding:5px 10px 5px 10px;
+    border-top:1px solid #999;
+    border-left:1px solid #999;
+    border-right:1px solid #999;
+    border-bottom:1px solid #d5d5d5;
+    
+    font-weight:bold
+}
+
+ 
+#tabnav {
+    background:#ffffff;
+    border-bottom:1px solid #cccccc;
+    padding-bottom:3px;
+    width:720px;
+}
+ 
+#tabnav ul {
+    padding:15px 10px 5px 10px;
+    list-style:none;
+    background:#ffffff;
+    border-bottom:1px solid #cccccc;
+}
+ 
+#tabnav ul li {
+    display:inline;
+    margin: 1px;
+    height:30px;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ffffff,endColorStr=#eeeeee); 
+}
+ 
+#tabnav ul li a {
+    background:#eeeeee;  
+    padding:5px 10px 5px 10px;
+    border:1px solid #cccccc;
+	color:#6e6e6e;
+	hide-focus: expression(this.hideFocus=true);  /* for ie 5+ */
+    outline: none;  /* for firefox 1.5 + */
+}
+ 
+#tabnav ul li a:hover {
+    background:#eeeeee;    
+}
+ 
+#tabnav ul li a.on {
+	background:#ffffff;
+    color:#3989ad;
+    padding:5px 10px 5px 10px;
+    border-top:1px solid #cccccc;
+    border-left:1px solid #cccccc;
+    border-right:1px solid #cccccc;
+    border-bottom:1px solid #ffffff;
+  
+}
+ 
+#tabnav ul li a.on:hover {
+    background:#eeeeee;
+}
+/*多选框的查询去样式开始*/
+.checkBoxContainer{
+ width: 100%;
+    background: #f8f8f8;
+    margin-top: 16px;
+    display: inline-block;
+    position:relative;
+    border:1px #cdd5e0 solid;
+    color:#343434;
+}
+.checkboxHead{
+	margin-left:25px;
+	margin-top:10px;
+}
+.checkboxContent{
+	min-width:700px;
+	background-color:#ffffff;
+	height:36px;
+	line-height:36px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:10px;
+	margin-bottom:5px;
+	border: 1px #cdd5e0 solid;
+	border-left:5px #27a9e3 solid;
+}
+.checkboxContent button{
+ line-height:23px;
+}
+.checkboxContent label.help{
+ margin-top:5px;
+}
+.checkboxChildContent{
+	min-width:700px;
+	background-color:#ffffff;
+	height:36px;
+	line-height:36px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:10px;
+	margin-bottom:5px;
+	border: 1px #cdd5e0 solid;
+	padding-left:5px;
+}
+.checkboxTitle{
+	margin-left:10px;
+	margin-right:10px;
+	float:left;
+
+}
+.checkboxSubmit{
+	float:right;
+	margin-right:30px;
+	margin-top:12px;
+	margin-bottom:12px;
+}
+.middleBorder{
+    float:left;   
+    margin-right:8px;
+    background:url(middleBorder.jpg) right no-repeat;
+    padding-right:8px;
+    line-height:36px;
+}
+/*多选框的查询去样式结束*/
+/*editgrid中删除样式*/
+.deleteBox{
+  background:url(flexgrid/delete1.png) no-repeat;
+  width:12px !important;
+  height:14px;
+}
+.tableTrSize{
+  height:35px;
+ 
+}
+.gridContainer{
+ margin-top:12px;
+}
+.floatSearch{
+ width:26px;
+ height:25px;
+ float:left;
+ margin-left:10px;
+ background:url(button/search.jpg) no-repeat !important;
+ cursor:pointer;
+}
+.tableTrLast{
+	margin-bottom:10px;
+	}
+.addBtn{
+  background:url(button/add.png) no-repeat !important;
+  width:25px;
+  height:25px;
+  margin-left:18px !important;
+  position:relative;
+  top:8px\0; /*ie8/9*/
+  cursor:pointer;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { .addBtn{top:9px} }
+.addBtn:hover{
+  background:url(button/add_hover.png) no-repeat !important;
+}
+:root .addBtn{
+ position:relative;
+ top:0px\9;/*ie9*/
+}
+/*折叠明细页的样式--开始*/
+.foldDetail{
+   width:90%;
+   color: #747474;
+   margin-left: 2%;
+   color:#343434;
+}
+.foldDetail tr{
+	height:30px;
+}
+.foldDetail tr:odd{
+	 background-color:#f8f9fd;
+}
+.foldContent tr td{
+ 
+ border-bottom:1px solid #dde7f0;
+}
+/*折叠明细页的样式--结束*/
+/*分享到微博的样式开始*/
+#blogContent{
+ position:absolute;
+ z-index:100000;
+}
+#blogShelter{
+ position:fixed;
+ background:url("help/maskBG.png");
+ top:0px;
+ left:0px;
+  z-index:999;
+}
+/*分享到微博的样式结束*/
+.ui-tabs.ui-widget ul{
+ font-size:13px;
+}
+.ui-tabs.ui-widget.ui-widget-content.ui-corner-all{
+  background:#fff !important;
+}
+/*明细页的样式--开始*/
+.detailTable{
+ margin:12px auto;
+ width:90%;
+ border-top:1px solid #dde7f0;
+}
+.detailTable tr.odd{
+ background-color:#f8f9fd;
+ }
+.detailTable .queryCaseTd{
+  height:30px;
+  padding-left:10px;
+}
+.detailTable .queryLabelTd{
+  height:30px;
+  padding-right:10px;
+}
+.detailTable tr td{
+ border-bottom:1px solid #dde7f0;
+ }
+.detailTable tr td.queryCaseTd{
+  padding-left:10px
+}
+.detailTable tr td input[type='text'],.detailTable tr td textarea,.detailTable tr td .inputHelpDiv,.detailTable tr td button,.detailTable tr td input[type='button']{
+  margin-left:0px;
+}
+ /*明细页的样式--结束*/
+ /*新增页面开始*/
+.insertTable {
+  border-top:1px solid #dde7f0;
+ }
+.insertTable tr td{
+ border-bottom:1px solid #dde7f0;
+ }
+.insertTable tr.even{
+ background-color:#f8f9fd;
+ }
+.insertTable tr td.queryCaseTd{
+  padding-left:10px
+}
+.insertTable tr td input[type='text'],.insertTable tr td textarea,.insertTable tr td button,.insertTable tr td input[type='button'],.insertTable tr td .inputHelpDiv{
+  margin-left:0px;
+}
+  /*新增页面结束*/
+/*新增页面带头行开始*/
+.insertTableMore{
+    float:left;
+    margin-left:18px;
+    color:#343434;
+    margin-top:5px;
+    }
+.insertContainer {
+    border-top: 1px solid #ccc;
+    margin: 6px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.detailContainer{
+	border-top: 1px solid #ccc;
+    margin: 6px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+
+}
+.insertTableMore tr td.queryCaseTd{
+  padding-left:10px
+}
+.insertTableMore tr td input[type='text'],.insertTableMore tr td textarea,.insertTableMore tr td .inputHelpDiv{
+  margin-left:0px;
+}
+/*新增页面带头行结束*/
+/*在折叠页面用用到明细页的table样式开始*/
+
+.foldContent .detailTable{
+ margin:12px auto;
+ width:90%;
+ border-top:0px;
+}
+.foldContent .detailTable tr.odd{
+ background-color:#f8f9fd;
+ }
+.foldContent .detailTable .queryCaseTd{
+  height:30px;
+  padding-left:10px;
+}
+.foldContent .detailTable .queryLabelTd{
+  height:30px;
+  padding-right:10px;
+}
+.foldContent .detailTable tr:first-child td{
+ border-top:0px solid #dde7f0;
+ }
+.foldContent .detailTable tr td{
+  border-top:1px solid #dde7f0;
+  border-bottom:0px solid #dde7f0;
+ }
+.foldContent .detailTable tr td.queryCaseTd{
+  padding-left:10px
+}
+.foldContent .detailTable tr td input[type='text'],.detailTable tr td textarea,.detailTable tr td .inputHelpDiv，.foldDetail .detailTable tr td button,.foldDetail .detailTable tr td input[type='button']{
+  margin-left:0px;
+}
+
+
+
+
+
+/*在折叠页面用用到明细页的table样式结束*/
+/*遮盖层样式开始*/
+.jsLoadingImg{
+  background-color:transparent;
+  width:32px;
+  height:32px; 
+  z-index:10001;
+  border: 0px none;
+  float:left;
+  margin-left:5px;
+  margin-top:9px;
+}
+.initLoadingBox{
+  position: absolute;
+  width:180px;
+  height:50px;
+  border:2px solid #d6e7f2;
+  z-index:10001;
+  line-height:50px;
+}
+.initloadText{
+ float:left;
+ margin-left:15px;
+}
+/*遮盖层样式结束
+input.help{
+    padding-right:25px;
+    width:115px ;
+   
+}
+.inputHelpDiv{
+	height:23px;
+	line-height:23px;
+    background-image: url("flexgrid/bangzhu.jpg");
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    padding-right:25px;
+    width:25px ; 
+    margin-left:10px;
+    background-color:#fff;
+}
+*/
+
+
+
+.queryTable .inputHelpDiv{
+   margin-left:5px;
+}
+/*日期组件时分秒样式开始*/
+.datepicker_houre_table{
+  height:170px;
+}
+.datepicker_houre_table  tr td{
+ background-color:#c5e3f3;
+ border:2px solid #fff;
+}
+.datepicker_houre_table  tr td:hover{
+  background-color:#73caf9;
+}
+.datepicker_houre_table  tr td span{
+ text-align:center;
+ line-height:30px;
+}
+.datepicker_minute_table{
+  height:170px;
+}
+.datepicker_minute_table  tr td{
+ background-color:#c5e3f3;
+ border:2px solid #fff;
+}
+.datepicker_minute_table  tr td:hover{
+  background-color:#73caf9;
+}
+.datepicker_minute_table  tr td span{
+ text-align:center;
+ line-height:18px;
+}
+.datepicker_second_table{
+  height:170px;
+}
+.datepicker_second_table  tr td{
+ background-color:#c5e3f3;
+ border:2px solid #fff;
+}
+.datepicker_second_table  tr td:hover{
+  background-color:#73caf9;
+}
+.datepicker_second_table  tr td span{
+ text-align:center;
+ line-height:18px;
+}
+/*日期组件时分秒样式结束*/
+
+/*日期组件年月样式开始*/
+.datepicker_year_table{
+   margin-top:20px!important;
+   height:170px;
+
+}
+.datepicker_year_table tr td{
+  color:#547d8f;
+  background:#f3f4ee;
+  width:25%;
+  text-align:center;
+  font-size:14px;
+  font-weight:bold;
+  border:2px solid #cacbcd;
+  line-height:55px;
+  cursor:pointer;
+}
+.datepicker_year_table tr td:hover{
+  color:#ffffff;
+  background:#a8daf4;
+}
+.datepicker_year_table  tr td span{
+  text-align:center;
+  height:50px;
+  line-height:50px;
+}
+
+
+
+
+.datepicker_yearMonth_table{
+   margin-top:20px!important;
+   height:170px;
+
+}
+.datepicker_yearMonth_table tr td{
+	cursor:pointer;
+  color:#547d8f;
+  background:#f3f4ee;
+  width:25%;
+  text-align:center;
+  font-size:14px;
+  font-weight:bold;
+  border:2px solid #cacbcd;
+  line-height:55px;
+}
+.datepicker_yearMonth_table tr td:hover{
+  color:#ffffff;
+  background:#a8daf4;
+}
+.datepicker_yearMonth_table  tr td span{
+  text-align:right;
+  height:50px;
+  line-height:50px;
+  float:left;
+  width:20px;
+}
+#datepicker_currentyear{
+ cursor:pointer;
+}
+#datepicker_currentyear:hover{
+  background:#a8daf4;
+  color:#000;
+}
+/*日期组件年月样式结束*/
+/*顶部功能按钮开始*/
+.topFunButton{
+	background:#6bbe14;
+	height:29px;
+	color:#f5f5f5;
+	outline:none;
+	border:1px solid #428000;
+	border-radius: 5px;
+	padding-left:8px;
+	padding-right:8px;
+	font-size:12px;
+	letter-spacing:2px;
+	margin-left:16px;
+	cursor:pointer;
+	-moz-box-shadow: 0px 0px 0px #000;
+   -webkit-box-shadow: 0px 0px 0px #000;
+   box-shadow: 0px 0px 0px #000;
+	}
+.topFunButton:hover{
+	color:#ffffff;
+	background:#7bcf21;
+	cursor:pointer;
+	-moz-box-shadow:0px 0px 0px #eaeaea inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0px 0px 0px #eaeaea inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:0px 0px 0px #eaeaea inset;	
+	}
+.topFunButton:hover:focus{
+	-moz-box-shadow:0px 3px 10px #eaeaea inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0px 3px 10px #eaeaea inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:0px 3px 10px #eaeaea inset;	
+	}
+/*顶部功能按钮结束*/	
+	
+/*数据列表区控制按钮开始*/
+.dataConButton{
+	background:#faa719;
+	height:25px;
+	color:#ffffff;
+	outline:none;
+	border:1px solid #edad25;
+	border-radius: 5px;
+	padding-left:8px;
+	padding-right:8px;
+	font-size:12px;
+	letter-spacing:2px;
+	margin-left:16px;
+	cursor:pointer;
+	-moz-box-shadow: 0px 0px 0px #000;
+  -webkit-box-shadow: 0px 0px 0px #000;
+  box-shadow: 0px 0px 0px #000;
+	}
+.dataConButton:hover{
+	color:#ffffff;
+	background:#fed05e;
+	-moz-box-shadow:0px 0px 0px #eaeaea inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0px 0px 0px #eaeaea inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:0px 0px 0px #eaeaea inset;	
+	}
+.dataConButton:hover:focus{
+	-moz-box-shadow:0px 3px 10px #eaeaea inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0px 3px 10px #eaeaea inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:0px 3px 10px #eaeaea inset;	
+	}
+/*数据列表区控制按钮结束*/
+
+/*查询条件区功能按钮开始*/
+.searchFunButton{
+	background:#f0f2f6;
+	height:25px;
+	line-height:25px;
+	color:#1d1d1d;
+	outline:none;
+	border:1px solid #becfd9;
+	border-radius: 5px;
+	padding-left:8px;
+	padding-right:8px;
+	font-size:12px;
+	letter-spacing:2px;
+	margin-left:16px;
+	cursor:pointer;
+  -moz-box-shadow: 0px 0px 0px #000;
+  -webkit-box-shadow: 0px 0px 0px #000;
+  box-shadow: 0px 0px 0px #000;
+	}
+.searchFunButton:hover{
+	background:#68a1e2;
+	border:1px solid #65a2db;
+	color:#ffffff;
+	outline:none;
+	-moz-box-shadow:0px 0px 0px #eaeaea inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0px 0px 0px #eaeaea inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:0px 0px 0px #eaeaea inset;	
+	}
+.searchFunButton:hover:focus{
+    border:1px solid #65a2db;
+	-moz-box-shadow:0px 3px 10px #eaeaea inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0px 3px 10px #eaeaea inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:0px 3px 10px #eaeaea inset;	
+	}
+/*查询条件区功能按钮结束*/
+
+
+
+
+.v6_buttonLoading{
+   width:30px;
+   height:30px;
+   opacity:0.5;
+   filter:alpha(opacity=50);
+}
+
+/*新设计外面包label的help的css开始*/
+label.help{
+	 border: 1px;
+     border-style: double solid  solid solid;
+     border-color: #ccc;
+	 display:inline-block;
+	}
+label.help input{
+  border:0px;
+  height:23px;
+  float:left;
+  margin-top:0px;
+  line-height:23px;
+	}
+label.help a.help{
+   background-image: url("flexgrid/bangzhu.jpg") center;
+   background-repeat: no-repeat;
+   width:20px;
+   margin-left:-20px;
+}
+
+
+.queryTable label.help{
+	 border: 1px;
+     border-style: double solid  solid solid;
+     border-color: #ccc;
+	 display:inline-block;
+	 margin-left:5px;
+	}
+.queryTable label.help input{
+  border:0px;
+  height:23px;
+  float:left;
+  margin-top:0px;
+  line-height:23px;
+  margin-left:0px;
+	}
+.queryTable label.help a.help{
+   background-image: url("flexgrid/bangzhu.jpg") center;
+   background-repeat: no-repeat;
+   width:20px;
+   margin-left:-20px;
+}
+/*新设计外面包label的help的css结束*/
+
+
+/*图片墙样式开始*/
+.photoWall{
+  width:500px;
+  margin:100px auto;
+}
+.photoWall img{
+height:100px;
+max-height:200px;
+max-width:200px;
+}
+.v6_photoWal_coverDiv{
+   background:#ffffff;
+   z-index:10000;
+   top:0px;
+   left:0px;
+   position:absolute;
+}
+.v6_photoWall_leftSlideDiv{
+ position:fixed;
+ top:0px;
+ left:0px;
+ z-index:10000;
+ background:url("photoWall/photoWall_left_arrow.png")  no-repeat center;
+ cursor:pointer;
+}
+.v6_photoWall_leftSlideDiv:hover{
+ background:url("photoWall/photoWall_left_arrow_hover.png") #bfbcbb no-repeat center;
+}
+.v6_photoWall_rightSlideDiv{
+  position:fixed;
+  top:0px;
+  right:0px;
+  z-index:10000;
+  background:url("photoWall/photoWall_right_arrow.png")  no-repeat center;
+  cursor:pointer;
+}
+.v6_photoWall_rightSlideDiv:hover{
+ background:url("photoWall/photoWall_right_arrow_hover.png") #bfbcbb no-repeat center;
+}
+.v6_photoWall_backDiv{
+   position:fixed;
+   z-index:10001;
+   top:100px;
+   right:10%;
+   width:32px;
+   height:32px;
+   background:url("photoWall/photoWallBack.png")  no-repeat ;
+   cursor:pointer;
+   border:1px dotted #8bb4f8;
+}
+
+
+.v6_photoWall_centerSlideDiv{
+  position:absolute;
+  left:10%;
+  top:100px;
+  z-index:10000;
+  text-align:center;
+  vertical-align:middle;
+}
+.v6_photoWall_centerImg{
+  margin:0 auto;
+  max-width:600px;
+  max-height:600px;
+  min-height:400px;
+  min-width:400px;
+  -moz-box-shadow:0px 3px 10px #eaeaea inset;               /* For Firefox3.6+ */
+  -webkit-box-shadow:0px 3px 10px #eaeaea inset;            /* For Chrome5+, Safari5+ */
+  box-shadow:0px 3px 10px #eaeaea inset;	
+}
+/*图片墙样式结束*/
+label.select{
+ display:inline-block;
+}
+/*优化的select，radio，chekcbox的样式开始*/
+/*
+label.select select{
+   background: transparent;
+   border:0px;
+   height:23px;
+}
+label.select{
+ position:relative;
+ z-index:100;
+ background-image: url("arrow.png");
+ background-position: right;
+ background-repeat: no-repeat;
+ width:100%;
+ overflow:hidden;
+ display:inline-block;
+ border: 1px;
+ border-style: double solid  solid solid;
+ border-color: #ccc;
+ height:23px;
+ line-height:23px;
+}
+/*radio和checkbox的样式开始*/
+/*
+label.radio{
+ width:18px;
+ height:19px;
+ display:inline-block;
+ background: url("selectbox/radio.png") no-repeat center 0px;
+ position:relative;
+ z-index:10;
+}
+label.v6_checked_radio{
+  background-position:center -18px;
+}
+label.radio input[type='radio']{
+filter:alpha(opacity=0); 
+opacity:0;
+visibility:hidden;
+}
+
+label.checkbox{
+ display:inline-block;
+ background: url(selectbox/checkbox.png) no-repeat center 0px;
+ position:relative;
+ z-index:10;
+}
+label.v6_checked_checkbox{
+  background-position:center -18px;
+}
+label.checkbox input[type='checkbox']{
+filter:alpha(opacity=0); 
+opacity:0;
+visibility:hidden;
+}
+*/
+/*树形下拉样式开始*/
+.queryTable label.selectTree{
+ margin-left:5px;
+}
+label.selectTree{
+  display:inline-block;
+  border: 1px;
+  border-style: double solid  solid solid;
+  border-color: #ccc;
+  position:relative;
+  height:23px;
+  line-height:23px;
+  z-index:100;
+}
+label.selectTree input[type='text']{
+  border:0px;
+  margin-left:0px;
+  float:left;
+  width:117px;
+}
+a.selectTreeBtn{
+  width:23px;
+  height:23px;
+  display:inline-block;
+  background: url(selectbox/selectTreeArrow.png) no-repeat center;
+  border-left: 1px;
+  border-right:0px;
+  border-top:0px;
+  border-bottom:0px;
+  border-style: double solid  solid solid;
+  border-color: #ccc;
+  float:float;
+}
+.selectTreeContent{
+  width:200px;
+  height:200px;
+  position:absolute;
+  border: 1px;
+  border-style: double solid  solid solid;
+  border-color: #ccc;
+  z-index:9999;
+  overflow:hidden;
+  background-color:#ffffff;
+}
+.v6_concreteSelectTreeDiv{
+  overflow:auto;
+}
+.v6_selectTree_head_button_div{
+ float:right;
+ margin-top:8px;
+ width:200px;
+}
+.v6_selectTree_head_select_div{
+  line-height:23px;
+  margin-top:10px;
+  margin-right:17px;
+}
+.v6_selectTree_head_select_div label{
+ float:right;
+ margin-right:10px;
+
+}
+.v6_selectTree_head_select_div select{
+ float:right;
+}
+.v6_selectTree_button{
+    background:#dddce3;
+    height:25px;
+    color:#1d1d1d;
+    outline:none;
+    border:1px solid #becfd9;
+    border-radius: 5px;
+    padding-left:5px;
+	padding-right:5px;
+	letter-spacing:2px;
+	margin-left:5px;
+	margin-right:5px;
+	cursor:pointer;
+    -moz-box-shadow: 0px 0px 0px #000;
+    -webkit-box-shadow: 0px 0px 0px #000;
+    box-shadow: 0px 0px 0px #000;
+}
+.v6_selectTree_button:hover{
+   color:#000000;
+   background:#f0f2f6;
+}
+.v6_concreteSelectTreeDiv{
+   border-top:1px solid #bfcfda ;
+   overflow:auto;
+}
+/*树形下拉样式结束*/
+/*通用下拉树样式开始*/
+.queryTable label.sampleSelectTree{
+ margin-left:5px;
+}
+label.sampleSelectTree{
+  display:inline-block;
+  border: 1px;
+  border-style: double solid  solid solid;
+  border-color: #ccc;
+  position:relative;
+  height:23px;
+  line-height:23px;
+}
+label.sampleSelectTree input[type='text']{
+  border:0px;
+  margin-left:0px;
+  float:left;
+  width:117px;
+}
+a.sampleSelectTreeBtn{
+  width:23px;
+  height:23px;
+  display:inline-block;
+  background: url(selectbox/selectTreeArrow.png) no-repeat center;
+  border-left: 1px;
+  border-right:0px;
+  border-top:0px;
+  border-bottom:0px;
+  border-style: double solid  solid solid;
+  border-color: #ccc;
+  float:float;
+}
+.v6_concreteSampleSelectTreeDiv{
+   border-top:1px solid #bfcfda ;
+   overflow:auto;
+   max-height:250px;
+   max-width:250px;
+}
+.selectSampleTreeContent{
+  width:200px;
+  position:absolute;
+  border: 1px;
+  border-style: double solid  solid solid;
+  border-color: #ccc;
+  z-index:9999;
+  overflow:hidden;
+  background-color:#ffffff;
+}
+/*通用下拉树样式结束*/

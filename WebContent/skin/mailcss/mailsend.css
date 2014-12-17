@@ -1,0 +1,166 @@
+@CHARSET "UTF-8";
+body,ul,p,form,input,textarea,select,table,tbody,tr,td{
+	padding:0;margin:0;
+	font-family: 'Microsoft Yahei',verdana ;
+}
+textarea{
+	display:block;
+	border:1px solid #D6D6D6;
+}
+input[type='text']{
+	display:block;
+	border:1px solid #D6D6D6;
+	margin:0;
+	padding:0;
+}
+li{ 
+	list-style:none;
+}
+img{
+	display:block;
+	border:none;
+	vertical-align: initial;
+}
+body{
+	background-color:#F7F8FA;
+	font-size:12px;
+}
+h2{
+	font-family: '黑体',sans-serif;
+	margin-left: 10px;
+	color:black;
+}
+.headButtonLine{
+	height:50px;
+	background:url("/skin/images/mail/headbuttonline.png") repeat-x 0 0;
+	border-bottom: 1px solid #E4EDF3;
+	position: fixed;
+	width:100%;
+	z-index: 100;
+}
+.headButtonLine .func_button{
+	cursor:pointer;
+	margin-left: 4px;
+	margin-top: 10px;
+	float:left;
+	height:28px;
+	width:54px;
+	background: url("/skin/images/mail/sbutton.png") no-repeat 0 0;
+}
+.headButtonLine .func_button_d{
+	background: url("/skin/images/mail/sbutton.png") no-repeat 0 -28px;
+}
+.headButtonLine .func_button:hover{
+	opacity:0.6;
+	filter:alpha(opacity:60);
+}
+.headButtonLine_space{
+	height: 50px;
+}
+.main .main_left{
+	margin-right: 201px;
+	height:100%;
+}
+.main .main_right{
+	width:200px;
+	float:right;
+	height:100%;
+}
+#attach_tab{
+	height:30px;
+	line-height:30px;
+	width:99px;
+	border:1px solid #D6D6D6;
+	border-bottom: none;
+	float:left;
+	text-align: center;
+}
+#contact_tab{
+	height:30px;
+	line-height:30px;
+	width:98px;
+	border-bottom:1px solid #D6D6D6;
+	float:left;
+	text-align: center;
+}
+.main .main_right .main_right_attach{
+	margin-top: 30px;
+	width:198px;
+	height:100%;
+	border:1px solid #D6D6D6;
+	border-top: none;
+	border-bottom: none;
+}
+.main .mail_head{
+	width:100%;
+	margin-top:10px;
+}
+.main .mail_head_line{
+	height:28px;
+	line-height: 28px
+}
+.main .mail_head_left{
+	width:40px;
+	padding:0 10px;
+}
+.main .mail_head_right input{
+	width:98%;
+	height:18px;
+	line-height: 18px;
+}
+.main .mail_head_right textarea{
+	width:98%;
+	height:20px;
+	line-height: 18px;
+	resize:none;
+}
+.main .properties {
+	margin: 6px 10px;
+}
+.main .properties img{
+	display:inline;
+}
+.main .mail_editarea{
+	margin-left:6px;
+}
+#edui1{width:98% !important}/* 这个ID为编辑器的ID */
+#edui1_iframeholder{width:100% !important}/* 这个ID为编辑器可编辑区域的ID */
+.fileShow {
+	border-top-style:solid;
+	border-top-width:1px;
+	border-top-color:#ccc;
+	border-radius: 1px;
+	padding: 5px;
+	padding-right: 5px;
+	position: relative;
+
+}
+.fileShow .fileImg {
+	height: 28px;
+	width: 30px;
+	float:left;
+	margin-top: 4px;
+}
+.fileShow .action {
+}
+.fileShow .fileinfo {
+	color: #3d882d;
+}
+.fileShow .fileright {
+	margin-left:54px;
+	font-size: 10px !important;
+}
+.fileShow .filecontent {
+	padding-top: 3px;
+	height: 36px;
+}
+.textbutton{
+	color:#0086CC;
+	cursor: pointer;
+}
+.textbutton:hover{
+	color:#00CC43;
+}
+.fontclr{
+	color:#94A5B1;
+}

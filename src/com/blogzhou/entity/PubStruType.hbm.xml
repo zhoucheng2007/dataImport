@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-9-24 15:31:13 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.blogzhou.entity.PubStruType" table="PUB_STRU_TYPE" schema="DB2INST1">
+        <id name="struType" type="string">
+            <column name="STRU_TYPE" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="typeName" type="string">
+            <column name="TYPE_NAME" length="60" not-null="true" />
+        </property>
+        <property name="rootId" type="string">
+            <column name="ROOT_ID" length="30" not-null="true" />
+        </property>
+        <property name="isDefault" type="char">
+            <column name="IS_DEFAULT" length="1" not-null="true" />
+        </property>
+        <property name="note" type="string">
+            <column name="NOTE" length="250" />
+        </property>
+        <property name="inUse" type="char">
+            <column name="IN_USE" length="1" not-null="true" />
+        </property>
+        <property name="ctime" type="timestamp">
+            <column name="CTIME" length="26" not-null="true" />
+        </property>
+        <set name="pubStrus" table="PUB_STRU" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="STRU_TYPE" length="10" not-null="true" />
+            </key>
+            <one-to-many class="com.blogzhou.entity.PubStru" />
+        </set>
+        <set name="pubStruExts" table="PUB_STRU_EXT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="STRU_TYPE" length="10" not-null="true" />
+            </key>
+            <one-to-many class="com.blogzhou.entity.PubStruExt" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,189 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<property name="query.substitutions">
+		length=length, substring=substr
+	</property>
+	<property name="generate_statistics">false</property>
+	<property name="show_sql">true</property>
+	<property name="hibernate.jdbc.use_streams_for_binary">
+		true
+	</property>
+	<property name="hibernate.jdbc.batch_size">0</property>
+	<property name="connection.pool_size">50</property>
+	<property name="hibernate.connection.autocommit">false</property>
+	<property name="dialect">
+		org.hibernate.dialect.OracleDialect
+	</property>
+	<property name="hibernate.query.factory_class">
+		org.hibernate.hql.ast.ASTQueryTranslatorFactory
+	</property>
+	<property name="hibernate.connection.url">
+		jdbc:oracle:thin:@201.201.201.40:1521:sgrila
+	</property>
+	<property name="hibernate.connection.driver_class">
+		oracle.jdbc.driver.OracleDriver
+	</property>
+	<property name="hibernate.connection.username">wssw</property>
+	<property name="hibernate.connection.password">foresee</property>
+
+	<!-- Mapping files -->
+	<mapping
+		resource="com/foresee/omni/service/dao/OmniFormData.hbm.xml" />
+	<mapping
+		resource="com/foresee/omni/service/dao/ErrorMessage.hbm.xml" />
+	<mapping
+		resource="com/foresee/omni/service/dao/OmniUpdatePackage.hbm.xml" />
+	<mapping
+		resource="com/foresee/omni/service/dao/OmniUpdateVersion.hbm.xml" />
+
+	<!-- 个税 Mapping files -->
+
+	<mapping
+		resource="com/foresee/fstax/dao/zxsb/om/ZxsbGrdjxxData.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/zxsb/om/SbGrsdsYb.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/zxsb/om/SbGrsdsNb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/zxsb/om/SbHhqytzzgrsds.hbm.xml" />
+
+	<!-- 营业税 Mapping files -->
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/FstaxDsSbYys.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/FstaxDsSbYysFwy.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/FstaxDsSbYysFwykc.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/FstaxDsSbYysJrbxy.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/FstaxDsSbYysJtysy.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/FstaxDsSbYysJzy.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/FstaxDsSbYysYdjz.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/FstaxDsSbYysYly.hbm.xml" />
+
+	<!-- 扣款日志 Mapping files -->
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/TrBzLogTaxKkmx.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/TrBzLogTaxkkInfo.hbm.xml" />
+
+	<!-- 个税代扣代缴汇总申报 Mapping files -->
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/FstaxDsSbGsdkdjhzsb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/FstaxDsSbGsdkdjhzsbMx.hbm.xml" />
+	<!-- ca序列号与纳税人编码对应表 -->
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/FstaxCaUserinfo.hbm.xml" />
+
+	<!-- 纳税申报模块配置 -->
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbSbxx.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbSbxxZb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbKjqysdsbgb.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbQysdsa.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbSbf.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbQysdsaFb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbJdsds2008Hdzs.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbFjmqysdsjdsbb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbFjmqysdsjdsbbZb.hbm.xml" />
+	<!-- 综合申报 Mapping files -->
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbZhsb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbZhsbYwmx.hbm.xml" />
+
+	<!-- 桌面设置 Mapping files -->
+	<mapping resource="com/foresee/fstax/dao/zmsz/om/XtNsrZmsz.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/zmsz/om/DmKstd.hbm.xml" />
+
+
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbZgClxx.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbZgClxxZb.hbm.xml" />
+
+	<!-- 营业税配置 Mapping files -->
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbYysJtysfb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbYysYlyfb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbYysFfyfb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbYysJzyfb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbYysJrbxyfb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbYysFfyfbKcfb.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbYysMain.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbYysJzyfbYdjzyfb.hbm.xml" />
+
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbYysYwmx.hbm.xml" />
+
+	<!-- 文书登记类配置 Mapping files -->
+	<mapping resource="com/foresee/fstax/dao/ws/om/WsDjxx.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/ws/om/WsDjxxZb.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/ws/om/FpFpdjxx.hbm.xml" />
+
+	<!-- 个人独资企业和合伙企业投资者个人所得税申报 Mapping files -->
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbGrdzqyhhrgrsds.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/zxsb/om/SbGrsdsN12w.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/zxsb/om/DjZrrjbxx.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbGsdkdjhzsb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbGsdkdjmxsb.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbGsdkdjhzsbTemp.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbZys.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbCztdsys.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbQs.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbYanysSgqk.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbYanys.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbFjmqysdsjdsbbA.hbm.xml" />
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbFjmqysdsndsbbA.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbGdzys.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbTdzzs.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbTdzzsXf.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbTdzzsJf.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbFcs.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbJms.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbJmsQysdsJmse.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbJmsQysdsJmseWestdkf.hbm.xml"/>
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbJmsGrsds.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbJmsQysdsDmsde.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbJmsQysdsJmsde.hbm.xml" />
+    <mapping resource="com/foresee/fstax/dao/nssb/om/SbJmsQysdsMssr.hbm.xml"/>
+    <mapping resource="com/foresee/fstax/dao/nssb/om/SbJmsQysdsBzssr.hbm.xml"/>
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbJmsQysdsDkynssde.hbm.xml"/>
+    <mapping resource="com/foresee/fstax/dao/nssb/om/SbJmsQysdsJjsr.hbm.xml"/>
+    <mapping resource="com/foresee/fstax/dao/nssb/om/SbJmsQysdsJjkc.hbm.xml"/>
+    <mapping resource="com/foresee/fstax/dao/nssb/om/SbZhsbYysfb.hbm.xml"/>
+
+	<!--申报车船税 Mapping files-->
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbCcs.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbCcstemp.hbm.xml" />
+	<mapping resource="com/foresee/fstax/dao/nssb/om/DjZrryydj.hbm.xml" />
+	<!-- 企业所得税年报B类 -->
+	<mapping
+		resource="com/foresee/fstax/dao/nssb/om/SbNdsds2008Hdzs.hbm.xml" />
+	<!-- 残保金 -->
+	<mapping resource="com/foresee/fstax/dao/nssb/om/SbCbj.hbm.xml" />
+	<!-- 系统-纳税人参数 -->
+	<mapping resource="com/foresee/fstax/dao/nssb/om/XtNsrcs.hbm.xml" />
+
+</session-factory>
+</hibernate-configuration>

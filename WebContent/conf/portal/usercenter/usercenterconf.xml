@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	  <bean id="usercenterquery" class="com.v6.portal.usercenter.UserCenterQuery" singleton="false">
+	  	 <property name="userCenterService"><ref bean="userCenterService"/></property> 
+	  	 <property name="forwards">
+	    	<map>
+	    		<entry key="query" value="usercenter/default.jsp"/>
+			</map>
+		 </property>	   
+	  	</bean>
+		<bean id="UserCenterCmd" class="com.v6.portal.usercenter.cmd.UserCenterCmd" singleton="false">
+			<property name="userCenterService"><ref bean="userCenterService"/></property> 
+			<property name="forwards">
+				<map>
+					<entry key="forinsert" value="usercenter/createuser.jsp"/>
+					<entry key="getDetail" value="usercenter/modify.jsp"/>
+					<entry key="updateInfo" value="usercenter/modify.jsp"/>
+					</map>
+				</property>
+     </bean>   
+     <bean id="UserCenter" class="com.v6.portal.usercenter.cmd.UserCenterCmd" singleton="false">
+			<property name="userCenterService"><ref bean="userCenterService"/></property> 
+			<property name="forwards">
+				<map>
+					<entry key="getDetail" value="usercenter/detail.jsp"/>
+					</map>
+				</property>
+     </bean>    
+	  <bean id="userCenterService" class="com.v6.portal.usercenter.UserCenterService" singleton="false">
+	  	<property name="userCenterDomain"><ref bean="userCenterDomain"/></property>
+	  	<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	  	</bean>
+	  <bean id="userCenterDomain" class="com.v6.portal.usercenter.UserCenterDomain"></bean>
+</beans>

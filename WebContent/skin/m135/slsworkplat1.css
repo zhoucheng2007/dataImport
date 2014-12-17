@@ -1,0 +1,26 @@
+
+
+
+/*xmw增加*/
+
+
+/*信息采集页面样式*/
+.cgt_detail table {
+	border-collapse:collapse;
+}
+.cgt_detail table tr {
+	height:100px;
+	border-bottom: 1px #BEBEBE solid;
+	border-bottom: 2px #FFFFFF inset;
+}
+.cgt_detail table tr .rightBorder{
+	border-right: 1px #BEBEBE solid;
+	border-right: 2px #FFFFFF inset;
+}
+
+.cgt_detail table input[type="text"] {
+	font-size:32px;
+	width: 100px;
+}
+
+

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+<message></message>
+	<area id="taishanqu">
+		<color>1</color>
+		<name>泰山区</name>
+		<info>
+			<measure><mName>卷烟销量</mName><mValue>1.51</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>卷烟销额</mName><mValue>1.52</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>单箱值</mName><mValue>1.53</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>人均条数</mName><mValue>1.5</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+		</info>
+	</area>
+	<area id="daiyuequ">
+		<color>1</color>
+		<name>岱岳区</name>
+		<info>
+			<measure><mName>卷烟销量</mName><mValue>1.51</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>卷烟销额</mName><mValue>1.52</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>单箱值</mName><mValue>1.53</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>人均条数</mName><mValue>1.5</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+		</info>
+	</area>
+	<area id="feicheng">
+		<color>1</color>
+		<name>肥城</name>
+		<info>
+			<measure><mName>卷烟销量</mName><mValue>1.51</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>卷烟销额</mName><mValue>1.52</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>单箱值</mName><mValue>1.53</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>人均条数</mName><mValue>1.5</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+		</info>
+	</area>
+	<area id="dongping">
+		<color>1</color>
+		<name>东平</name>
+		<info>
+			<measure><mName>卷烟销量</mName><mValue>1.51</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>卷烟销额</mName><mValue>1.52</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>单箱值</mName><mValue>1.53</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>人均条数</mName><mValue>1.5</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+		</info>
+	</area>
+	<area id="ningyang">
+		<color>1</color>
+		<name>宁阳</name>
+		<info>
+			<measure><mName>卷烟销量</mName><mValue>1.51</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>卷烟销额</mName><mValue>1.52</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>单箱值</mName><mValue>1.53</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>人均条数</mName><mValue>1.5</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+		</info>
+	</area>
+	<area id="xintaishi">
+		<color>1</color>
+		<name>新泰市</name>
+		<info>
+			<measure><mName>卷烟销量</mName><mValue>1.51</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>卷烟销额</mName><mValue>1.52</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>单箱值</mName><mValue>1.53</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+			<measure><mName>人均条数</mName><mValue>1.5</mValue><mUite>万箱</mUite><mRank>1</mRank></measure>
+		</info>
+	</area>
+	
+	
+</config>

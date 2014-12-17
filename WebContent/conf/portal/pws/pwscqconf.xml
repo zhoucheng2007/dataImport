@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+     <bean id="cqpageinitcmd" class="com.v6.portal.pws.cq.PwsMainCmd" singleton="false">
+		<property name="pwsMainService"><ref bean="pwsMainService"/></property>
+	    <property name="forwards">
+	    	<map>
+	        	<entry key="goHomePage" value="pws/cq/home/homenew.jsp" />
+	        	<entry key="moreBacklog" value="pws/cq/home/moreBacklog.jsp" />
+	        	<entry key="queryDaibanByKeys" value="pws/cq/home/queryDaibanByKeys.jsp" />
+			</map>
+		</property>	    
+    </bean>
+	
+	<!--***********************domain配置********************************************-->
+	<bean id="pwsMainDomain" class="com.v6.portal.pws.cq.PwsMainDomain"> 
+	</bean>
+	<!--***********************service配置*******************************************-->
+
+	<bean id="pwsMainService" class=" com.v6.portal.pws.cq.PwsMainService"> 
+		<property name="pwsMainDomain"><ref bean="pwsMainDomain"/></property>   	
+		<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	</bean>
+</beans>
+

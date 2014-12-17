@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--***********************dao configuration*********************************************** -->
+	<bean id="mpSubscrListDao" class="org.loushang.eai.mp.dao.jdbc.MpSubscrListJdbcDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<!--***********************domain configuration******************************************** -->
+
+	<bean id="mpSubscrListDomain"
+		class="org.loushang.eai.mp.domain.support.MpSubscrListDomainImpl">
+		<property name="mpSubscrListDao">
+			<ref bean="mpSubscrListDao" />
+		</property>
+		<property name="mpSubscrListId">
+			<ref bean="mpSubscrListId" />
+		</property>
+	</bean>
+	<!--***********************service configuration******************************************* -->
+
+	<bean id="mpSubscrListService"
+		class="org.loushang.eai.mp.service.support.MpSubscrListServiceImpl">
+		<property name="mpSubscrListDomain">
+			<ref bean="mpSubscrListDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+
+
+	<!--***********************Flip initialization special query configuration 
+		begin****************************************** -->
+	<bean id="mpsubscrlistquery_page_init" class="org.loushang.eai.mp.query.MpSubscrListQueryPageInitCmd">
+		<property name="mpSubscrListService">
+			<ref bean="mpSubscrListService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="speQuery">
+					<ref bean="mpsubscrlistqueryforward" />
+				</entry>
+			</map>
+		</property>
+		<property name="pageSize">
+			<value>10</value>
+		</property>
+		<property name="beforIntercept">
+			<list>
+				<ref bean="mpsubscrlist_interceptor" />
+			</list>
+		</property>
+	</bean>
+	<!--***********************Flip initialization special query configuration 
+		end****************************************** -->
+	<!--***********************query page forward configuration begin*********************************** -->
+	<bean id="mpsubscrlistqueryforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="queryPageInit">jsp/eai/mp/mp_subscr_list_query_init.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<!--***********************query page forward configuration end*********************************** -->
+
+	<!--***********************view objects view configuration**************************************** -->
+	<bean id="mpSubscrListView" class="org.loushang.eai.mp.view.MpSubscrListView"
+		singleton="false" />
+
+	<!--***********************cmd configuration begin********************************************* -->
+	<bean id="mpsubscrlist" class="org.loushang.eai.mp.cmd.MpSubscrListCmd"
+		singleton="false">
+		<property name="mpSubscrListService">
+			<ref bean="mpSubscrListService" />
+		</property>
+		<property name="mpInceptMannerService">
+			<ref bean="mpInceptMannerService" />
+		</property>
+		<property name="mpMessageTypeService">
+			<ref bean="mpMessageTypeService" />
+		</property>
+		<property name="mpReceiveAddressService">
+			<ref bean="mpReceiveAddressService" />
+		</property>
+		<property name="view">
+			<ref bean="mpSubscrListView" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="mpsubscrlistView">
+					<ref bean="mpsubscrlistforward" />
+				</entry>
+				<entry key="mpsubscrlistViewChain">
+					<ref bean="mpsubscrlistforwardchain" />
+				</entry>
+			</map>
+		</property>
+		<property name="beforIntercept">
+			<list>
+				<ref bean="mpsubscrlist_interceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<!--***********************cmd configuration end********************************************* -->
+	<bean id="mpsubscrlist_interceptor" class="org.loushang.waf.interceptor.CollectionInterceptor">
+		<property name="collections">
+			<map>
+				<entry key="mpMessageType">
+					<ref bean="mpMessageType" />
+				</entry>
+				<entry key="mpInceptManner">
+					<ref bean="mpInceptManner" />
+				</entry>
+				<entry key="mpSubscriberType">
+					<ref bean="mpSubscriberType" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--***********************page forward configuration begin*********************************** -->
+	<bean id="mpsubscrlistforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="detail">jsp/eai/mp/mp_subscr_list_detail.jsp</prop>
+				<prop key="forinsert">jsp/eai/mp/mp_subscr_list_forinsert.jsp</prop>
+				<prop key="forupdate">jsp/eai/mp/mp_subscr_list_forupdate.jsp</prop>
+				<prop key="forsubscibe">jsp/eai/mp/mp_user_subscibe.jsp</prop>
+				<prop key="success">jsp/eai/mp/mp_subscibe_success.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="mpsubscrlistforwardchain" class="org.loushang.waf.mvc.ChainForward">
+		<property name="mappings">
+			<map>
+				<entry key="success">
+					<ref bean="mpsubscrlistquery_page_init" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--***********************page forward configuration end*********************************** -->
+</beans>

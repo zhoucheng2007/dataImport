@@ -1,0 +1,296 @@
+@CHARSET "UTF-8";
+body,ul,p,form,input,textarea,select{
+	padding:0;margin:0;font-family: 'Microsoft Yahei',verdana !important;
+}
+li{ 
+	list-style:none;
+}
+img{
+	display:block;
+	border:none;
+	vertical-align: initial;
+}
+button{
+	display:block;
+	cursor: pointer;
+}
+.frame{
+	position: relative;
+}
+.headButtonLine{
+	height:50px;
+	background:url("/skin/images/mail/headbuttonline.png") repeat-x 0 0;
+	border-bottom: 1px solid #E4EDF3;
+	position: fixed;
+	width:100%;
+	z-index: 10;
+}
+.headButtonLine .select_checkbox{
+	margin-top:16px;
+	font-size: 12px;
+	color:#206FA8;
+	margin-left: 30px;
+	float:left;
+	position: relative;
+	cursor: pointer;
+}
+.headButtonLine .select_checkbox:hover{
+	border:1px solid #D1D1D1;
+	margin:15px -1px -1px 29px;
+}
+.headButtonLine .select_checkbox  ul{
+	position: absolute;
+	top: 34px;
+	left: -20px;
+	background-color: white;
+	border: 1px solid #D4D4D4;
+	line-height: 24px;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+	white-space: nowrap;
+	border-radius: 3px;
+}
+.headButtonLine .select_checkbox  li{
+	padding: 0px 20px;
+}
+.headButtonLine .select_checkbox  li:hover{
+	background-color: #2579B7;
+	color:white;
+	cursor: pointer;
+}
+.down_arrow_img{
+	display: inline;
+	vertical-align: 2px;
+}
+.head_func_button{
+	margin-top: 10px;
+	float:left;
+	margin-left: 20px;
+}
+.head_func_button .sbutton{
+	line-height:28px;
+	margin: 0 5px;
+	float:left;
+	height:28px;
+	width:54px;
+	background: url("/skin/images/mail/sbutton.png") no-repeat 0 0;
+}
+.head_func_button .sbutton_d{
+	background: url("/skin/images/mail/sbutton.png") no-repeat 0 -28px;
+}
+.head_func_button .bbutton{
+	line-height:28px;
+	float:left;
+	height:28px;
+	width:78px;
+	background: url("/skin/images/mail/bbutton.png") repeat-x 0 0;
+}
+#switch_button{
+	float: left;
+	position: relative;
+}
+#switch_button ul{
+	position: absolute;
+	top: 30px;
+	left: 1px;
+	width: 76px;
+	border-radius: 3px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	background-color: white;
+	border:1px solid #d4d4d4;
+}
+#switch_button li{
+	padding: 3px 12px;
+}
+#switch_button li:hover{
+	cursor:pointer;
+	background-color: #2579B7;
+	color:white;
+}
+.head_func_button .bbutton_d{
+	background: url("/skin/images/mail/bbutton.png") repeat-x 0 -28px;
+}
+.headButtonLine .head_cpage_button{
+	margin-top:10px;
+	float:right;
+	}
+.headButtonLine .head_cpage_button .change_page{
+	position: relative;
+	float: left;
+	margin-right: 60px;
+	margin-top: 7px;
+	color:#206FA8;
+	}
+.headButtonLine .head_cpage_button .change_page:hover{
+	border:1px solid #D1D1D1;
+	cursor: pointer;
+	margin:6px 59px -1px -1px;
+}
+.headButtonLine .head_cpage_button  ul{
+	top: 32px;
+	left: -16px;
+	width: 100px;
+	max-height: 120px;
+	position: absolute;
+	background-color: white;
+	overflow-y: auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+	white-space: nowrap;
+	border-radius: 2px;
+	}
+.headButtonLine .head_cpage_button  li{
+	padding-left:16px;
+	}
+.headButtonLine .head_cpage_button  li:hover{
+	background-color: #2579B7;
+	color:white;
+	cursor:pointer;
+	}
+.headButtonLine .head_cpage_button .left_button{
+	float:left;
+	height:30px;
+	width:30px;
+	background: url("/skin/images/mail/round_button.png") no-repeat 0 -90px ;
+}
+.headButtonLine .head_cpage_button .left_button_d{
+	float:left;
+	height:30px;
+	width:30px;
+	background: url("/skin/images/mail/round_button.png") no-repeat 0 -120px;
+}
+.headButtonLine .head_cpage_button .right_button{
+	float:left;
+	height:30px;
+	width:30px;
+	background: url("/skin/images/mail/round_button.png") no-repeat 0 0;
+}
+.headButtonLine .head_cpage_button .right_button_d{
+	float:left;
+	height:30px;
+	width:30px;
+	background: url("/skin/images/mail/round_button.png") no-repeat 0 -30px;
+}
+.headButtonLine_space{
+	height: 50px;
+}
+.query_condition_wrap{
+	position:relative;
+}
+.query_condition{
+	min-height: 30px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	padding-left: 12px;
+	border-bottom: 2px solid #E4EDF3;
+	display: none;
+}
+.query_condition li{
+	line-height: 30px;
+	float:left;
+	margin-right: 16px;
+}
+.main .readinfo{
+	margin:12px 20px;
+	color:#737373;
+}
+.main .readinfo span{
+	margin:0 5px;
+}
+.main .list{
+	margin:5px 20px;
+}
+.main .list h2{
+	border-bottom: 1px solid #A3BDD0;
+	font-size: 13px;
+	font-weight: bold;
+	margin:0 0;
+}
+.main .list h2 span{
+	color:#737373;
+	font-size: 12px;
+	font-weight: normal;
+}
+.main .list table{
+	table-layout:fixed;
+	width:100%;
+	margin-bottom: 16px;
+}
+.main .list tr{
+	border-bottom: 1px solid #D5D6D7;
+	font-size: 13px;
+	line-height: 36px;
+	cursor: pointer;
+}
+.main .list tr:hover{
+	background-color: #F5F5F5;
+}
+.main .list td{
+	text-align: left;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow-x: hidden;
+}
+.clear{
+	clear:both;
+}
+.jNiceCheckbox{
+	top:0 !important;
+	left:6px !important;
+}
+.cpage_bottom_line{
+	width: 160px;
+	margin-top: 10px;
+	margin:0 auto;
+	text-align: center;
+}
+.cpage_bottom_line .left_button{
+	float:left;
+	text-indent: 12px;
+	height:28px;
+	width:80px;
+	line-height: 28px;
+	background: url("/skin/images/mail/cpage_button_group.png") no-repeat 0 -84px;
+}
+.cpage_bottom_line .right_button{
+	float:left;
+	text-indent: -20px;
+	height:28px;
+	width:80px;
+	line-height: 28px;
+	background: url("/skin/images/mail/cpage_button_group.png") no-repeat 0 0;
+}
+.cpage_bottom_line .left_button_d{
+	float:left;
+	text-indent: 12px;
+	height:28px;
+	width:80px;
+	line-height: 28px;
+	background: url("/skin/images/mail/cpage_button_group.png") no-repeat 0 -112px;
+}
+.cpage_bottom_line .right_button_d{
+	float:left;
+	text-indent: -20px;
+	height:28px;
+	width:80px;
+	line-height: 28px;
+	background: url("/skin/images/mail/cpage_button_group.png") no-repeat 0 -28px;
+}
+
+.page_button:hover{
+	opacity:0.6;
+	filter:alpha(opacity:60);
+	cursor: pointer;
+}
+
+.query_tab{
+	background-color: #F7F8FA;
+	right: 260px;
+	bottom: -31px;
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	border: 1px solid #E4EDF3;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	line-height: 30px;
+	text-align: center;
+}

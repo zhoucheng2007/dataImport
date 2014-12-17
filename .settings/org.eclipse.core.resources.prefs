@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//WebContent/jsp/common/head.jsp=UTF-8
+encoding//resource/appconfig.properties=UTF-8
+encoding//resource/foresee-wssw.properties=UTF-8
+encoding//resource/fstax.properties=UTF-8
+encoding//src/com/zc/exception/ActionException.java=UTF-8
+encoding//src/com/zc/orm/hibernate=UTF-8
+encoding//src/com/zc/orm/hibernate/SimpleHibernateDao.java=UTF-8
+encoding//src/com/zc/util/refelect/Reflector.java=UTF-8
+encoding//test/test/decrypt/asymmetryEncrypt.java=UTF-8
+encoding/<project>=UTF-8

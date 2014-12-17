@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<!--***** service configuration *****-->	  
+  	<bean id="ann_show_cmd" class="com.v6.portal.announcement.AnnShowCmd" singleton="false">
+  	   <property name="forwards">
+	    	<map>
+	        	<entry key="queryAnn" value="message/announcement/announcement.jsp" />	        	
+			</map>
+	  </property>	
+  	</bean>
+	
+   <bean id="annService" class="com.inspur.hsf.config.spring.proxy.SpringConsumerBean">
+		<property name="interfaceName"><value>com.v6.base.announcementl.IAnnService</value></property>
+	</bean>
+
+
+</beans>

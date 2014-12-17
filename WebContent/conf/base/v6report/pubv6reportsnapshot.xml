@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="pubReportSnapshotDomain" class="com.inspur.hsf.config.spring.proxy.SpringConsumerBean">
+		<property name="interfaceName">
+			<value>com.v6.base.v6report.snapshot.IPubReportSnapshotDomain</value>
+		</property>
+	</bean>
+
+	<bean id="pubReportSnapshotService" class="com.v6.base.v6report.snapshot.PubReportSnapshotService">
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+	<bean id="pubReportSnapshotCmd" class="com.v6.base.v6report.snapshot.PubReportSnapshotCmd"
+		singleton="false">
+		<property name="pubReportSnapshotService">
+			<ref bean="pubReportSnapshotService" />
+		</property>
+	</bean>
+</beans>
+
+   

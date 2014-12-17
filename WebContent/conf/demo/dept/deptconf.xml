@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!--***** dao configuration ***** -->
+	<!--***** domain configuration ***** -->
+	<bean id="deptDomain" class="org.loushang.demo.dept.domain.DeptDomainImpl">
+	</bean>
+
+	<!--***** service configuration ***** -->
+	<bean id="deptService" class="org.loushang.demo.dept.service.DeptServiceImpl">
+		<property name="deptDomain">
+			<ref bean="deptDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+
+	<!--***** netty services configuration ***** -->
+	<bean id="dept.netty" class="com.inspur.hsf.config.spring.proxy.SpringProviderBean">
+		<property name="interfaceName" value="org.loushang.demo.dept.service.IDeptService" />
+		<property name="target">
+			<ref bean="deptService" />
+		</property>
+		<!-- <property name="toRegistry"><value>false</value></property> <property 
+			name="serviceName"><value>deptService</value></property> <property name="host"><value>localhost</value></property> 
+			<property name="port"><value>1314</value></property> <property name="protocol"><value>netty</value></property> -->
+	</bean>
+</beans>

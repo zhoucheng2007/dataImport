@@ -1,0 +1,424 @@
+*{ padding: 0; margin: 0; border: 0;}
+ul,li{
+	list-style:none;
+}
+
+body{
+	font-family:'微软雅黑','宋体',Verdana, Geneva, sans-serif;
+	font-size:13px;
+}
+
+body{
+	font-family:'微软雅黑','宋体',Verdana, Geneva, sans-serif;
+	font-size:13px;
+}
+
+#tab-container{
+	
+}
+#tab-container .nav-tab-btn{
+	width:98px;
+	height:33px;
+	float:left;
+	line-height:33px;
+	text-align:center;
+	color:#3366FF;
+	cursor:pointer;
+}
+#tab-container .nav-tab-btn.active{
+	background:url(../../img/rc/rc-tab.jpg);
+	cursor:default;
+}
+.nav-tab-content{
+	height:400px;
+	border-top:#CCCCCC 1px solid;
+	overflow:auto;
+	display:none;
+}
+#nav-tab-content1{
+	display:block;
+}
+#spe-line{
+	height:30px;
+	background:url(../../img/rc/topedgemiddle.jpg) repeat-x;
+	margin-left:144px;
+	margin-right:144px;
+}
+#spe-line .line-left{
+	float:left;
+	width:144px;
+	height:30px;
+	background:url(../../img/rc/topedgeleft.jpg) no-repeat;
+	margin-left:-144px;
+}
+#spe-line .line-right{
+	float:right;
+	width:144px;
+	height:30px;
+	background:url(../../img/rc/topedgeright.jpg) no-repeat;
+	margin-right:-144px;
+}
+#layout-right{
+	margin-left:270px;
+	padding:10px;
+	padding-top:0px;
+}
+#layout-left{
+	width:270px;
+	float:left;
+}
+
+#menu-tab-container{
+	
+}
+#user{
+	width:213px;
+	height:54px;
+	background:url(../../img/rc/personal.png) no-repeat;
+	float:right;
+	margin-right:10px;
+}
+#menuBox-top{
+	width:270px;
+	height:10px;
+	background:url(../../img/rc/menutop.png) no-repeat;
+}
+#menuBox-bottom{
+	width:270px;
+	height:9px;
+	background:url(../../img/rc/menuend.png) no-repeat;
+}
+#menu{
+	background:url(../../img/rc/menumiddle.jpg) repeat-y;
+	padding-left:20px;
+	padding-right:20px;
+	position:relative;
+	padding-bottom:40px;
+}
+#busi-menu{
+	width:121px;
+	position:absolute;
+	line-height:40px;
+	padding-left:30px;
+	bottom:-5px;
+	*bottom:5px;
+	background:#FFFFFF;
+	cursor:pointer;
+}
+.content-iframe{
+	width:100%;
+	height:470px;
+}
+#menu-tab-container .tab-title{
+	width:26px;
+	height:24px;
+	background:url(../../img/rc/label1.png);
+	line-height:20px;
+	font-weight:bold;
+	text-align:center;
+	font-size:12px;
+	color:#FFF;
+	float:left;
+	cursor:pointer;
+	margin-left:10px;
+}
+#menu-tab-container .tab-title.active{
+	background:url(../../img/rc/label2.png);
+}
+#returnMain{
+	float:right
+}
+#busi-menu span{
+	float:left;
+	margin-top:10px;
+	margin-right:5px;
+	display:block;
+	width:14px;
+	height:18px;
+	background:url(../../img/rc/tubiao.png);
+}
+#allMenu{
+	width:650px;;
+	position:absolute;
+	top:70px;
+	left:170px;
+	display:none;
+	z-index:99990;
+}
+#container .closeBtn{
+	width:18px;
+	height:18px;
+	background:url(../../img/rc/fatcow_179.png) no-repeat;
+	position:absolute;
+	top:-9px;
+	right:-9px;
+	cursor:pointer;
+}
+#container-left{
+	width:200px;
+	float:left;
+}
+#container-right{
+	margin-left:200px;
+	height:100%;
+}
+#left-btn{
+	width:10px;
+	height:10px;
+	background:#CCC;
+	position:absolute;
+	right:0px;
+	top:10px;
+	cursor:pointer;
+}
+#menu-tab-container{
+	height:24px;
+	margin-bottom:5px;
+	border-bottom:#CCCCCC 1px solid;
+}
+.tab-btn{
+	height:24px;
+	*width:150px;
+	background:url(../../img/rc/tabm.png) repeat-x;
+	margin-left:10px;
+	margin-right:5px;
+	float:left;
+	cursor:pointer;
+}
+.tab-btn s{
+	display:block;
+	width:4px;
+	height:24px;
+	background:url(../../img/rc/tableft.png) no-repeat;
+	float:left;
+	margin-left:-4px;
+}
+.tab-btn b{
+	display:block;
+	width:5px;
+	height:24px;
+	background:url(../../img/rc/tabright.png) no-repeat;
+	float:right;
+	margin-right:-5px;
+}
+.tab-btn span{
+	line-height:24px;
+	padding:0 5px;
+	float:left;
+}
+.tab-btn .close-btn{
+	width:12px;
+	height:12px;
+	background:url(../../img/rc/xh.png) 50% no-repeat;
+	float:right;
+	margin-top:5px;	
+}
+.tab-btn .close-btn:hover{
+	border:#FF0080 1px solid;
+}
+.tab-btn:hover{
+	background:url(../../img/rc/tabm2.png) repeat-x;
+}
+.tab-btn:hover>s{
+	background:url(../../img/rc/tableft2.png) repeat-x;
+}
+.tab-btn:hover>b{
+	background:url(../../img/rc/tabright2.png) repeat-x;
+}
+.tab-btn:hover>span{	
+}
+.tab-btn.active>.close-btn{
+	background:url(../../img/rc/xw.png) 50% no-repeat;
+}
+.tab-btn.active{
+	background:url(../../img/rc/tabm2.png) repeat-x;
+}
+.tab-btn.active>s{
+	background:url(../../img/rc/tableft2.png) repeat-x;
+}
+.tab-btn.active>b{
+	background:url(../../img/rc/tabright2.png) repeat-x;
+}
+.tab-btn.active>span{	
+}
+.tab-btn.active>.close-btn{
+	background:url(../../img/rc/xh.png) 50% no-repeat;
+}
+#slt-container{
+	height:500px;
+	border:#CCCCCC 1px solid;
+	margin-top:10px;
+}
+.sys-menu{
+	width:167px;
+	height:43px;
+	margin-left:20px;
+	margin-top:10px;
+	cursor:pointer;
+}
+.sys-menu span{
+	float:left;
+	margin-left:50px;
+	margin-top:21px;
+}
+.sys-menu:hover{
+	color:#FF8000;
+}
+.sys-menu.active{
+	color:#FF8000;
+}
+.sys-menu.mululeixing{
+	background:url(../../img/rc/cddjq_11.png) no-repeat;
+}
+.sys-menu.muluguanli{
+	background:url(../../img/rc/cddjq_12.png) no-repeat;
+}
+.sys-menu.fabuguanli{
+	background:url(../../img/rc/cddjq_13.png) no-repeat;
+}
+.sys-menu.quanxianguanli{
+	background:url(../../img/rc/cddjq_14.png) no-repeat;
+}
+.sys-menu.gongjifenxi{
+	background:url(../../img/rc/cddjq_15.png) no-repeat;
+}
+.sys-menu.baobiaotixi{
+	background:url(../../img/rc/cddjq_16.png) no-repeat;
+}
+.sys-menu.shujucaiji{
+	background:url(../../img/rc/cddjq_17.png) no-repeat;
+}
+.sys-menu.juanyan{
+	background:url(../../img/rc/cddjq_17.png) no-repeat;
+}
+.sys-menu.mululeixing:hover{
+	background:url(../../img/rc/cddjh_11.png) no-repeat;
+}
+.sys-menu.muluguanli:hover{
+	background:url(../../img/rc/cddjh_12.png) no-repeat;
+}
+.sys-menu.fabuguanli:hover{
+	background:url(../../img/rc/cddjh_13.png) no-repeat;
+}
+.sys-menu.quanxianguanli:hover{
+	background:url(../../img/rc/cddjh_14.png) no-repeat;
+}
+.sys-menu.gongjifenxi:hover{
+	background:url(../../img/rc/cddjh_15.png) no-repeat;
+}
+.sys-menu.baobiaotixi:hover{
+	background:url(../../img/rc/cddjq_16.png) no-repeat;
+}
+.sys-menu.shujucaiji:hover{
+	background:url(../../img/rc/cddjh_17.png) no-repeat;
+}
+.sys-menu.juanyan:hover{
+	background:url(../../img/rc/cddjh_17.png) no-repeat;
+}
+.sys-menu.mululeixing.active{
+	background:url(../../img/rc/cddjh_11.png) no-repeat;
+}
+.sys-menu.muluguanli.active{
+	background:url(../../img/rc/cddjh_12.png) no-repeat;
+}
+.sys-menu.fabuguanli.active{
+	background:url(../../img/rc/cddjh_13.png) no-repeat;
+}
+.sys-menu.quanxianguanli.active{
+	background:url(../../img/rc/cddjh_14.png) no-repeat;
+}
+.sys-menu.gongjifenxi.active{
+	background:url(../../img/rc/cddjh_15.png) no-repeat;
+}
+.sys-menu.baobiaotixi.active{
+	background:url(../../img/rc/cddjq_16.png) no-repeat;
+}
+.sys-menu.shujucaiji.active{
+	background:url(../../img/rc/cddjh_17.png) no-repeat;
+}
+.sys-menu.juanyan.active{
+	background:url(../../img/rc/cddjh_17.png) no-repeat;
+}
+.holdpage{
+	position:absolute;
+	top:0px;
+	left:0px;
+	line-height:500px;
+	text-align:center;
+	background:url(../../img/rc/temp_08091512529506.gif) 50% no-repeat;
+}
+#container a{
+	display:block;
+	float:left;
+	color:#000000;
+	text-decoration:none;
+	padding-left:18px;
+	background:url(../../img/rc/tubiao.png) 0 4px no-repeat;
+}
+#container a:hover{
+	color:#0000FF;
+	text-decoration:underline;
+}
+#container a:active{
+	color:#990000;
+	text-decoration:underline;
+}
+#container a:visited{
+	color:#990000;
+	text-decoration:none;
+}
+#container li.haveSon{
+	font-weight:bold;
+	color:#0091b3 ;
+}
+#container li .title{
+	padding-left:20px;
+	background:url(../../img/rc/tb1.png) 0 4px no-repeat;
+}
+#container li .title.active{
+	background:url(../../img/rc/tb2.png) 0 4px no-repeat;
+}
+#container ul{
+	padding:5px;
+}
+#container li{
+	font-size:12px;
+	height:27px;
+	line-height:27px;
+	position:relative;
+	border-bottom:#CCCCCC 1px dotted;
+}
+#container li:hover{
+	background:#DDF;
+}
+#container li:hover>span{
+	display:inline;
+}
+#container li span{
+	display:none;
+	position:absolute;
+	right:3px;
+	color:#0000FF;
+	cursor:pointer;
+}
+#container li span:hover{
+	text-decoration:underline;
+}
+.mainBox{
+	cursor:pointer;
+}
+.mainBox:hover .mainBoxTitle{
+	color:#FF8000;
+}
+#menu-arrow{
+	width:8px;
+	height:39px;
+	top:0px;
+	right:0px;
+	position:absolute;
+	background:url(../../img/rc/menu-right-arrow.png);
+	cursor:pointer;
+}
+#menu-arrow.close{
+	background:url(../../img/rc/menu-left-arrow.png)
+}

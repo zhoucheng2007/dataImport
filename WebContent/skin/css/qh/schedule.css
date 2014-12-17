@@ -1,0 +1,37 @@
+body{
+	font-family:"微软雅黑","Microsoft YaHei",Verdana,Arial,"simsun","宋体","Microsoft Sans Serif", "Microsoft Tai Le", "Microsoft Uighur";
+	font-size:12px;
+	min-width: 1245px;
+  SCROLLBAR-FACE-COLOR: #fcfcfc;
+	SCROLLBAR-HIGHLIGHT-COLOR: #6c6c90;
+	SCROLLBAR-SHADOW-COLOR: #fcfcfc;
+	SCROLLBAR-3DLIGHT-COLOR: #fcfcfc;
+	SCROLLBAR-ARROW-COLOR: #240024;
+	 SCROLLBAR-TRACK-COLOR: #fcfcfc;
+	 SCROLLBAR-DARKSHADOW-COLOR: #48486c;
+}
+li{
+	vertical-align: bottom;
+}
+a{
+	text-decoration: none;
+}
+a:visited {
+ text-decoration: none;
+}
+a:hover {
+ text-decoration: none;
+}
+a:active {
+ text-decoration: none;
+}
+
+.main-container{
+	border-top: 1px #bccad3 solid;
+	min-width: 1024px;
+	overflow: hidden;
+
+}
+
+
+ 

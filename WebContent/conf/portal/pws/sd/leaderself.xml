@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<!--***********************domain配置********************************************-->
+	<bean id="leaderBookselfDomain" class="com.v6.portal.pws.sd.leaderself.domain.support.LeaderBookselfDomain"> 
+	</bean>
+<!--***********************service配置*******************************************-->
+
+	<bean id="leaderBookselfService" class=" com.v6.portal.pws.sd.leaderself.service.support.LeaderBookselfService"> 
+		<property name="leaderBookselfDomain"><ref bean="leaderBookselfDomain"/></property>   	
+		<property name="transactionTemplate"><ref bean="jdbcTransactionTemplate"/></property>
+	</bean>
+<!--***********************翻页初始化特殊查询配置开始******************************************-->
+	<bean id="leaderBookself" class="com.v6.portal.pws.sd.leaderself.LeaderBookselfCmd">
+		<property name="leaderBookselfService"><ref bean="leaderBookselfService"/></property>
+	    <property name="forwards">
+	        <map>
+	            <entry key="upload" value="pws/sd/leaderself/BookUploadPage.jsp"></entry>
+	            <entry key="query" value="pws/sd/leaderself/LeaderBookself.jsp"></entry>
+	            <entry key="foraddfilegroup" value="pws/sd/leaderself/InsertBookGroupPage.jsp"></entry>
+			</map>
+        </property>
+	</bean>
+	<bean id="leaderBookselfupload" class="com.v6.portal.pws.sd.leaderself.LeaderBookselfUploadCmd">
+		<property name="leaderBookselfService"><ref bean="leaderBookselfService"/></property>
+		<property name="forwards">
+	        <map>
+	            <entry key="photoupload" value="pws/sd/leaderself/InsertBookGroupPage.jsp"></entry>
+			</map>
+        </property>
+	</bean>
+	<bean id="booksquerypageinitcmd" class="com.v6.portal.pws.sd.leaderself.BooksQueryPageInitCmd">
+		<property name="leaderBookselfService"><ref bean="leaderBookselfService"/></property>  
+	    <property name="forwards">
+	        <map>
+	        	<entry key="query" value="pws/sd/leaderself/QueryBookPage.jsp"></entry>
+	        </map>
+        </property>
+	</bean>	
+</beans>

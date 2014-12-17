@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 
+		1）实际业务类是通过Spring的HessianServiceExporter类来暴露给客户端的。 
+        2）service：指定服务对应的业务类。 
+        3）serviceInterface：指定业务类实现哪个接口。Spring推荐采用面向接口编程，因此，Hessian服务建议通过接口暴露。 
+        4）Hessian的远程服务名为/hessianService。笔者使用的web服务器是Tomcat7，端口是8187，web应用名为dataImport，则远程服务的URL为：http://localhost:8187/dataImport/hessian/hessianService。
+          -->
+
+	<bean id="hessianService" class="com.blogzhou.webservice.hessian.HessianServiceImpl"/>  
+	          
+	<!-- 远程服务 -->  
+	<bean name="/hessianService" class="org.springframework.remoting.caucho.HessianServiceExporter">  
+	    <property name="service" ref="hessianService"/>  
+	    <property name="serviceInterface">  
+	        <value>  
+	            com.blogzhou.webservice.hessian.HessianService
+	        </value>  
+	    </property>  
+	</bean>  
+</beans>

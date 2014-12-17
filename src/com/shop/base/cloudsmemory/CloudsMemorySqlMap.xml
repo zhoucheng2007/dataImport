@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.v6.base.cloudsmemory.CloudsMemoryDomain">
+	<select id="getSession" parameterType="map" resultType="map">
+		SELECT setting_obj as SETTINGOBJ
+		FROM base_cloud_mem
+		WHERE user_id=#{userId} 
+        and app_code=#{appCode}
+        and obj_type=#{objType} 
+	</select>
+	<select id="getSeq" parameterType="map" resultType="map">
+		SELECT SEQ
+		FROM base_cloud_mem
+		WHERE user_id=#{userId} 
+        and app_code=#{appCode}
+        and obj_type=#{objType} 
+	</select>
+	<update id="updateSeq" parameterType="map" >
+		 UPDATE base_cloud_mem
+         SET seq=seq+1
+         WHERE user_id=#{userId} 
+         and app_code=#{appCode}
+         and obj_type=#{objType} 
+	</update>
+	<insert id="insertSession" parameterType="map" >
+		INSERT INTO base_cloud_mem(
+		user_id,
+		app_code,
+		obj_type,
+		setting_obj
+		) 
+		values(
+		#{userId,jdbcType=VARCHAR},
+		#{appCode,jdbcType=VARCHAR},
+		#{objType,jdbcType=CHAR}, 
+		#{settingObj,jdbcType=BLOB}
+		)
+	</insert>
+	<update id="updateSession"  parameterType="map">
+		 UPDATE base_cloud_mem
+         SET setting_obj=#{settingObj,jdbcType=BLOB}
+         WHERE user_id=#{userId} 
+         and app_code=#{appCode}
+         and obj_type=#{objType}
+	</update>
+
+</mapper>

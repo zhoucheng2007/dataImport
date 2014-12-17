@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="mpMessageId" class="org.loushang.bsp.base.id.dao.jdbc.IncrementDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="id">
+			<value>MP_MESSAGE_MSG_ID</value>
+		</property>
+	</bean>
+	<bean id="mpMessageHospitalId" class="org.loushang.bsp.base.id.dao.jdbc.IncrementDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="id">
+			<value>MP_MESSAGE_HOSPITAL_ID</value>
+		</property>
+	</bean>
+	<bean id="mpSubscrListId" class="org.loushang.bsp.base.id.dao.jdbc.IncrementDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="id">
+			<value>MP_SUBSCR_LIST_ID</value>
+		</property>
+	</bean>
+	<bean id="mpUserMessageId" class="org.loushang.bsp.base.id.dao.jdbc.IncrementDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="id">
+			<value>MP_USER_MESSAGE_ID</value>
+		</property>
+	</bean>
+	<bean id="mpReceiveAddressId" class="org.loushang.bsp.base.id.dao.jdbc.IncrementDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="id">
+			<value>RECEIVE_ADDRESS_ID</value>
+		</property>
+	</bean>
+</beans>

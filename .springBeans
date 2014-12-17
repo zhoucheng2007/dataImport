@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.6.0.201407080615-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>WebContent/WEB-INF/hessian-servlet.xml</config>
+		<config>resource/spring-common.xml</config>
+		<config>resource/spring-mvc-shiro.xml</config>
+		<config>resource/spring-config.xml</config>
+		<config>resource/spring-mvc.xml</config>
+		<config>test/test/springheadannotition/spring-beantest.xml</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

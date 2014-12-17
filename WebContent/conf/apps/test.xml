@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!--***********************cmd配置开始********************************************* -->
+	<bean id="test" class="TestCmd" singleton="false">
+		<property name="forwards">
+			<map>
+				<entry key="bspinfo">
+					<ref bean="testForward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--***********************cmd配置结束********************************************* -->
+
+	<!--***********************界面转向forward配置开始*********************************** -->
+	<bean id="testForward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="userId">jsp/test.jsp</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

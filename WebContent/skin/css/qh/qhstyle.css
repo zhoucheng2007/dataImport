@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* CSS Document */
+body,div, h1, h2, h3, h4, p, form, label, input, textarea, img, span{
+	margin:0; padding:0;
+}
+.entrance{
+	width:250px;
+	height:225px;
+	background:#058bc8;
+	
+	}
+.portalicon{
+	height:37px;
+	line-height:37px;
+	font-size:13px;
+	margin-top: -15px;
+	font-family:"微软雅黑", 'Microsoft Yahei';
+	background:url(../../img/qh/anniu1.png) 16px 8px no-repeat;
+	border-bottom : 1px solid #8bc0cc;
+	}
+.entrancetitle{
+	width:250px;
+	height:32px;
+	line-height:35px;
+	color:#fff;
+	font-size:16px;
+	font-family:"微软雅黑", 'Microsoft Yahei';
+	font-weight:bold;
+	text-align:center;
+	border-bottom : 1px solid #006c9d;
+	}
+.td1{
+	height:44px;
+	width:124px;
+	border-top : 1px solid #f5fafb;
+	border-right : 1px solid #8bc0cc;
+	border-bottom : 1px solid #8bc0cc;
+	}
+.td2{
+	height:44px;
+	border-top : 1px solid #f5fafb;
+	border-right : 1px solid #8bc0cc;
+	border-bottom : 1px solid #8bc0cc;
+	}
+.td3{
+	height:44px;
+	width:124px;
+	border-top : 1px solid #f5fafb;
+	border-left : 1px solid #f5fafb;
+	border-bottom : 1px solid #8bc0cc;
+	}
+.td4{
+	height:44px;
+	width:124px;
+	border-top : 1px solid #f5fafb;
+	border-left : 1px solid #f5fafb;
+	border-bottom : 1px solid #8bc0cc;
+	}
+.td3 p.lftTxt1{
+	display:block;
+	background:url(../../img/qh/bgzdh.png) 16px 8px no-repeat;
+	padding:3px 6px 3px 50px;
+	font:normal 12px/36px  "宋体";
+	color:#038BC7;
+	line-height : 150%;
+	text-align:center;
+	float:left;
+}
+.lftTxt1 a{
+	color:#038BC7;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt1 a:hover{
+	color:#f60;
+	text-decoration:none;
+	cursor:pointer;
+	}	
+.lftTxt2{
+	display:block;
+	background:url(../../img/qh/zichan.png) 16px 8px no-repeat;
+	padding:3px 6px 3px 50px;
+	font:normal 12px/36px  "宋体";
+	color:#038BC7;
+	line-height : 150%;
+	text-align:center;
+	float:left;
+}
+.lftTxt2 a{
+	color:#038BC7;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt2 a:hover{
+	color:#f60;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt3{
+	display:block;
+	background:url(../../img/qh/v3guanli.png) 16px 8px no-repeat;
+	padding:3px 6px 3px 50px;
+	font:normal 12px/36px  "宋体";
+	color:#038BC7;
+	line-height : 150%;
+	text-align:center;
+	float:left;
+}
+.lftTxt3 a{
+	color:#038BC7;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt3 a:hover{
+	color:#f60;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt4{
+	display:block;
+	background:url(../../img/qh/v3yingyong.png) 16px 8px no-repeat;
+	padding:3px 6px 3px 50px;
+	font:normal 12px/36px  "宋体";
+	color:#038BC7;
+	line-height : 150%;
+	text-align:center;
+	float:left;
+}
+.lftTxt4 a{
+	color:#038BC7;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt4 a:hover{
+	color:#f60;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt5{
+	display:block;
+	background:url(../../img/qh/zijin.png) 16px 8px no-repeat;
+	padding:3px 6px 3px 50px;
+	font:normal 12px/36px  "宋体";
+	color:#038BC7;
+	line-height : 150%;
+	text-align:center;
+	float:left;
+}
+.lftTxt5 a{
+	color:#038BC7;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt5 a:hover{
+	color:#f60;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt6{
+	display:block;
+	background:url(../../img/qh/kongjian.png) 16px 8px no-repeat;
+	padding:3px 6px 3px 50px;
+	font:normal 12px/36px  "宋体";
+	color:#038BC7;
+	line-height : 150%;
+	text-align:center;
+	float:left;
+}
+.lftTxt6 a{
+	color:#038BC7;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt6 a:hover{
+	color:#f60;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt7{
+	display:block;
+	background:url(../../img/qh/kuaijikaohexitong.png) 16px 8px no-repeat;
+	padding:3px 6px 3px 50px;
+	font:normal 12px/36px  "宋体";
+	color:#038BC7;
+	line-height : 150%;
+	text-align:center;
+	float:left;
+}
+.lftTxt7 a{
+	color:#038BC7;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt7 a:hover{
+	color:#f60;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt8{
+	display:block;
+	background:url(../../img/qh/jianguan.png) 16px 8px no-repeat;
+	padding:3px 6px 3px 50px;
+	font:normal 12px/36px  "宋体";
+	color:#038BC7;
+	line-height : 150%;
+	text-align:center;
+	float:left;
+}
+.lftTxt8 a{
+	color:#038BC7;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.lftTxt8 a:hover{
+	color:#f60;
+	text-decoration:none;
+	cursor:pointer;
+	}

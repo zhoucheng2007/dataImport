@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="pubItemFilterCmd" class="com.v6.base.commonSelect.item.ItemFilterCmd">
+	</bean>
+	<bean id="pubItemSelectCmd" class="com.v6.base.commonSelect.item.ItemSelectCmd">
+		<property name="forwards">
+			<map>
+				<entry key="itemForward">
+					<ref bean="pubItemSelectForward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="pubItemSelectForward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="itemtype">/jsp/pub/commonSelect/item/plm_type.jsp</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
+

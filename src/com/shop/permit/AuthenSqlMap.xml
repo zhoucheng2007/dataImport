@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AuthenService">	
+
+    <select id="commonSelect" parameterType="map" resultType="map">
+	SELECT S.APP_USER_ID,P.URI FROM PUB_USER_SSO S,PUB_APPS P
+	WHERE S.APP_CODE=P.APP_CODE
+	AND S.APP_CODE=#{APP_CODE}
+	AND S.USER_ID=#{USER_ID}
+	</select>
+    <select id="mappSelect" parameterType="map" resultType="map">
+	SELECT APP_USER_ID
+	  FROM pub_user_sso S
+	 WHERE 
+		AND S.APP_CODE=#{APP_CODE}
+		AND S.USER_ID=#{USER_ID}
+	</select>
+	
+	 <select id="queryDN" parameterType="map" resultType="map">
+       select user_id,dn_info,IS_FORCEKEY from pub_users where DN_INFO =#{DN_INFO}
+     </select>
+	
+	<select id="queryUserID" parameterType="map" resultType="map">
+       select user_id,dn_info,IS_FORCEKEY from pub_users where DN_INFO =#{DN_INFO}
+    </select>
+    <select id="queryByUserID" parameterType="map" resultType="map">
+       select USER_ID,PASSWORD from pub_users where USER_ID =#{USER_ID}
+    </select>
+	
+</mapper>

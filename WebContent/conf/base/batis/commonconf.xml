@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--***** base command configuration ***** -->
+	<bean id="commonquery" class="com.v6.base.batis.CommonQueryCmd"
+		singleton="false">
+		<property name="forwards">
+			<map>
+				<entry key="test" value="test.jsp" />
+			</map>
+		</property>
+	</bean>
+	<!-- 通用查询cmd -->
+	<bean id="pubsql" class="com.v6.base.cmd.PubSqlCommand" singleton="false">
+	</bean>
+</beans>
+
+   

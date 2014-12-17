@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-9-24 15:31:13 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.blogzhou.entity.PubStru" table="PUB_STRU_BAK" schema="DB2INST1">
+        <id name="struId" type="string">
+            <column name="STRU_ID" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="pubStruType" type="string">
+            <column name="STRU_TYPE" length="10" />
+        </property>
+        <property name="organId" type="string">
+            <column name="ORGAN_ID" length="30" />
+        </property>
+        <property name="parentId" type="string">
+            <column name="PARENT_ID" length="30" />
+        </property>
+        <property name="struLevel" type="int">
+            <column name="STRU_LEVEL" not-null="true" />
+        </property>
+        <property name="struPath" type="string">
+            <column name="STRU_PATH" length="1000" not-null="true" />
+        </property>
+        <property name="struOrder" type="int">
+            <column name="STRU_ORDER" not-null="true" />
+        </property>
+        <property name="isLeaf" type="char">
+            <column name="IS_LEAF" length="1" not-null="true" />
+        </property>
+        <property name="inUse" type="char">
+            <column name="IN_USE" length="1" not-null="true" />
+        </property>
+        <property name="positionCode" type="string">
+            <column name="POSITION_CODE" length="30" />
+        </property>
+        <property name="ctime" type="timestamp">
+            <column name="CTIME" length="26" not-null="true" />
+        </property>
+        <property name="struName" type="string">
+            <column name="STRU_NAME" length="80" />
+        </property>
+        <property name="struCode" type="string">
+            <column name="STRU_CODE" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

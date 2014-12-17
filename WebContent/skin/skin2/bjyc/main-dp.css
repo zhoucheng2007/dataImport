@@ -1,0 +1,283 @@
+/* CSS Document */
+html { 
+	overflow: auto;
+}
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family:SimHei,"微软雅黑","Microsoft YaHei",Verdana,Arial,"simsun","宋体","Microsoft Sans Serif", "Microsoft Tai Le", "Microsoft Uighur" !important;
+	font-size:20px !important;	
+	color:#ffffff !important;
+	padding-bottom:0px !important;
+	background:url(img-dp/background.jpg) no-repeat;
+}
+#main-page{
+	width:2560px;
+	height:768px;
+}
+
+/* 表格样式 */
+.dataTable{
+	table-layout: fixed;
+    border-collapse:collapse;
+	border:3px solid #1B1447;
+	text-align:center;
+	color:#ffffff;
+	font-size:20px ;
+}
+.dataTable th{	
+    height:50px;
+	border-right:1px solid #003DD6;
+	background:#0033A8;
+    line-height:50px;
+	text-align:center;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.dataTable td{
+	height:40px;
+	border-right:1px solid #003DD6;
+	background:#005EDB;
+	line-height:40px;
+	padding-left:4px;
+	padding-right:4px;
+	white-space:nowrap;
+	overflow:hidden;
+	overflow:visible;
+	white-space:normal;
+}
+.dataTable-tr-even td{
+	background-color:#0045DB;
+}
+.dataTable tr.active td{
+	background:#002699;
+}
+.dataTable td.active{
+	background:#002699;
+}
+.dataTable td.up-arrow{
+	background:url(img-dp/up-arrow.png) no-repeat;
+	background-position:right;
+	background-color:#005EDB;
+}
+.dataTable td.down-arrow{
+	background:url(img-dp/down-arrow.png) no-repeat;
+	background-position:right;
+	background-color:#005EDB;
+}
+.dataTable-tr-even td.up-arrow{
+	background:url(img-dp/up-arrow.png) no-repeat;
+	background-position:right;
+	background-color:#0045DB;
+}
+.dataTable-tr-even td.down-arrow{
+	background:url(img-dp/down-arrow.png) no-repeat;
+	background-position:right;
+	background-color:#0045DB;
+}
+.dataTable tr.active td.up-arrow{
+	background:url(img-dp/up-arrow.png) no-repeat;
+	background-position:right;
+	background-color:#002699;
+}
+.dataTable tr.active td.down-arrow{
+	background:url(img-dp/down-arrow.png) no-repeat;
+	background-position:right;
+	background-color:#002699;
+}
+/*三级页面样式*/
+#data-container{
+	width:2350px;
+	height:581px;
+	position:relative;
+	top:140px;
+	margin-left:100px;
+}
+.data-container{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+#menuBtin-container{
+	width:56px;
+	height:263px;
+	float:right;
+	margin-right:40px;
+	margin-top:-130px;
+	position:relative;
+}
+#goHome{
+	width:56px;
+	height:56px;
+	background:url(img-dp/goHome.png) no-repeat;	
+	position:absolute;
+	bottom:0px;
+	cursor:pointer;
+}
+#goBack{
+	width:56px;
+	height:56px;
+	background:url(img-dp/goBack.png) no-repeat;
+	position:absolute;
+	top:138px;
+	cursor:pointer;
+}
+#helpBtn{
+	width:56px;
+	height:56px;
+	background:url(img-dp/helpBtn.png) no-repeat;
+	position:absolute;
+	top:69px;
+	cursor:pointer;
+}
+#pub-measure-help-container{
+	width:0;
+	height:716px;
+	color:#000000;
+	position:absolute;
+	left: 2460px;
+	top: 50px;
+	z-index:999999;
+}
+#zhuanMaiSys{
+	width:56px;
+	height:56px;
+	background:url(img-dp/zmsys.png) no-repeat;
+	position:absolute;
+	top:0px;
+	cursor:pointer;
+}
+#fuzhuJCSys{
+	width:56px;
+	height:56px;
+	background:url(img-dp/fuzhuJCSys.png) no-repeat;
+	position:absolute;
+	top:0px;
+	cursor:pointer;
+}
+#wuliuSys{
+	width:56px;
+	height:56px;
+	background:url(img-dp/wuliuSys.png) no-repeat;
+	position:absolute;
+	top:0px;
+	cursor:pointer;
+}
+#left-container{
+	width:361px;
+	height:100%;
+	background:url(img-dp/container7.png) no-repeat;
+	float:left;
+	position:relative;
+}
+#left-title{
+	width:150px;
+	height:580px;
+	background:url(img-dp/container-title.png) no-repeat;
+	float:left;
+	margin-left:-50px;
+}
+#title-container{
+	width:50px;
+	line-height:50px;
+	text-align:center;
+	font-size:32px;
+	color:#59D6FF;
+	font-weight:bold;
+	margin-left:50px;
+}
+.title{
+	width:100%;
+	height:50px;
+	position:absolute;
+	font-size:32px;
+	color:#FFFFFF;
+	line-height:50px;
+	text-align:center;
+	font-weight:bold;
+	top:80px;
+}
+
+.sub-title{
+	width:182px;
+	height:48px;
+	font-size:20px;
+	color:#FFFFFF;
+	line-height:45px;
+	text-align:center;
+	font-weight:bold;
+	margin-left:45px;
+}
+
+.menu-pic{
+	width:200px;
+	height:200px;
+	position:absolute;
+	left: 90px;
+	top: 200px;
+}
+#go-back{
+	width:336px;
+	height:90px;
+	background:url(img-dp/go-back.png) no-repeat;
+	position:absolute;
+	left: 10px;
+	top: 450px;
+	cursor:pointer;
+}
+#gis-container{
+	width:2202px;
+	height:100%;
+	background:url(img-dp/container-gis.png) no-repeat;
+	float:right;
+	position:relative;
+}
+#gis-data{
+	background-color:transparent;
+	height:560px;
+	margin:5px;
+}
+.container-title{
+	height:120px;
+	font-size:32px;
+	color:#FFFFFF;
+	line-height:120px;
+	text-align:center;
+	font-weight:bold;
+}
+
+/* 下拉框样式 */
+.ui-widget{
+	font-family:SimHei,"微软雅黑","Microsoft YaHei",Verdana,Arial,"simsun","宋体","Microsoft Sans Serif", "Microsoft Tai Le", "Microsoft Uighur" !important;
+}
+.ui-widget-select-header{
+	width:100px;
+	background:#165392 !important;
+	border:1px solid #25B9E9;	
+	font-size:20px;
+	color:#FFFFFF;
+}
+.ui-widget-content{
+	background:#008ACB !important;
+}
+.ui-multiselect-checkboxes{
+	scrollBar-face-color:#1560B1;
+	scrollbar-track-color:#162C55;
+	scrollbar-3dlight-color:#2D9DDC;
+}
+.ui-select-state-hover, .ui-select-state-focus{
+	background:#03569A !important;
+}
+.ui-corner-all .ui-select-state-active{
+	background:#03569A !important;
+}
+.ui-multiselect-checkboxes label{
+	font-size:20px;
+	color:#FFFFFF;
+}
+.ui-icon{
+	background:url(img-dp/select-arrow.png);
+}

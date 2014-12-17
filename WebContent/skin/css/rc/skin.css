@@ -1,0 +1,1158 @@
+body{
+	font-size:9pt;
+	background-color:#F5F9FA;                           /*网页背景色*/
+	padding:0px;
+	color:#1C3D5E;
+}
+table{
+	border-collapse : Collapse;                         /**/
+	border:0px none;                                    /**/
+}
+/*-------------------放单选框及复选框的label样式---------------------------*/
+.advlabel{
+	overflow:		hidden;
+	text-overflow:	ellipsis;
+	vertical-align:	middle;
+	text-align:		center;
+}
+/*-------------------input样式---------------------------*/
+.body input{
+	width:100%;
+	height:22;
+	padding-right:17;
+	text-align:right;
+	border: 1px solid #808080;
+	}
+/*-------------------复选框input样式---------------------------*/
+.advcheckbox {
+	width:			13px;
+	height:			13px;
+	vertical-align:	middle;
+}
+/*-------------------单选框input样式---------------------------*/
+.advradio {
+	width:			13px;
+	height:			13px;
+	vertical-align:	middle;
+	margin-right:4;
+}
+/*-------------------按钮样式button---------------------------*/
+.advbutton {
+	overflow:	hidden;
+	text-align:	center;
+	vertical-align:	middle;
+	font-size: 9pt;
+	cursor: hand;
+	height: 20px;
+	background-color: white;
+	background-image:url(../images/btn_bg.gif);
+	border: #6489B3 1px solid;
+	color:#000000;
+}
+.advbutton-over
+ {
+	overflow:	hidden;
+	text-align:	center;
+	vertical-align:	middle;
+	border: #6489B3 1px solid;
+	font-size: 9pt;
+	cursor: hand;
+	height: 20px;
+	background-color: #6489B3;
+	color:#ffffff;
+}
+/*-------------------按钮button中的图片样式---------------------------*/
+.advbutton img{
+	vertical-align:middle;
+	margin-right:2;
+	}
+	/*-------------------数据控制条中的button按钮样式---------------------------*/
+.data_ctrl button{
+	width:25;height:20;
+	}
+	/*-------------------快捷键提示样式，加下划线并转为大写字母---------------------------*/
+u{text-transform : uppercase; }
+/*-------------------进度条外div样式---------------------------*/
+.guage{
+	width:190;
+	height:12;
+	border:1 solid background;
+	background:white;
+	overflow:hidden
+}
+/*-------------------进度条内div样式---------------------------*/
+.guagesub{
+	background: lime;
+	filter:Alpha(Opacity=0,FinishOpacity=100, Style=1, StartX=0, StartY=0, FinishX=100, FinishY=0);
+	height:4;
+}
+/*-------------------数字微调输入框input样式---------------------------*/
+.adjust input{
+	width:100%;
+	height:22;
+	padding-right:17;
+	text-align:right;
+	}
+	/*-------------------数字微调按钮button样式---------------------------*/
+.adjust button{
+	width:16;
+	height:9;
+	position:absolute;
+	font-size:7;
+	font-family:webdings;
+	background-color:white;
+	border:silver solid 1;
+	
+	}
+/*-------------------组合框输入框input样式---------------------------*/
+.combobox input{
+	width:100%;
+	height:20;
+	padding-right:17;
+	}
+/*-------------------组合框下拉按钮button样式---------------------------*/
+.combobox button{
+	width:16;
+	height:16;
+	position:absolute;
+	font-size:9;
+	line-height:1px;
+	font-family:webdings;
+	background: lightskyblue;
+	background-image:url(images/buttonbg.gif);
+	border-width:1px;
+	border-style:solid;
+	border-color: azure royalblue royalblue azure
+	}
+/*-------------------组合框下拉内容label样式---------------------------*/
+.combobox label{
+	width:100%;
+	height:20px;
+	padding-top:4;
+	}
+/*-------------------组合框当前选中项样式---------------------------*/
+.combobox.selected{
+	background: royalblue;
+	color:white;
+	width:100%;
+	height:20px;
+	}
+/*-------------------组合框下拉内容体样式---------------------------*/
+.combo_body{
+	background:white;
+	border:1 solid dimgray;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='#666666', Direction=135, Strength=3);
+	}
+/*-------------------单选框组fieldset样式---------------------------*/
+.radiogroup{
+	padding:6;
+	white-space:nowrap;
+	width:12;
+	border:1px solid royalblue;
+}
+/*-------------------选项卡字号td样式---------------------------*/
+.tab_title td{
+	font-size:9pt;
+	}
+/*-------------------未选中选项卡的span样式---------------------------*/
+.tab_view span{
+	height:18;
+	border-top:1 solid white;
+	border-left:1 solid white;
+	border-right:1 solid background　;
+	width:100%;
+	padding-left:12;
+	padding-right:12;
+	padding-top:2;
+	background:lightskyblue　;
+	}
+/*-------------------当前选项卡的td样式---------------------------*/
+.tab_select{
+	border-left: 1 solid background　;
+	border-right: 1 solid background　; 
+	border-top: 2 solid orange;
+	background:lavender;
+	}
+/*-------------------未选中选项卡的td样式---------------------------*/
+.tab_view{
+	padding-top:2;
+	border-bottom: 1 solid white;
+	}
+/*-------------------当前选项卡的span样式---------------------------*/
+.tab_select span{
+	width:100%;
+	height:18;
+	border-right:1 solid lightsteelblue;
+	border-left:1 solid white;
+	border-top:1 solid white;
+	padding-left:12;
+	padding-right:12;
+	}
+/*-------------------选项卡最后一个是空单元格，td样式---------------------------*/
+.tab_blank{
+	border-bottom: 1 solid white;
+	width:80%;
+	}
+/*-------------------选项卡内容表格table样式---------------------------*/
+.tab_body{
+	border-left: 1 solid background　; 
+	border-right: 1 solid background　; 
+	border-bottom: 1 solid background　;
+	background:lavender;
+	}
+/*-------------------选项卡内容表格td样式---------------------------*/
+.tab_body.tab_td{
+	border-right: 1 solid lightsteelblue　;
+	border-left: 1 solid white; 
+	border-bottom: 1 solid lightsteelblue　;
+}
+
+/*-------------------按钮外面的span样式---------------------------*/
+.buttonskin{
+	border-width: 1px;
+	border-style: solid;
+	border-color: gray background　background　gray;
+	margin-right:1;
+	}
+/*-------------------时间输入框外div样式---------------------------*/
+.date{
+	width:160;
+	background: #e4e4e4;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='#666666', Direction=135, Strength=3);
+	}
+.date.datebackground
+{
+background: #e4e4e4;
+}
+/*-------------------时间输入框日期表格table样式---------------------------*/
+.date.date_table{
+	border:0px solid dimgray;
+	background: #e4e4e4;
+	padding:2;
+	}
+/*-------------------时间输入框时间输入表格单元格td样式---------------------------*/
+.date.date_table.date_time td{
+	font-size:9pt;
+	}
+/*-------------------时间输入框时间输入表格样式---------------------------*/
+.date.date_table.date_time{
+	width:100%;
+	}
+/*-------------------时间输入框弹出表格单元格td样式---------------------------*/
+.date_body td{
+	width:22;
+	font-size:9pt;
+	text-align:center;
+	}
+/*-------------------时间输入框弹出表格table样式---------------------------*/
+.date_body{
+	border:1 solid gray;
+	}
+/*-------------------时间输入框日期输入表格星期行td样式---------------------------*/
+.date_body.date_title td{
+	background: #e4e4e4;
+	color:black;
+	}
+/*-------------------时间输入框当前选中日期单元格td样式---------------------------*/
+.date.date_select{
+	background:darkblue;
+	color:white;
+	}
+/*-------------------时间输入框时间鼠标移上单元格td样式---------------------------*/
+.date.date_mouseover{
+	background:gray;
+	}
+/*-------------------时间输入框时间当前系统日期单元格td样式---------------------------*/
+.date.date_today{
+	background: #8989bc;
+	color:black;
+	}
+
+.date.date_td
+{
+background: #ffffcc;
+}
+.date.date_blank_td
+{
+background: white;
+
+}
+/*-------------------时间输入框确认按钮button样式---------------------------*/
+.date_button{
+	width:20;
+	height:20;
+	border: darkgray 1px solid;
+	padding:1;
+	}
+.selectColCss select
+{
+	background:white;
+	width:100%;
+}
+.datactrl input{
+	height:22;
+	width:48;
+	font-family:wingdings;
+	overflow:	hidden;
+	text-align:	center;
+	vertical-align:	middle;
+	font-size:9pt;
+	background:white;
+	background-image:url(../images/btn_back.gif);
+	border-width: 0px;
+	border-style: solid;
+	border-color: white steelblue　steelblue　buttonhighlight;
+}
+.tblsearch input{
+	border:1 solid steelblue;
+}
+
+.tblsearch td{
+	font-size:9pt;
+}
+.tblsearch select{
+	margin:-2;
+}
+.tdMargin3px {
+	WIDTH: 4px
+}
+.tblList ,.tblHead, .tblHeadline ,.tblWorkArea,.tblFoot{
+	border-collapse:collapse;
+	}
+.tblList td{
+	font-size:9pt;
+	}
+.tdFootRight {
+	TEXT-ALIGN: right
+}
+.tdWorkArea {
+	padding:12;
+	background:#F5F9FA;
+}
+.search{
+background:#e4e4e4;
+border:1 solid silver;
+padding:5
+}
+.search label{
+white-space:nowrap;
+margin-right:12;
+}
+input.txtfocus
+{
+border:1 solid #0066CC;
+}
+textarea 
+{
+border: 1 solid silver;
+}
+.taboncss{
+background-color:#C5C5C5;
+	border: #999900 1px solid;
+	border-bottom: #FF9900 2px solid;
+	font-size: 9pt;
+	cursor: hand;
+	height: 20px;
+	color: #000000;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:5px;
+	white-space:nowrap;
+filter: Alpha(Opacity=50, FinishOpacity=90, Style=1, StartX=0, StartY=5, FinishX=0, FinishY=50);
+}
+.taboffcss{
+background-color:#E6E6E6;
+	border: silver 1px solid;
+	border-bottom: silver 0px solid;
+	font-size: 9pt;
+	cursor: hand;
+	height: 20px;
+	color: #000000;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:5px;
+	white-space:nowrap;
+filter: Alpha(Opacity=40, FinishOpacity=90, Style=1, StartX=0, StartY=5, FinishX=0, FinishY=50);
+
+}
+.tabdiv
+{
+border:1 solid silver;
+margin-top:-2
+}
+.tblHead{
+}
+.tblFoot{
+	background-color: #eeeeee;
+}
+.tdFootRight{
+	text-align:right;
+}
+.tblHeadline{
+	background-color: #eeeeee;
+}
+.trTitle{
+	text-align:center;
+	height:20px
+}
+.tblListContent{
+{
+	border:1px solid #000000;
+}
+.tblListContent td{
+	border-bottom: 0 solid #808080;s
+	write-space:nowrap
+}
+.tblContent{
+	border:1px solid #1E3C62;
+	background-color:#81A5C9;
+}
+.tblContent td{
+	border:1px solid #6699cc;
+}
+.tdMargin3px{
+	width:4px;
+}
+.tdHeadlineText{
+	text-align:center;
+	vertical-align:middle;
+	font-weight:200;
+	height:20;
+	color:#385273;
+}
+.trContentNextRow{
+	background-color:#D8E5F6
+}
+.tblCommandBtn{
+	border-collapse:separate;
+	border:1px
+}
+.tdPageUpDown{
+	vertical-align :bottom
+}
+.tblWorkArea{
+	background-color:#F5F9FA
+
+}
+.tdWorkArea{
+	padding:5px;
+	background-color:#F5F9FA;
+}
+body.bdDialog{/*帮助窗口样式*/
+	padding:0px;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+}
+.advSearch td{/*高级搜索样式*/
+	border-bottom:1px solid #6699cc; 
+}
+.tblBill table.tblBillTitle input.billInput{/*单据页头的样式*/
+	border:1px solid #cccccc;
+	background-color:#F8F8F8;
+}
+.tblBill table.tblBillTitle table.tblBillDetail input.billInput{/*单据页行的样式*/
+	border:1px solid #cccccc;
+	background-color:#ffffff;	
+}
+.tblBillTitle{
+	border:1px solid #111111;
+}
+.tdBillTitle{
+	text-align:right;	
+}
+.tblBillTitle td{
+	padding:0px;
+	background-color:#A5D5FC;
+}	
+.tblBillDetail{
+	border:1px solid #111111;
+}
+.tblBillDetail td{
+	background-color:#E9F4FE;
+	border:1px solid #888888;
+}
+.disablestyle{/*表单disable的样式*/
+	border:0;
+	background-color:#E9F4FE;	
+}
+.tdBillDetailTitle{
+	
+}
+.tdBillDetail{padding:5px}
+.tblMsg{/*信息提示table样式*/
+	border:1px solid #052C65;
+	background-color:#D5DEEF
+}
+.tdMsg{/*信息提示td的样式*/
+	color:blue
+}
+
+.txtReadOnly{/*只读框样式*/
+	color: black
+}
+.txtMandatory{/*必填框样式*/
+	background-color: #FFCCCC
+}
+
+.tdTitle{
+	background-color:#B2CAE2;
+	padding:2px;
+	text-align:right;
+	white-space:nowrap;
+}
+.tdRight input{
+	border:1px solid #1B3E5E;
+	background-color:#F3F8FB;
+	color:#1B3E5E;
+}
+.tdRight {
+	border:0px solid #81A5C9;
+	background-color:#F3F8FB;
+}
+
+#tblMain
+{
+height:100%;
+}
+form
+{
+height:100%;
+
+}
+
+body{
+	font-size:9pt;
+	}
+/*-------------------放单选框及复选框的label样式---------------------------*/
+.advlabel{
+	overflow:		hidden;
+	text-overflow:	ellipsis;
+	vertical-align:	middle;
+	text-align:		center;
+}
+/*-------------------复选框input样式---------------------------*/
+.advcheckbox {
+	width:			13px;
+	height:			13px;
+	vertical-align:	middle;
+}
+/*-------------------单选框input样式---------------------------*/
+.advradio {
+	width:			13px;
+	height:			13px;
+	vertical-align:	middle;
+	margin-right:4;
+}
+/*-------------------按钮样式button---------------------------*/
+.advbutton {
+	overflow:	hidden;
+	text-align:	center;
+	vertical-align:	middle;
+	font-size: 9pt;
+	cursor: hand;
+	height: 24px;
+	background-color: white;
+	background-image:url(../images/btn_bg.gif);
+	border: #6489B3 1px solid;
+	color:#000000;
+}
+.advbutton-over
+ {
+	overflow:	hidden;
+	text-align:	center;
+	vertical-align:	middle;
+	border: #ffffff 1px solid;
+	font-size: 9pt;
+	cursor: hand;
+	height: 24px;
+	background-color: #6489B3;
+	color:#ffffff;
+}
+/*-------------------按钮button中的图片样式---------------------------*/
+.advbutton img{
+	vertical-align:middle;
+	margin-right:2;
+	}
+	/*-------------------数据控制条中的button按钮样式---------------------------*/
+.data_ctrl button{
+	width:25;height:20;
+	}
+	/*-------------------快捷键提示样式，加下划线并转为大写字母---------------------------*/
+u{text-transform : uppercase; }
+/*-------------------进度条外div样式---------------------------*/
+.guage{
+	width:190;
+	height:12;
+	border:1 solid background;
+	background:white;
+	overflow:hidden
+}
+/*-------------------进度条内div样式---------------------------*/
+.guagesub{
+	background: lime;
+	filter:Alpha(Opacity=0,FinishOpacity=100, Style=1, StartX=0, StartY=0, FinishX=100, FinishY=0);
+	height:4;
+}
+/*-------------------数字微调输入框input样式---------------------------*/
+.adjust input{
+	width:100%;
+	height:22;
+	padding-right:17;
+	text-align:right;
+	}
+	/*-------------------数字微调按钮button样式---------------------------*/
+.adjust button{
+	width:16;
+	height:9;
+	position:absolute;
+	font-size:7;
+	font-family:webdings;
+	background-color:white;
+	border:silver solid 1;
+	
+	}
+/*-------------------组合框输入框input样式---------------------------*/
+/*-------------------组合框输入框input样式---------------------------*/
+.combobox input{
+	width:86%;
+	height:16;
+	padding-right:17;
+	}
+/*-------------------组合框下拉按钮button样式---------------------------*/
+.combobox button{
+	width:17;
+	height:17;
+	position:absolute;
+	font-size:9;
+	line-height:1px;
+	font-family:webdings;
+	}
+/*-------------------组合框下拉内容label样式---------------------------*/
+.combobox label{
+	width:100%;
+	height:20px;
+	padding-top:4;
+	}
+/*-------------------组合框当前选中项样式---------------------------*/
+.combobox.selected{
+	background:Highlight;
+	color:white;
+	width:100%;
+	height:20px;
+	}
+/*-------------------组合框下拉内容体样式---------------------------*/
+.combo_body{
+	background:white;
+	border:1 solid dimgray;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='#666666', Direction=135, Strength=3);
+	}
+/*-------------------单选框组fieldset样式---------------------------*/
+.radiogroup{
+	padding:6;
+	white-space:nowrap;
+	width:12;
+	border:1px solid royalblue;
+}
+/*-------------------选项卡字号td样式---------------------------*/
+.tab_title td{
+	font-size:9pt;
+	}
+/*-------------------未选中选项卡的span样式---------------------------*/
+.tab_view span{
+	height:18;
+	border-top:1 solid white;
+	border-left:1 solid white;
+	border-right:1 solid background　;
+	width:100%;
+	padding-left:12;
+	padding-right:12;
+	padding-top:2;
+	background:lightskyblue　;
+	}
+/*-------------------当前选项卡的td样式---------------------------*/
+.tab_select{
+	border-left: 1 solid background　;
+	border-right: 1 solid background　; 
+	border-top: 2 solid orange;
+	background:lavender;
+	}
+/*-------------------未选中选项卡的td样式---------------------------*/
+.tab_view{
+	padding-top:2;
+	border-bottom: 1 solid white;
+	}
+/*-------------------当前选项卡的span样式---------------------------*/
+.tab_select span{
+	width:100%;
+	height:18;
+	border-right:1 solid lightsteelblue;
+	border-left:1 solid white;
+	border-top:1 solid white;
+	padding-left:12;
+	padding-right:12;
+	}
+/*-------------------选项卡最后一个是空单元格，td样式---------------------------*/
+.tab_blank{
+	border-bottom: 1 solid white;
+	width:80%;
+	}
+/*-------------------选项卡内容表格table样式---------------------------*/
+.tab_body{
+	border-left: 1 solid background　; 
+	border-right: 1 solid background　; 
+	border-bottom: 1 solid background　;
+	background:lavender;
+	}
+/*-------------------选项卡内容表格td样式---------------------------*/
+.tab_body.tab_td{
+	border-right: 1 solid lightsteelblue　;
+	border-left: 1 solid white; 
+	border-bottom: 1 solid lightsteelblue　;
+}
+
+/*-------------------按钮外面的span样式---------------------------*/
+.buttonskin{
+	border-width: 1px;
+	border-style: solid;
+	border-color: gray background　background　gray;
+	margin-right:1;
+	}
+/*-------------------时间输入框外div样式---------------------------*/
+.date{
+	width:160;
+	background: #e4e4e4;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='#666666', Direction=135, Strength=3);
+	}
+.date.datebackground
+{
+background: #e4e4e4;
+}
+/*-------------------时间输入框日期表格table样式---------------------------*/
+.date.date_table{
+	border:0px solid dimgray;
+	background: #e4e4e4;
+	padding:2;
+	}
+/*-------------------时间输入框时间输入表格单元格td样式---------------------------*/
+.date.date_table.date_time td{
+	font-size:9pt;
+	}
+/*-------------------时间输入框时间输入表格样式---------------------------*/
+.date.date_table.date_time{
+	width:100%;
+	}
+/*-------------------时间输入框弹出表格单元格td样式---------------------------*/
+.date_body td{
+	width:22;
+	font-size:9pt;
+	text-align:center;
+	}
+/*-------------------时间输入框弹出表格table样式---------------------------*/
+.date_body{
+	border:1 solid gray;
+	}
+/*-------------------时间输入框日期输入表格星期行td样式---------------------------*/
+.date_body.date_title td{
+	background: #e4e4e4;
+	color:black;
+	}
+/*-------------------时间输入框当前选中日期单元格td样式---------------------------*/
+.date.date_select{
+	background:darkblue;
+	color:white;
+	}
+/*-------------------时间输入框时间鼠标移上单元格td样式---------------------------*/
+.date.date_mouseover{
+	background:gray;
+	}
+/*-------------------时间输入框时间当前系统日期单元格td样式---------------------------*/
+.date.date_today{
+	background: #8989bc;
+	color:black;
+	}
+
+.date.date_td
+{
+background: #ffffcc;
+}
+.date.date_blank_td
+{
+background: white;
+
+}
+/*-------------------时间输入框确认按钮button样式---------------------------*/
+.date_button{
+	width:20;
+	height:20;
+	border: darkgray 1px solid;
+	padding:1;
+	}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+div
+{
+	scrollbar-3dlight-color:gray;
+	scrollbar-arrow-color:black;
+	scrollbar-base-color:#cccccc;
+	scrollbar-darkshadow-color:white;
+	scrollbar-face-color:silver;
+	scrollbar-highlight-color:#cccccc;
+	scrollbar-shadow-color:gray;
+}
+.divTiSkin{
+	border:1 solid silver;
+}
+.divTiSkin table
+{
+	border-collapse:collapse;
+	table-layout: fixed;
+}
+.divTiSkin td
+{
+	border:1 solid #7DA3C7;
+        padding-top:0px;
+        padding-bottom:0px;
+        text-align:center;
+        font-size:9pt;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height:20px;
+	color:#0D4880;
+}
+.divTiSkin img{
+
+}
+.divTiSkin span
+{
+	width:         100%;
+	height:        100%;
+	white-space:   nowrap;
+	overflow:      hidden;
+	text-overflow: ellipsis;
+	padding-top:3;
+
+}
+
+.divTiSkin input
+{
+	background-color:#f3f8fd;
+	border:0 solid white;
+	text-align:center;
+	width:100%;
+	height:17px;
+
+}
+.focusCss
+{
+	border:1 solid #6699cc;
+}
+.lightSkin
+
+{
+
+	background:#B2CAE2;
+
+	text-align:center;
+
+	font-size:9pt;
+
+}
+
+.lightSkin input
+
+{
+
+	background-color:#B2CAE2;
+
+	border:0 solid #3366cc;
+
+	text-align:center;
+
+}
+
+.lightSkin td{
+
+	background-color:#B2CAE2;
+
+	color:black;
+
+}
+.divToucss table
+{
+	border-collapse:collapse;
+	table-layout: fixed;
+	border-left:1 solid ;
+}
+.divToucss td
+{
+	font-size:9pt;
+        height:20;
+        border:1 solid #7DA3C8;
+        text-align:center;
+        vertical-align:top;
+	color:#1E3C5E;
+}
+.divToucss span{
+	border-width: 1px;
+        border-style: solid;
+        background: #B2CAE2;
+        border-color: #FFFFFF #D5E6ED #D5E6ED #FFFFFF;
+	vertical-align:center;
+	width:         100%;
+	height:        100%;
+	white-space:   nowrap;
+	padding-top:3;
+	color: #000000;
+}
+.divToucss label{
+	margin-left:5;
+	font-family:Marlett;
+	font-size:8;
+}
+.divToucss input
+{
+	color:#000000;
+	font-size:9pt;
+	border:0px solid #ccddff;
+	background-color:#ccddff;
+	text-align:center;
+}
+.divAllcss{
+	border:1px solid #3a64b9;
+	overflow:hidden;
+}
+.divSumcss
+{
+padding-left:1;
+}
+
+.divSumcss table
+{
+	border-collapse:collapse;
+	table-layout: fixed;
+}
+.divSumcss td
+{
+	color:#000000;
+        font-size:9pt;
+        background:#D4E5EF;
+        text-align:center;
+        border:1 solid #7CA4C7; 
+        height:21;
+}
+.divSumcss input
+{
+	color:#000000;
+        font-size:9pt;
+        border:1 solid dimgray;
+        background:#D4E5EF;
+        text-align:center;
+}
+.divSumcss span
+{
+	border-width: 1px;
+        border-style: solid;
+        background:#D4E5EF;
+        border-color: #FFFFFF #D5E6ED #D5E6ED #FFFFFF;
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: hand;
+        padding-left:2;
+        padding-top:3;
+	color:#1B3E5E;
+}
+.divLeftCss table
+{
+	border-collapse:collapse;
+	margin-top:21px;
+}
+.divLeftCss td
+{
+	color:#000000;
+        background:#D4E5EF;
+        font-size:9pt;
+        text-align:right;
+        height:20px;
+        border:1 solid #7CA4C7;
+}
+.divLeftCss span
+{
+	border-width: 1px;
+        border-style: solid;
+        background:#D4E5EF;
+        border-color: #FFFFFF #D5E6ED #D5E6ED #FFFFFF;
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: hand;
+        padding-left:2;
+        padding-top:3;
+	color:#1B3E5E;
+}
+.selectColCss select
+{
+	background:white;
+	width:100%;
+}
+.datactrl input{
+	height:20;
+	width:25;
+	font-family:wingdings;
+	overflow:	hidden;
+	text-align:	center;
+	vertical-align:	middle;
+	font-size:9pt;
+	background:lightskyblue;
+	background-image:url(../images/buttonbg.gif);
+	border-width: 1px;
+	border-style: solid;
+	border-color: white steelblue　steelblue　buttonhighlight;
+}
+.tblsearch input{
+	border:1 solid steelblue;
+}
+
+.tblsearch td{
+	font-size:9pt;
+}
+.tblsearch select{
+	margin:-2;
+}
+.tdMargin3px {
+	WIDTH: 4px
+}
+.tblList ,.tblHead, .tblHeadline ,.tblWorkArea,.tblFoot{
+	border-collapse:collapse;
+	}
+.tblList td{
+	font-size:9pt;
+	}
+.tdFootRight {
+	TEXT-ALIGN: right
+}
+.tdWorkArea {
+	padding:12;
+}
+.search{
+background:#e4e4e4;
+border:1 solid silver;
+padding:5
+}
+.search label{
+white-space:nowrap;
+margin-right:12;
+}
+input.txtfocus
+{
+border:1 solid #0066CC;
+}
+textarea 
+{
+border: 1 solid silver;
+}
+.taboncss{
+background-color:#C5C5C5;
+	border: #999900 1px solid;
+	border-bottom: #FF9900 2px solid;
+	font-size: 9pt;
+	cursor: hand;
+	height: 20px;
+	color: #000000;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:5px;
+	white-space:nowrap;
+filter: Alpha(Opacity=50, FinishOpacity=90, Style=1, StartX=0, StartY=5, FinishX=0, FinishY=50);
+}
+.taboffcss{
+background-color:#E6E6E6;
+	border: silver 1px solid;
+	border-bottom: silver 0px solid;
+	font-size: 9pt;
+	cursor: hand;
+	height: 20px;
+	color: #000000;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:5px;
+	white-space:nowrap;
+filter: Alpha(Opacity=40, FinishOpacity=90, Style=1, StartX=0, StartY=5, FinishX=0, FinishY=50);
+
+}
+.tabdiv
+{
+border:1 solid silver;
+margin-top:-2
+}
+
+
+.divtoucss{      
+	height:21;
+}
+.divTiSkin input{
+	
+	text-align:center;
+ 	ont-size:9pt;
+	width:100%;
+	height:20px;
+ 	vertical-align:middle;
+}
+
+.divSumcss{
+height: 21;
+}
+
+/*.divLeftCss table{
+border-collapse:collapse;
+	background:#f4f4f4;
+	margin-top:3;
+}*/
+.divTiBottom{
+	height:19px;
+}
+/*----------  样式new 20080926------------- */
+.table{
+        border-collapse:collapse;
+        background-color:#f4f9fd;
+	border-color:#7fa6cb;
+	border:1px solid #1E3C62;
+        }
+.table td,{
+        border:1px solid #7fa6cb;
+        font-size:9pt;
+	padding:4px;
+	color:black;}
+.tableTop{ background:#98badf url(../images/top-bg.gif) repeat-x top left;
+	   height:25px;
+	   text-align:center;}
+.tableTopAdapt{ background:#98badf url(../images/top-bg-adapt.gif) repeat-x top left;
+	   height:28px;
+	   text-align:center;}  
+.tdTopic{
+	background-color:#B2CAE2;
+	padding:2px;
+	text-align:right;
+	white-space:nowrap;
+}
+.tdContent input{
+	border:1px solid #1B3E5E;
+	background-color:#F3F8FB;
+	color:#1B3E5E;
+}
+.tdMiddle{
+	background-color:#e7f2ff;
+}
+.tdMiddleSelect{
+	background-color:#FF2D2D;
+}
+.tableradio {
+	height:18px;
+	vertical-align:	middle;
+}
+/*----------  样式new------------- */

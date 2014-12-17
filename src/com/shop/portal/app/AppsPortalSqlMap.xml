@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AppPortalDomainImpl">	
+	<insert id="insertCollect" parameterType="map" >
+		INSERT INTO APP_USER_COLLECT(
+		USER_ID,
+		MENU_ID,
+		MENU_URL,
+		MENU_NAME,
+		APP_TYPE) 
+		 VALUES (
+		#{USER_ID,jdbcType=VARCHAR},
+		#{MENU_ID,jdbcType=VARCHAR},
+		#{MENU_URL,jdbcType=VARCHAR},
+		#{MENU_NAME,jdbcType=VARCHAR},
+		#{APP_TYPE,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertRecord" parameterType="map" >
+		INSERT INTO APP_USER_RECORD(
+		USER_ID,
+		MENU_ID,
+		MENU_URL,
+		MENU_NAME,
+		APP_TYPE,
+		CREATE_TIME) 
+		 VALUES (
+		#{USER_ID,jdbcType=VARCHAR},
+		#{MENU_ID,jdbcType=VARCHAR},
+		#{MENU_URL,jdbcType=VARCHAR},
+		#{MENU_NAME,jdbcType=VARCHAR},
+		#{APP_TYPE,jdbcType=VARCHAR},
+		#{CREATE_TIME,jdbcType=VARCHAR}
+		)
+	</insert>
+	<select id="isExistCollect" parameterType="map" resultType="map">
+		SELECT * FROM APP_USER_COLLECT
+		<where>
+			<if test="MENU_ID != null">
+				MENU_ID =  #{MENU_ID}
+			</if>
+			<if test="USER_ID != null">
+				AND USER_ID =  #{USER_ID}
+			</if>
+		</where>
+	</select>
+	<select id="selectCollect" parameterType="map" resultType="map">
+		SELECT * FROM APP_USER_COLLECT
+		<where>
+			<if test="USER_ID != null">
+				USER_ID =  #{USER_ID}
+			</if>
+		</where>
+		ORDER BY Cast("ORDER" AS DECIMAL)
+	</select>
+	<select id="selectRecord" parameterType="map" resultType="map">
+		<if test="v6dbtype==oracle">
+			SELECT * FROM (
+		</if>
+		SELECT  USER_ID,MENU_ID,MENU_URL,MENU_NAME,APP_TYPE,COUNT(*) NUM 
+		FROM APP_USER_RECORD 
+		<where>
+			<if test="USER_ID != null">
+				USER_ID =  #{USER_ID}
+			</if>
+			<if test="CREATE_TIME != null">
+				AND CREATE_TIME >  #{CREATE_TIME}
+			</if>
+		</where>
+		GROUP BY USER_ID,MENU_ID,MENU_URL,MENU_NAME,APP_TYPE
+		ORDER BY NUM DESC
+		<if test="v6dbtype==db2">
+			FETCH FIRST 10 ROWS ONLY
+		</if>
+		<if test="v6dbtype==oracle">
+			)  where  rownum between 0 and 10
+		</if>
+	</select>
+	<delete id="delCollect" parameterType="map">
+		DELETE FROM APP_USER_COLLECT WHERE  USER_ID=#{USER_ID} AND MENU_ID=#{MENU_ID}    		
+	</delete>
+	<delete id="delRecord" parameterType="map">
+		DELETE FROM APP_USER_RECORD WHERE  USER_ID=#{USER_ID} AND MENU_ID=#{MENU_ID}    		
+	</delete>
+	<select id="selOrgan" parameterType="map" resultType="map">
+		SELECT * FROM PUB_ORGAN O,PUB_STRU S WHERE O.ORGAN_ID=S.ORGAN_ID AND O.CTIME >#{CTIME} 
+	</select>
+	<delete id="delOrgan" parameterType="map">
+		DELETE FROM TS_USER_TREE WHERE STRU_ID=#{STRU_ID}    		
+	</delete>
+	<insert id="insertOrgan" parameterType="map" >
+		INSERT INTO TS_USER_TREE(
+		USER_ID,
+		MENU_ID,
+		MENU_URL,
+		MENU_NAME,
+		APP_TYPE,
+		CREATE_TIME) 
+		 VALUES (
+		#{USER_ID,jdbcType=VARCHAR},
+		#{MENU_ID,jdbcType=VARCHAR},
+		#{MENU_URL,jdbcType=VARCHAR},
+		#{MENU_NAME,jdbcType=VARCHAR},
+		#{APP_TYPE,jdbcType=VARCHAR},
+		#{CREATE_TIME,jdbcType=VARCHAR}
+		)
+	</insert>
+	<select id="getStruRoot" parameterType="map" resultType="map">
+		SELECT S.STRU_ID, O.ORGAN_NAME,S.PARENT_ID,S.IS_LEAF
+		FROM PUB_STRU S, PUB_ORGAN O
+		WHERE S.ORGAN_ID=O.ORGAN_ID
+		AND S.STRU_TYPE='00' 
+		AND S.IN_USE='1'
+		ORDER BY S.STRU_ORDER;
+	</select>
+	<select id="getSubStru" parameterType="map" resultType="map">
+		SELECT S.STRU_ID, O.ORGAN_NAME,S.PARENT_ID,S.IS_LEAF
+		FROM PUB_STRU S, PUB_ORGAN O
+		WHERE S.ORGAN_ID=O.ORGAN_ID
+		AND S.STRU_TYPE='00' 
+		AND S.PARENT_ID=#{id} 
+		AND S.IN_USE='1'
+		ORDER BY S.STRU_ORDER;
+	</select>
+	
+	<select id="getMenuBaike" parameterType="map" resultType="map">
+		SELECT MENU_ID,CONTENT,UPDATE_TIME,UPDATE_MAN
+		FROM PORTAL_MENU_BAIKE
+		WHERE MENU_ID=#{menuId}
+	</select>
+	
+	<delete id="delMenuBaike" parameterType="map">
+		DELETE FROM PORTAL_MENU_BAIKE
+		WHERE MENU_ID=#{menuId}
+	</delete>
+	
+	<insert id="insertMenuBaike" parameterType="map" >
+		INSERT INTO PORTAL_MENU_BAIKE(
+		MENU_ID,
+		CONTENT,
+		UPDATE_TIME,
+		UPDATE_MAN)
+		VALUES (
+		#{menuId,jdbcType=VARCHAR},
+		#{content,jdbcType=VARCHAR},
+		#{updateTime,jdbcType=VARCHAR},
+		#{updateMan,jdbcType=VARCHAR}
+		)
+	</insert>
+	<select id="queryApp" parameterType="map" resultType="map">
+	SELECT S.APP_USER_ID,SERVER_HOST,URI,APP_URL FROM PUB_USER_SSO S,PUB_APPS P
+	WHERE S.APP_CODE=P.APP_CODE
+	AND S.APP_CODE=#{APP_CODE}
+	AND S.USER_ID=#{USER_ID}
+	</select>
+	<select id="queryBusin" parameterType="map" resultType="map">
+	SELECT USER_ID WHERE BUSINESS_ID= #{BUSINESS_ID}
+	</select>
+    <select id="querySSOUser" parameterType="map" resultType="map">
+	SELECT APP_USER_ID FROM PUB_USER_SSO
+    WHERE APP_CODE= #{APP_CODE} AND USER_ID= #{USER_ID}
+	</select>
+	<select id="queryModule" parameterType="map" resultType="map">
+	SELECT MODULE_CODE,MODULE_NAME,URL,URI FROM PUB_MODULES ,PUB_APPS  WHERE  PUB_MODULES.APP_CODE =  #{APP_CODE}  AND PUB_MODULES.APP_CODE=PUB_APPS.APP_CODE  AND PUB_MODULES.PARENT_MODULE_CODE='-1' order by PUB_MODULES.SEQ
+	</select>
+	<update id="updateCollectMenuOrder" parameterType="map" >
+	UPDATE APP_USER_COLLECT 
+	SET "ORDER"=#{order,jdbcType=VARCHAR} 
+	WHERE MENU_ID=#{menuId,jdbcType=VARCHAR}
+	AND USER_ID=#{userId,jdbcType=VARCHAR}
+	</update>
+</mapper>
+   
+   

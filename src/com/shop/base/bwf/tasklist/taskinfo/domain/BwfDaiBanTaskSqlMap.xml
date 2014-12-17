@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.v6.base.bwf.tasklist.taskinfo.domain.BwfDaiBanTaskDomain">
+	
+	<sql id="queryDaiBanTask">
+	 SELECT 
+	 	ID as id,
+		ORGAN_ID as organId,
+		ORGAN_NAME as organName,
+		CREATE_TIME as createTime,
+		ACTIVITY_ID as activityId,
+		ACT_DEF_UNIQUE_ID as actDefUniqueId,
+		ACT_DEF_ID as actDefId,
+		ACT_DEF_NAME as actDefName,
+		ACT_LIMIT_TIME as actLimitTime,
+		ACT_WARN_TIME as actWarnTime,
+		PRE_ACT_DEF_NAMES as preActDefNames,
+		PRE_ORGAN_NAMES as preOrganNames,
+		PROCESS_ID as processId,
+		PROC_DEF_UNIQUE_ID as procDefUniqueId,
+		PROC_DEF_ID as procDefId,
+		PROC_DEF_NAME as procDefName,
+		PROC_CREATE_TIME as procCreateTime,
+		PROC_CREATOR_ID as procCreatorId,
+		PROC_CREATOR_NAME as procCreatorName,
+		PRIMARY_KEY as primaryKey,
+		PROCESS_TYPE as processType,
+		IS_VISIBLE as isVisible,
+		SYS_SUBJECT as sysSubject,
+		PROC_SUBJECT as procSubject,
+		TYPE_SUBJECT as typeSubject,
+		SUBJECT as subject,
+		TASK_SOURCE as taskSource,
+		TASK_COUNT as taskCount,
+		APP_CODE as appCode,
+		RELATIVE_PATH as relativePath,
+		INTERNAL_ID as internalId
+	 FROM WF_DAI_BAN_TASK
+	</sql>	
+	
+	<select id="getDaiBanTask" parameterType="map" resultType="com.v6.base.bwf.tasklist.taskinfo.data.BwfDaiBanTask">
+		<include refid="queryDaiBanTask"/>
+		<where>
+			ACT_DEF_ID=#{functionCode}
+			AND TASK_SOURCE='1'
+			AND ACT_DEF_ID IN 
+			( SELECT FUNCTION_CODE FROM V_USER_FUNCTION_PERMIT WHERE USER_ID=#{userId})
+			AND ORGAN_ID IN 
+			( SELECT ORGAN_ID FROM V_USER_DATA_PERMIT WHERE USER_ID=#{userId})
+			<choose>
+				<when test="primaryKey!= null and primaryKey != '' ">
+					AND PRIMARY_KEY=#{primaryKey}
+				</when>
+				<otherwise>
+				 	AND TASK_COUNT>0
+				</otherwise>
+			</choose>
+		</where>
+	</select>
+	
+	<select id="getDaiBanTaskByActDefIdAndOrganId" parameterType="map" resultType="com.v6.base.bwf.tasklist.taskinfo.data.BwfDaiBanTask">
+		<include refid="queryDaiBanTask"/>
+		<where>
+			 ACT_DEF_ID=#{actDefId}
+			 AND TASK_SOURCE='1'
+			 AND TASK_COUNT>0
+			 AND ORGAN_ID=#{organId}
+		</where>
+	</select>
+	
+	
+	<insert id="insertDaiBanTask" parameterType="com.v6.base.bwf.tasklist.taskinfo.data.BwfDaiBanTask" >
+		INSERT INTO WF_DAI_BAN_TASK (
+		
+		ID,ORGAN_ID,ORGAN_NAME,
+		CREATE_TIME,ACTIVITY_ID,ACT_DEF_UNIQUE_ID,
+		ACT_DEF_ID,ACT_DEF_NAME,ACT_LIMIT_TIME,
+		ACT_WARN_TIME,PROCESS_ID,PROC_DEF_UNIQUE_ID,
+		PROC_DEF_ID,PROC_DEF_NAME,PROC_CREATE_TIME,
+		PRE_ACT_DEF_NAMES,PRE_ORGAN_NAMES,PRIMARY_KEY,
+		PROCESS_TYPE,IS_VISIBLE,SUBJECT,
+		SYS_SUBJECT,PROC_SUBJECT,TYPE_SUBJECT,
+		TASK_SOURCE,TASK_COUNT,APP_CODE,
+		RELATIVE_PATH,INTERNAL_ID,PROC_CREATOR_ID,
+		PROC_CREATOR_NAME
+		) 
+		
+		VALUES(
+		#{id,jdbcType=VARCHAR},#{organId,jdbcType=VARCHAR},#{organName,jdbcType=VARCHAR},
+		#{createTime,jdbcType=CHAR},#{activityId,jdbcType=VARCHAR},#{actDefUniqueId,jdbcType=VARCHAR},
+		#{actDefId,jdbcType=VARCHAR},#{actDefName,jdbcType=VARCHAR},#{actLimitTime,jdbcType=CHAR},
+		#{actWarnTime,jdbcType=CHAR},#{processId,jdbcType=VARCHAR},#{procDefUniqueId,jdbcType=VARCHAR},
+		#{procDefId,jdbcType=VARCHAR},#{procDefName,jdbcType=VARCHAR},#{procCreateTime,jdbcType=CHAR},
+		#{preActDefNames,jdbcType=VARCHAR},#{preOrganNames,jdbcType=VARCHAR},#{primaryKey,jdbcType=VARCHAR},
+		#{processType,jdbcType=VARCHAR},#{isVisible,jdbcType=CHAR},#{subject,jdbcType=VARCHAR},
+		#{sysSubject,jdbcType=VARCHAR},#{procSubject,jdbcType=VARCHAR},#{typeSubject,jdbcType=VARCHAR},
+		#{taskSource,jdbcType=CHAR},#{taskCount,jdbcType=INTEGER},#{appCode,jdbcType=VARCHAR},
+		#{relativePath,jdbcType=VARCHAR},#{internalId,jdbcType=VARCHAR},#{procCreatorId,jdbcType=VARCHAR},
+		#{procCreatorName,jdbcType=VARCHAR}
+		)
+	</insert>
+	
+	<update id="updateTaskCount"  parameterType="map">
+		 UPDATE WF_DAI_BAN_TASK
+         SET TASK_COUNT=#{taskCount}
+         WHERE ID=#{id}
+	</update>
+
+	<delete id="deleteDaiBanTask" parameterType="map">
+		DELETE FROM WF_DAI_BAN_TASK WHERE ID=#{id}  		
+	</delete>
+	
+	<insert id="insertTaskUser" parameterType="string" >
+		INSERT INTO  BASE_BWF_TASK_USER(TASK_ID,USER_ID)
+		 SELECT  A.ID,B.USER_ID FROM WF_DAI_BAN_TASK A,V_USER_DATA_PERMIT B,V_USER_FUNCTION_PERMIT C  
+		 WHERE A.ID=#{value} AND A.ORGAN_ID=B.ORGAN_ID 
+		 AND A.ACT_DEF_ID=C.FUNCTION_CODE AND B.USER_ID=C.USER_ID
+	</insert>
+	
+	<delete id="deleteTaskUser" parameterType="string" >
+		DELETE BASE_BWF_TASK_USER WHERE TASK_ID=#{value}  
+	</delete>
+
+</mapper>

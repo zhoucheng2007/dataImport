@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-9-24 15:31:13 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.blogzhou.entity.PubStruExt" table="PUB_STRU_EXT" schema="DB2INST1">
+        <id name="id" type="string">
+            <column name="ID" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="pubStru" type="string">
+            <column name="STRU_ID" length="30" not-null="true" />
+        </property>
+        <property name="pubStruType" type="string">
+            <column name="STRU_TYPE" length="10" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="TYPE" length="2" not-null="true" />
+        </property>
+        <property name="srcId" type="string">
+            <column name="SRC_ID" length="30" not-null="true" />
+        </property>
+        <property name="targetId" type="string">
+            <column name="TARGET_ID" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

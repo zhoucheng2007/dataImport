@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!--***** 下拉树查询类 configuration ***** -->
+	<bean id="SelectQueryTreeCmd" class="com.v6.base.selectquerytree.SelectQueryTreeCmd"
+		singleton="false">
+	</bean>
+</beans>
+

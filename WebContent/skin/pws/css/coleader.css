@@ -1,0 +1,317 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-image: url(coleaderimg/beijign1336.png);
+	
+}
+div,dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td {
+	padding: 0;
+	margin: 0;
+}
+#coleaderHeader{
+	background-image: url(coleaderimg/headerbg.png);
+	width: 1000px;
+	height: 95px;
+	margin-right: auto;
+	margin-left: auto;
+	margin: auto;
+	text-align: center;
+
+}
+#coleaderTile{
+	background-image: url(coleaderimg/title.png);
+	width: 315px;
+	height: 55px;
+	margin: auto;
+}
+#jyxsbt{
+	width: 86px;
+	height: 23px;
+	
+	top:-30px;
+	left: 60px;
+	background-image: url(coleaderimg/jyxsbt.png);
+	position: relative;
+	float:left;
+	
+
+}
+#jyxsbt:hover,#jyxsbt.hover {
+	border:1px ;	 
+}
+#djyjy{
+	top:-10px;
+	width: 97px;
+	height: 22px;
+	background-image: url(coleaderimg/djyjy.png);
+	position: relative;
+	float:left;
+	left: 100px;
+
+	
+}
+#djyjy:hover,#jyxsbt.hover {
+	opacity: 0.5;
+	border:1px solid #000;
+}
+
+
+#lcy{
+	top:5px;
+	width: 76px;
+	height: 24px;
+	background-image: url(coleaderimg/lcy.png);
+	position: relative;
+	float:left;
+	left: 200px;
+
+	
+}
+#lcy:hover,#lcy.hover {
+	opacity: 0.5;
+	border:1px solid #000;
+}
+#dxz{
+	top:5px;
+	width: 75px;
+	height: 22px;
+	background-image: url(coleaderimg/dxz.png);
+	position: relative;
+	float:left;
+	left: 300px;
+
+	
+}
+#dxz:hover,#dxz.hover {
+	opacity: 0.5;
+	border:1px solid #000;
+}
+
+#flbjy{
+	top:-10px;
+	width: 105px;
+	height: 24px;
+	
+	background-image: url(coleaderimg/flbjy.png);
+	position: relative;
+	float:left;
+	left: 380px;
+
+	
+}
+#flbjy:hover,#flbjy.hover {
+	opacity: 0.5;
+	border:1px solid #000;
+}
+#zdpp{
+	top:-30px;
+	width: 86px;
+	height: 23px;
+	
+	background-image: url(coleaderimg/zdpp.png);
+	position: relative;
+	float:left;
+	left: 420px;
+
+	
+}
+#zdpp:hover,#zdpp.hover {
+	opacity: 0.5;
+	border:1px solid #000;
+}
+#center-zone{
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	margin: auto;
+	text-align: left;
+}
+#center-left{
+	width: 489px;
+	float: left;
+}
+#center-right{
+	width: 511px;
+	float: left;
+}
+#qujian{
+	height: 100px;
+	
+}
+#qujian-zone{
+	height: 34px;
+	width: 200px;
+	float: left;
+	margin-left: 10px; 
+	margin-top: 10px;
+	background-image: url(coleaderimg/qujian.png);
+}
+#qujian-zone a{
+	text-align: center;
+	line-height: 34px;
+	font-family:Microsoft YaHei;
+	font-size:90%;
+	color:#1b6f4d;
+	margin-left:5px;
+}
+#query-zone{
+	height: 34px;
+	width: 83px;
+	float: left;
+	background-image: url(coleaderimg/qujian-nian.png);
+}
+#month-zone{
+	height: 34px;
+	width: 110px;
+	float: left;
+	background-image: url(coleaderimg/qujian-yue.png);
+}
+#diqiu{
+	width: 513px;
+	height: 463px;
+	background-image: url(coleaderimg/diqiu.png);
+	text-align: center;
+}
+#diquzone{
+	margin-top:40px;
+}
+#jianbao{
+	font-family:"Î¢ÈíÑÅºÚ","Microsoft YaHei",Verdana,Arial,"simsun","ËÎÌå","Microsoft Sans Serif", "Microsoft Tai Le", "Microsoft Uighur";
+	
+}
+.hnreport{
+	width:100%;
+	height:230px;
+	padding:20px 0;
+}
+.hnreporthead{
+	height:20px;
+}
+#hnreporttitle{
+	height:20px;
+	font-size:18px;
+	color:#002635 ;
+	font-weight:500;
+	float:left;
+}
+.hnreport .container{
+	height:230px;
+	margin-top:10px;
+	
+}
+.hnreport .container .content{
+	margin-right:60px;
+	width:100%;
+}
+.hnreport .container .content .title{
+	color:#035d9c;
+}
+.hnreport .container .content .contentpart{
+	margin-top:10px;
+}
+.contentpart p{
+	font-size:18px;
+	font-weight:500;
+	float:left;
+	
+}
+#botton{
+	width: 1000px;
+	height: 64px;
+		margin-right: auto;
+	margin-left: auto;
+	margin: auto;
+	text-align: center;
+	background-image: url(coleaderimg/botton.png);
+}
+#simple1{
+	width: 175px;
+	height: 25px;
+	float: left;
+	left: 300px;
+	bottom: -30px;
+	position: relative;
+	background-image: url(coleaderimg/simple1.png);
+}
+#simple2{
+	width: 175px;
+	height: 25px;
+	float: left;
+	left: 400px;
+	bottom: -30px;
+	position: relative;
+	background-image: url(coleaderimg/simple2.png);
+}
+#simple1 a{
+	text-align: center;
+	line-height: 25px;
+	font-family:Microsoft YaHei;
+	font-size:90%;
+	color:#1b6f4d;
+}
+#simple2 a{
+	text-align: center;
+	line-height: 25px;
+	font-family:Microsoft YaHei;
+	font-size:90%;
+	color:#1b6f4d;
+}
+	.tab-area{
+		margin-left:10px;
+		width:500px;
+		height:289px;
+		float:left;
+		position:relative;
+	}
+		.tab-title-area{
+		width:500px;
+		height:45px;
+		background:url(coleaderimg/tab-active-before.png);
+	}
+	.tab-arrow-left{
+		margin-top:15px;
+		width:5px;
+		height:10px;
+		background:url(coleaderimg/arrow-left.png);
+		float:left;
+	}
+	.tab-arrow-right{
+		margin-top:15px;
+		width:5px;
+		height:10px;
+		background:url(coleaderimg/arrow-right.png);
+		float:right;
+	}
+	.tab-text{
+		height:45px;
+		float:left;
+		color:#006A50;
+		line-height:39px;
+		text-align:center;
+		cursor:pointer;
+	}
+	.tab-text.active{
+		background:url(coleaderimg/tab-active-after.png) repeat-x;
+		font-weight:bold;
+	}
+	#qty{
+		width:90px;
+		margin-left:-10px;
+	}
+	#nvl{
+		width:90px;
+		margin-left:10px;
+	}
+	#amt{
+		width:90px;
+		margin-left:10px;
+	}
+
+	#tab-content-area{
+		margin-top:5px;
+		width:500px;
+		height:245px;
+		z-index:0;
+		margin-left:-10px;
+		
+	}

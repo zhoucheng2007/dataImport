@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="email" class="com.v6.portal.pws.jx.email.cmd.EmailCmd">
+		<property name="forwards">
+			<map>
+				<entry key="emailmgt" value="pws/jx/email/user_emailmgt.jsp" />
+			</map>
+		</property>
+		<property name="emailService" ref="emailService"></property>
+	</bean>
+	<bean id="emailService"
+		class="com.v6.portal.pws.jx.email.service.impl.EmailServiceImpl">
+		<property name="emailDomain">
+			<ref bean="emailDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+
+	<bean id="emailDomain" class="com.v6.portal.pws.jx.email.domain.impl.EmailDomainImpl">
+	</bean>
+</beans>

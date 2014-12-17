@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="pubCustFilterCmd" class="com.v6.base.commonSelect.cust.CustFilterCmd">
+	</bean>
+	<bean id="pubCustCustomSelectCmd" class="com.v6.base.commonSelect.cust.CustomSelectCmd">
+		<property name="forwards">
+			<map>
+				<entry key="ccsForward">
+					<ref bean="pubCommonSelectForward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="pubCustTagToolCmd" class="com.v6.base.commonSelect.cust.CustTagTool">
+	</bean>
+	<bean id="pubCommonSelectForward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="custtype">jsp/pub/commonSelect/cust/cust_type.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="pubCustFilterService" class="com.inspur.hsf.config.spring.proxy.SpringConsumerBean">
+		<property name="interfaceName">
+			<value>com.v6.crm.service.hsf.custfilter.ICustFilterHsfService</value>
+		</property>
+	</bean>
+</beans>
+

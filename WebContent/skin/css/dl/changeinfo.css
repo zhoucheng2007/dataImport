@@ -1,0 +1,56 @@
+table {
+	width: 100%; 
+	text-align: center; 
+	color: rgb(0, 0, 0); 
+	font-family:"Î¢ÈíÑÅºÚ","Microsoft YaHei",Verdana,Arial,"simsun","ËÎÌå","Microsoft Sans Serif", "Microsoft Tai Le", "Microsoft Uighur";
+	font-size: 12px; 
+	border-collapse: collapse;
+	line-height:30px;
+}
+input[type='button'],input[type='submit'],button, .abutton {
+	margin:0px;
+	padding:8px;
+	padding-left:15px;padding-right:15px;
+	*padding: 6px ; /*ie7*/
+	*padding-left:8px;*padding-right:8px; /*ie7*/
+	display:inline-block;
+	font-size:12px;
+	/*background:url("button/bg.png") no-repeat left top;*/
+	vertical-align:middle;
+	background-color: #3eb1f0;
+	border: 0px solid #3eb1f0;
+	color:white;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	cursor:pointer;
+	font-family:Tahoma, "SimSun", sans-serif;
+}
+input[type='button']:hover,input[type='submit']:hover,button:hover,.abutton:hover   {
+	background: #1a94d7;
+	cursor:pointer;
+	
+}
+input[type='password'],input[type='text']  {
+	padding: 2px 0px 0px 4px; width: 85%; height: 20px;
+}
+.ui-corner-top{
+	font-family:"Î¢ÈíÑÅºÚ","Microsoft YaHei",Verdana,Arial,"simsun","ËÎÌå","Microsoft Sans Serif", "Microsoft Tai Le", "Microsoft Uighur";
+	font-size: 15px; 
+}
+#saveBtn,#submitBtn{
+	color:white;
+	margin:20px 10px 10px 10px;
+	float:right;
+}
+.sign-red{
+	color:red;
+}
+#sch-result-table{
+	text-align: left; 
+}
+#sch-result-table thead tr th{
+	
+	filter:progid:DXImageTransform.Microsoft.Gradient ( gradientType = 0,startColorStr = #c6dbf3, endColorStr = #aac3dc );
+	
+}

@@ -1,0 +1,54 @@
+.FocusImgFrame {
+	BORDER-BOTTOM: #dee0cb 1px solid;WIDTH: 54px; BORDER-LEFT: #dee0cb 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: #dee0cb 1px solid; BORDER-RIGHT: #dee0cb 1px solid; PADDING-TOP: 4px
+}
+.FocusImg {
+	POSITION: relative; BORDER-BOTTOM-COLOR: #fff; BORDER-TOP-COLOR: #fff; WIDTH: auto; BACKGROUND: #f3f4ee; BORDER-RIGHT-COLOR: #fff; BORDER-LEFT-COLOR: #fff
+}
+.FocusImg .BigPic {
+	position: relative; text-align: center; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; zoom: 1; background: #000; overflow: hidden; padding-top: 0px
+}
+.FocusImg .TitleBox {
+	Z-INDEX: 50; POSITION: absolute; TEXT-ALIGN: center; BOTTOM: 0px; COLOR: #fff; FONT-SIZE: 12px; OVERFLOW: hidden; FONT-WEIGHT: bold
+}
+.FocusImg .TitileBg {
+	Z-INDEX: 49; POSITION: absolute; FILTER: alpha(opacity=70); BACKGROUND-COLOR: #4c74a6; BOTTOM: 0px; OVERFLOW: hidden; RIGHT: 0px; opacity: 0.7
+}
+.FocusImg A:link {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.FocusImg A:visited {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.FocusImg A:hover {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.FocusImg .Number {
+	Z-INDEX: 50; POSITION: absolute; TEXT-ALIGN: right; LINE-HEIGHT: 13px; HEIGHT: 13px; COLOR: #fff; FONT-SIZE: 11px; OVERFLOW: hidden; RIGHT: 1px
+}
+.FocusImg .NumberItem {
+	PADDING-BOTTOM: 1px; BACKGROUND-COLOR: #000; MARGIN: 0px 0px 0px 2px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; CURSOR: pointer; PADDING-TOP: 1px
+}
+.FocusImg .NumberItemOn {
+	PADDING-BOTTOM: 1px; MARGIN: 0px 0px 0px 2px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; CURSOR: pointer; PADDING-TOP: 1px
+}
+.FocusImg .NumberItemBg {
+	Z-INDEX: 48; POSITION: absolute; FILTER: alpha(opacity=70); BACKGROUND-COLOR: #4c74a6; WIDTH: 15px; HEIGHT: 15px; opacity: 0.7
+}
+.FocusImg .BorderHack1 {
+	Z-INDEX: 51; POSITION: absolute; BACKGROUND-COLOR: #707070; HEIGHT: 1px; FONT-SIZE: 0px; OVERFLOW: hidden; TOP: 0px; LEFT: 0px
+}
+.FocusImg .BorderHack2 {
+	Z-INDEX: 51; POSITION: absolute; BACKGROUND-COLOR: #707070; WIDTH: 1px; FONT-SIZE: 0px; OVERFLOW: hidden; TOP: 0px; RIGHT: 0px
+}
+.FocusImg .BorderHack3 {
+	Z-INDEX: 51; POSITION: absolute; BACKGROUND-COLOR: #707070; HEIGHT: 1px; FONT-SIZE: 0px; OVERFLOW: hidden; LEFT: 0px
+}
+.FocusImg .BorderHack4 {
+	Z-INDEX: 51; POSITION: absolute; BACKGROUND-COLOR: #707070; WIDTH: 1px; FONT-SIZE: 0px; OVERFLOW: hidden; TOP: 0px; LEFT: 0px
+}
+.FocusImg #foc_player {
+	Z-INDEX: 99; POSITION: absolute; MARGIN: -21px 0px 0px -21px; WIDTH: 54px; DISPLAY: block; BACKGROUND: url(../../img/play_icon.png) no-repeat; HEIGHT: 54px; TOP: 190px; CURSOR: pointer; LEFT: 33px; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="../..img/play_icon.png"); _background: none
+}
+.FocusImg .on#foc_player {
+	BACKGROUND: url(../..img/play_icon_on.png) no-repeat; CURSOR: pointer; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="../../img/play_icon_on.png"); _background: none
+}

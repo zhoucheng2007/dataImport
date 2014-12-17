@@ -1,0 +1,152 @@
+.rssbtn{
+	cursor:pointer;
+}
+.rssbtn span{
+	display:block;
+}
+.rssbtn .rssbtn-left{
+	width:3px;
+	height:27px;
+	background:url(../../img/rptrss/rptrss-left.png) no-repeat;
+	float:left;
+}
+.rssbtn .rssbtn-center{
+	height:27px;
+	line-height:27px;
+	padding:0 10px;
+	background:url(../../img/rptrss/rptrss-center.png) repeat-x;
+	float:left;
+}
+.rssbtn .rssbtn-right{
+	width:3px;
+	height:27px;
+	background:url(../../img/rptrss/rptrss-right.png) no-repeat;
+	float:left;
+}
+
+.rssbtn:hover .rssbtn-left{
+	background:url(../../img/rptrss/rptrss02-left.png) no-repeat;
+}
+.rssbtn:hover .rssbtn-center{
+	background:url(../../img/rptrss/rptrss02-center.png) repeat-x;
+}
+.rssbtn:hover .rssbtn-right{
+	background:url(../../img/rptrss/rptrss02-right.png) no-repeat;
+}
+.rssbtn.active .rssbtn-left{
+	width:3px;
+	height:27px;
+	background:url(../../img/rptrss/hasrptrss-left.png) no-repeat;
+}
+.rssbtn.active .rssbtn-center{
+	height:27px;
+	line-height:27px;
+	padding:0 10px;
+	background:url(../../img/rptrss/hasrptrss-center.png) repeat-x;
+}
+.rssbtn.active .rssbtn-right{
+	width:3px;
+	height:27px;
+	background:url(../../img/rptrss/hasrptrss-right.png) no-repeat;
+}
+.rssRateCheckDiv{
+	position:absolute;
+	left:100px;
+	top:100px;
+}
+.rssRateCheckDiv-container{
+	width:350px;
+	height:100px;
+	position:relative;
+}
+.rssRateCheckDiv-container span{
+	display:block;
+}
+.rssRateCheckDiv-container .rssdiv-top-left{
+	width:4px;
+	height:4px;
+	background:url(../../img/rptrss/rssdiv-top-left.png) no-repeat;
+	position:absolute;
+	left:-4px;
+	top:-4px;
+}
+.rssRateCheckDiv-container .rssdiv-top-center{
+	width:100%;
+	height:4px;
+	background:url(../../img/rptrss/rssdiv-top-center.png) repeat-x;
+	position:absolute;
+	top:-4px;
+}
+.rssRateCheckDiv-container .rssdiv-top-right{
+	width:4px;
+	height:4px;
+	background:url(../../img/rptrss/rssdiv-top-right.png) no-repeat;
+	position:absolute;
+	top:-4px;
+	right:-4px;
+}
+.rssRateCheckDiv-container .rssdiv-center-left{
+	width:4px;
+	height:100px;
+	background:url(../../img/rptrss/rssdiv-left.png) repeat-y;
+	position:absolute;
+	left:-4px;
+	height:100%;
+}
+.rssRateCheckDiv-container .rssdiv-center-center{
+	width:100%;
+	height:100%;
+	background:#ffffff;
+	position:absolute;
+}
+.rssRateCheckDiv-container .rssdiv-center-right{
+	width:4px;
+	height:100px;
+	background:url(../../img/rptrss/rssdiv-right.png) repeat-y;
+	position:absolute;
+	right:-4px;
+	height:100%;
+}
+.rssRateCheckDiv-container .rssdiv-bottom-left{
+	width:4px;
+	height:4px;
+	background:url(../../img/rptrss/rssdiv-bottom-left.png) no-repeat;
+	position:absolute;
+	left:-4px;
+	top:100%;
+}
+.rssRateCheckDiv-container .rssdiv-bottom-center{
+	width:100%;
+	height:4px;
+	background:url(../../img/rptrss/rssdiv-bottom-center.png) repeat-x;
+	position:absolute;
+	top:100%;
+}
+.rssRateCheckDiv-container .rssdiv-bottom-right{
+	width:4px;
+	height:4px;
+	background:url(../../img/rptrss/rssdiv-bottom-right.png) no-repeat;
+	position:absolute;
+	right:-4px;
+	top:100%;
+}
+.ckoption{
+	height:27px;
+	line-height:27px;
+	margin:10px;
+}
+.ckoption .rssbtn-right{
+	margin-right:10px;
+}
+.rss-ctn{
+	margin:10px;
+	line-height:150%;
+}
+.rss-ctn-datail{
+	background-color:#daeaf1;
+}
+.canCelRssBtn{
+	text-decoration:underline;
+	font-style:italic;
+	color:#005da2;
+}

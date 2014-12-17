@@ -1,0 +1,98 @@
+
+#calendar {
+	width:260px;
+	font-size: 14px;
+	font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+	margin: 0 auto;
+}
+.createBottomBar{
+	height: 40px;
+	width:900px;
+	margin: 0 auto;
+}
+.createBottom{
+	width: 103px;
+	height: 30px;
+	float:right;
+	background: url(mycalendar/01.jpg) no-repeat;
+}
+.createBottom:hover{
+	background: url(mycalendar/02.jpg) no-repeat;
+}
+#txtCalendarName{
+	background: url(mycalendar/slogo.png) no-repeat;
+	padding-left: 22px;
+	background-position: 0px 8px;
+	background-color: #fff;
+}
+#txtAddress{
+	background: url(mycalendar/place.png) no-repeat;
+	padding-left: 22px;
+	background-position: 0px 8px;
+	background-color: #fff;
+}
+#txtDesc{
+	height: 36px;
+	overflow-y:auto;
+	background: url(mycalendar/illus.png) no-repeat;
+	padding-left: 22px;
+	background-position: 0px 8px;
+	background-color: #fff;
+}
+.pubdivepick{
+	margin-top: 5px;
+}
+#diatopTitle{
+	position:absolute;
+	width:330px;
+	height:250px;
+	background:#fff;
+	z-index:12;
+	overflow:hidden;
+	border:1px #e0e0e0 solid;
+	box-shadow:0 0 14px #bababa;
+	-webkit-box-shadow:0 0 14px #bababa;
+	-moz-box-shadow:0 0 14px #bababa;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px
+	}
+#diatopTitle>div{
+	margin-left: 10px;
+}
+#diatopTitle .detailtitle{
+	font-weight: bold;
+	height: 35px;
+	line-height: 34px;
+}
+#diatopTitle .detailtime{
+	height: 35px;
+}
+#diatopTitle .detailplace{
+	height: 35px;
+}
+#diatopTitle .detailman{
+	height: 50px;
+}
+#diatopTitle .detailexp{
+	height: 35px;
+}
+#diatopTitle .detailaction{
+	height: 42px;
+	line-height: 42px;
+	width: 300px;
+	font-weight:bold;
+	margin: 0px auto;
+	border-top: 1px #d4e5f6 solid;
+}
+.dialogclose{
+	float: right;
+	width: 13px;
+	height: 10px;
+	background: url(mycalendar/chargeClose_x.png) no-repeat;
+	
+}
+.dialogclose:hover{
+	background-position: 0px -10px;
+}
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="portal" class="org.loushang.waf.DirBeanConfig">
+		<property name="dir">
+			<value>/WEB-INF/conf/portal</value>
+		</property>
+		<property name="includes">
+			<value>*.xml,**/*.xml</value>
+		</property>
+	</bean>
+	<bean id="v6base" class="org.loushang.waf.DirBeanConfig">
+		<property name="dir">
+			<value>/WEB-INF/conf/base</value>
+		</property>
+		<property name="includes">
+			<value>*.xml,**/*.xml</value>
+		</property>
+	</bean>
+	<bean id="v6hsf" class="org.loushang.waf.DirBeanConfig">
+		<property name="dir">
+			<value>/WEB-INF/conf/hsfconf</value>
+		</property>
+		<property name="includes">
+			<value>*.xml,**/*.xml</value>
+		</property>
+	</bean>
+</beans>

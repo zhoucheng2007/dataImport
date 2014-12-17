@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<!--********************业务中心－翻页初始化特殊查询cmd配置结束********************* -->
+	    <bean id="appCenterInitCmd" class="com.v6.portal.app.AppPageInitCmd" singleton="false">
+        <property name="appPageService"><ref bean="appPageService"/></property>
+        <property name="forwards">
+	    	<map>
+	        	<entry key="queryPageInit" value="app/busicenter.jsp" />
+			</map>
+		</property>	    
+    </bean>   
+    
+</beans>
+

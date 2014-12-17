@@ -1,0 +1,121 @@
+body{
+	font-family:"Î¢ÈíÑÅºÚ","Microsoft YaHei",Verdana,Arial,"simsun","ËÎÌå","Microsoft Sans Serif", "Microsoft Tai Le", "Microsoft Uighur";
+	font-size:13px;
+}
+#head-layout{
+	width:960px;
+	margin:0 auto;
+	height:107px;
+}
+.logo{
+	height:61px;
+}
+.logo .logo-left{
+	width:393px;
+	height:61px;  
+	background:url(../imgs/logo.png) no-repeat;
+	float:left;
+}
+.logo .logo-right{
+	width:280px;
+	height:53px;
+	background:url(../imgs/sancheng.png) no-repeat;
+	float:right;
+	margin-top:5px;
+}
+.menu{
+	height:46px;
+	background:url(../imgs/menubj.jpg) repeat-x;
+}
+.menu-item{
+	height:46px;
+	float:left;
+	padding:0 15px;
+	background:url(../imgs/menusline.jpg) right no-repeat;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:bold;
+	position:relative;
+}
+.menu-btn-left{
+	line-height:26px;
+	margin-top:10px;;
+	padding-left:6px;
+}
+.menu-btn-right{
+	line-height:26px;
+	padding-right:6px;
+}
+.menu-item:hover .menu-btn-left{
+	background:url(../imgs/menubuttonbj2.png) no-repeat;
+}
+.menu-item:hover .menu-btn-right{
+	color:#FFFFFF;
+	background:url(../imgs/menubuttonbj1.png) right no-repeat;
+}
+.menu-item .arrow{
+	padding-right:20px;
+	background:url(../imgs/downarrow.png) right no-repeat;
+}
+.menu-item:hover .arrow{
+	background:url(../imgs/downarrowAfter.png) right no-repeat;
+}
+.submenu{
+	position:absolute;
+	top:46px;
+	left:0px;
+	color:#FFF;
+	display:none;
+	z-index:99999;
+}
+.submenu-top{
+	width:175px;
+	height:8px;
+	background:url(../imgs/downtop2.png) no-repeat;
+}
+.submenu-foot{
+	width:175px;
+	height:9px;
+	background:url(../imgs/downend2.png) no-repeat;
+}
+ul.submenu-container{
+	background:url(../imgs/downmiddle2.png) repeat-y;
+	padding:0 10px;
+}
+.submenu-item{
+	display:block;
+	line-height:40px;
+	padding-left:20px;
+}
+.submenu-item:hover{
+	background:#0269c5;
+}
+.menu-item:hover .submenu{
+	display:block;
+}
+.login-userinfo{
+	float:right;
+	margin-right:10px;
+	line-height:46px;
+	font-size:12px;
+}
+.sit-option{
+	float:right;
+	line-height:46px;
+}
+.sit-btn{
+	margin-left:10px;
+	font-size:12px;
+}
+.sit-btn:hover{
+	cursor:pointer;
+	text-decoration:underline;
+	color:#0033CC;
+}
+#setfavorite{
+	padding-left:15px;
+	background:url() no-repeat 0 center;
+	margin-right:5px;
+}
+
+

@@ -1,0 +1,89 @@
+@CHARSET "UTF-8";
+body,ul,p,form,input,textarea,select{
+	padding:0;margin:0;font-family: 'Microsoft Yahei',verdana !important;
+}
+li{ 
+	list-style:none;
+}
+img{
+	border:none;
+}
+body{
+	overflow: hidden;
+}
+#banner{
+	background: url("/skin/images/mail/banner.jpg") repeat-x 0 0;
+	height: 44px;
+	padding: 10px 32px;
+	line-height: 44px;
+}
+#banner_mail_logo{
+	background: url("/skin/images/mail/mail_logo.png") no-repeat 0 0;
+	height:45px;
+	text-indent: 70px;
+	font-size:20px;
+	font-family: 'Microsoft Yahei',verdana !important;
+	color:#2579B7;
+}
+#content{
+}
+#nav{
+	background-color:#62AEEA;
+	width: 200px;
+	float:left;
+	height:100%;
+}
+#dvNavTop{
+	height:50px;width: 201px;
+}
+.sendMail{
+	background:url("/skin/images/mail/write_read.png") no-repeat 0 0;
+	float:left;	
+	width:88px;
+	height:32px;
+	margin-top:8px;
+	margin-left:12px;
+}
+.sendMail:hover{
+	box-shadow:0 0 5px rgba(0,0,0,.5);
+}
+.sendMail_d{
+	background:url("/skin/images/mail/write_read.png") no-repeat 0 -32px ;
+}
+.getMail{
+	background:url("/skin/images/mail/write_read.png") no-repeat 0 -64px;
+	float:left;
+	width:88px;
+	height:32px;
+	margin-top:8px;
+}
+.getMail:hover{
+	box-shadow:0 0 5px rgba(0,0,0,.5);
+}
+.getMail_d{
+	background:url("/skin/images/mail/write_read.png") no-repeat 0 -96px ;
+}
+#navtree li{
+	height:32px;
+	font-size: 12px;
+	line-height: 32px;
+	padding-left:48px;
+	color:white;
+	cursor: pointer;
+}
+#inboxLi{background: url("/skin/images/mail/inbox.png") no-repeat 20px 8px}
+#draftLi{background: url("/skin/images/mail/draft.png") no-repeat 20px 8px}
+#sendedLi{background: url("/skin/images/mail/sended.png") no-repeat 20px 8px}
+#deletedLi{background: url("/skin/images/mail/deleted.png") no-repeat 20px 8px}
+
+#navtree li:hover{
+	background-color: #2579B7;
+}
+
+#dvContent{
+	margin-left: 200px;
+}
+#iframeRight{
+	width:100%;
+}
+

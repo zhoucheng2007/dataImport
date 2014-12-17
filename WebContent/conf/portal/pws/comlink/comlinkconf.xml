@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+     <bean id="comlinkquery" class="com.v6.portal.pws.hn.comlink.ComLinkPageQuery" singleton="false">
+        <property name="comLinkService"><ref bean="comLinkService"/></property>
+        <property name="forwards">
+            <map>
+                <entry key="query" value="pws/hn/comlink/opcomlink.jsp" />
+                
+            </map>
+        </property>     
+    </bean>    
+    <bean id="comlinkinit" class="com.v6.portal.pws.hn.comlink.ComLinkCmd" singleton="false">
+        <property name="comLinkService"><ref bean="comLinkService"/></property>
+        <property name="forwards">
+            <map>
+                <entry key="forinsert" value="pws/hn/comlink/comlink_forinsert.jsp" />
+                <entry key="forupdate" value="pws/hn/comlink/comlink_forupdate.jsp" />
+                <entry key="detail" value="pws/hn/comlink/comlink_fordetail.jsp" />
+            </map>
+        </property>     
+    </bean>    
+</beans>
+

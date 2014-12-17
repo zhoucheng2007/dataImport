@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--***********************dao configuration*********************************************** -->
+	<bean id="mpSubscriberTypeDao" class="org.loushang.eai.mp.dao.jdbc.MpSubscriberTypeJdbcDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<!--***********************domain configuration******************************************** -->
+
+	<bean id="mpSubscriberTypeDomain"
+		class="org.loushang.eai.mp.domain.support.MpSubscriberTypeDomainImpl">
+		<property name="mpSubscriberTypeDao">
+			<ref bean="mpSubscriberTypeDao" />
+		</property>
+	</bean>
+	<!--***********************service configuration******************************************* -->
+
+	<bean id="mpSubscriberTypeService"
+		class="org.loushang.eai.mp.service.support.MpSubscriberTypeServiceImpl">
+		<property name="mpSubscriberTypeDomain">
+			<ref bean="mpSubscriberTypeDomain" />
+		</property>
+		<property name="transactionTemplate">
+			<ref bean="jdbcTransactionTemplate" />
+		</property>
+	</bean>
+
+
+	<!--***********************Flip initialization special query configuration 
+		begin****************************************** -->
+	<bean id="mpsubscribertypequery_page_init"
+		class="org.loushang.eai.mp.query.MpSubscriberTypeQueryPageInitCmd">
+		<property name="mpSubscriberTypeService">
+			<ref bean="mpSubscriberTypeService" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="speQuery">
+					<ref bean="mpsubscribertypequeryforward" />
+				</entry>
+			</map>
+		</property>
+		<property name="pageSize">
+			<value>10</value>
+		</property>
+	</bean>
+	<!--***********************Flip initialization special query configuration 
+		end****************************************** -->
+	<!--***********************query page forward configuration begin*********************************** -->
+	<bean id="mpsubscribertypequeryforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="queryPageInit">jsp/eai/mp/mp_subscriber_type_query_init.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<!--***********************query page forward configuration end*********************************** -->
+
+	<!--***********************view objects view configuration**************************************** -->
+	<bean id="mpSubscriberTypeView" class="org.loushang.eai.mp.view.MpSubscriberTypeView"
+		singleton="false" />
+
+	<!--***********************cmd configuration begin********************************************* -->
+	<bean id="mpsubscribertype" class="org.loushang.eai.mp.cmd.MpSubscriberTypeCmd"
+		singleton="false">
+		<property name="mpSubscriberTypeService">
+			<ref bean="mpSubscriberTypeService" />
+		</property>
+		<property name="view">
+			<ref bean="mpSubscriberTypeView" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="mpsubscribertypeView">
+					<ref bean="mpsubscribertypeforward" />
+				</entry>
+				<entry key="mpsubscribertypeViewChain">
+					<ref bean="mpsubscribertypeforwardchain" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<!--***********************cmd configuration end********************************************* -->
+
+	<!--***********************page forward configuration begin*********************************** -->
+	<bean id="mpsubscribertypeforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="detail">jsp/eai/mp/mp_subscriber_type_detail.jsp</prop>
+				<prop key="forinsert">jsp/eai/mp/mp_subscriber_type_forinsert.jsp</prop>
+				<prop key="forupdate">jsp/eai/mp/mp_subscriber_type_forupdate.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="mpsubscribertypeforwardchain" class="org.loushang.waf.mvc.ChainForward">
+		<property name="mappings">
+			<map>
+				<entry key="success">
+					<ref bean="mpsubscribertypequery_page_init" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!--***********************page forward configuration end*********************************** -->
+</beans>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--***********************cmd configuration begin********************************************* -->
+	<bean id="mpbasecheck" class="org.loushang.eai.mp.cmd.MpBaseDataCheck"
+		singleton="false">
+		<property name="mpReceiveAddressService">
+			<ref bean="mpReceiveAddressService" />
+		</property>
+		<property name="view">
+			<ref bean="mpReceiveAddressView" />
+		</property>
+		<property name="forwards">
+			<map>
+				<entry key="mpbasecheckforward">
+					<ref bean="mpbasecheckforward" />
+				</entry>
+			</map>
+		</property>
+		<property name="beforIntercept">
+			<list>
+				<ref bean="mpreceiveaddress_interceptor" />
+			</list>
+		</property>
+	</bean>
+	<!--***********************cmd configuration end********************************************* -->
+	<!--***********************page forward configuration begin*********************************** -->
+	<bean id="mpbasecheckforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="forcheck">jsp/eai/mp/mp_data_forcheck.jsp</prop>
+				<prop key="datacheck">jsp/eai/mp/mp_data_check.jsp</prop>
+			</props>
+		</property>
+	</bean>
+	<!--***********************page forward configuration end*********************************** -->
+</beans>

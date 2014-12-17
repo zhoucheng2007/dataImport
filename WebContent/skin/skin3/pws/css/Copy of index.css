@@ -1,0 +1,341 @@
+body{
+	font-family:"微软雅黑","Microsoft YaHei",Verdana,Arial,"simsun","宋体","Microsoft Sans Serif", "Microsoft Tai Le", "Microsoft Uighur";
+	font-size:12px;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+.head-main{
+	width:100%;
+	height:56px;
+	background:url("../img/bannerbg.jpg") repeat-x;
+}
+.main-container{
+	
+}
+
+.main-left{
+	width: 260px;
+	float: left;
+	border-right: 1px #bccad3 solid;
+}
+.main-right{
+	width: 360px;
+	float: right;
+	border-left: 1px #bac8d1 solid;
+}
+.main-center{
+	margin-left: 260px;
+	margin-right: 360px;
+}
+.userInfo-top{
+	height: 25px;
+	width: 100%;
+	background:url("../img/lefttopbg.jpg") repeat-x;
+}
+#userinfo{
+	position: relative;
+	height: 80px;
+}
+#userinfo span,s,b {
+	position: absolute;
+}
+#userinfo s{
+	width:50px;
+	height:46px;
+	top: 20px;
+	left: 15px;
+	background:url("../img/headportrait.png") no-repeat;
+}
+#userinfo b{
+	width:39px;
+	height:30px;
+	background:url("../img/edit.png") no-repeat;
+	top: 15px;
+	left: 170px;
+}
+#userinfo .name{
+	color:#529bc6;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing:3px;
+	top: 20px;
+	left: 90px;
+}
+#userinfo .logintime{
+	color: #7897a9;
+	top: 50px;
+	left: 90px;
+}
+.comm-sys{
+	width: 260px;
+	height: 40px;
+	line-height:40px;
+	background:url("../img/titlebg.jpg") repeat-x;
+}
+ .comm-sys span{
+ 	color: #1e69a1;
+ 	font-size: 14px;
+ 	font-weight: bold;
+ 	margin-left: 50px;
+ }
+  .comm-sys s{
+  	width:14px;
+  	height:14px;
+  	margin-top:12px;
+  	margin-left:20px;
+ 	background:url("../img/changyong.png") no-repeat;
+ }
+ 
+ .sys-list{
+ }
+ .sys-list li{
+ 	line-height:37px;
+ 	width: 260px;
+ 	height: 37px;
+ 	border-bottom: 1px #d6e4ed solid;
+ 	color: #83a3b8;
+ 	font-size: 13px;
+ 	cursor: pointer;
+ 	position: relative;
+ }
+ .sys-list li:hover{
+ 	background-color: #f7f8fa;
+ }
+ .sys-list li span{
+ 	font-size:14px;
+ 	margin-left: 86px;
+ }
+ .sys-list li b{
+ 	width: 15px;
+ 	height: 15px;
+ 	margin-top:10px;
+ 	margin-left:75px;
+ 	background:url("../img/leftmenuicon.png") no-repeat;
+ }
+ .sys-list li:hover s{
+ 	width: 6px;
+ 	height: 38px;
+ 	right:0px;
+ 	background-color: #fe9900;
+ }
+ .sys-action-list{
+ 	height: 40px;
+ 	width: 260px;
+ }
+  .sys-action-list li{
+  	width: 75px;
+  	height: 27px;
+  	border: 1px #aac1cf solid;
+  	float: left;
+  	text-align: center;
+  	line-height: 27px;
+  	margin-left: 7px;
+  }
+  .cen-top-bg{
+  	background-color: #ecf3f9;
+  	height: 34px;
+  	line-height: 34px;
+  }
+  .cen-top-bg span{
+	color: #1e69ae;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 50px;
+  }
+  .cen-top-bg s{
+    width:14px;
+  	height:14px;
+  	margin-top:10px;
+  	margin-left: 20px;
+  }
+  .work-list{
+  	background-color: #f8f9fb;
+  }
+  .work-list li{
+  	height: 35px;
+  	line-height: 35px;
+  	color: #767676;
+  	font-size: 13px;
+  	margin-left: 30px;
+  }
+  .work-list li span{
+  	color: #ff0000;
+
+  }
+   .mail-list li{
+  	height: 35px;
+  	line-height: 35px;
+  	color: #1f6aa2;
+  	font-size: 13px;
+  	font-weight: bold;
+  	margin-left: 30px;
+  }
+  .mail-list li span{
+  	color: #ff0000;
+
+  }
+  .comment-main{
+  	height: 160px;
+  	border-top: 1px #c7cad3 solid;
+  }
+  .comment-main .count-num{
+  	height: 50px;
+  	line-height: 50px;
+  	margin-right:20px;
+  	text-align: right;
+  	color: #9b9a96;
+  }
+  .comment-main .count-num span{
+  	font-size: 20px;
+  }
+  .comment-main .comm-content div{
+  	margin-right: 150px;
+  	margin-left:25px;
+  	height: 70px;
+  	overflow: hidden;
+  	border: 1px #cecece solid;
+  }
+  .comment-main .comm-content div textarea{
+  	width: 100%;
+  	height:68px;
+  	overflow: hidden;
+  	border: none;
+  }
+  #comm-action{
+  	width: 79px;
+  	height: 66px;
+  	background-color: #acd2e5;
+  	border: none;
+  	float: right;
+  }
+  .comm-tools{
+  	height: 39px;
+  	line-height: 39px;
+  	margin-left: 50px;
+  	color: #385b95;
+  }
+   .comm-tools li{
+   	width: 55px;
+   	float: left;
+   	cursor: pointer;
+   }
+  .comm-tools li:hover{
+  	background-color: #2f4c7d;
+  }
+  .perfor-top{
+  	width: 100%;
+  	height: 30px;
+  	line-height:30px;
+  	background-color: #bde3f0;
+  	color: #3e82b3;
+  }
+  .perfor-top span{
+  	margin-left: 35px;
+  	font-size: 14px;
+  }
+  .perfor-top s{
+  	width:14px;
+  	height:14px;
+  	margin-top:10px;
+  	margin-left: 10px;
+  }
+  .perfor-content{
+  	width: 100%;
+  	height: 165px;
+  }
+  .doc-tab-ul{
+  	margin-left: 30px;
+  }
+  .doc-tab-ul li{
+ 	text-align:center;
+  	width: 60px;;
+  	height: 27px;
+  	line-height:27px;
+  	float: left;
+  	cursor: pointer;
+  	margin-top: 2px;
+  }
+  .doc-tab-ul li:hover,.active{
+  	background-color: #ecf3f9;
+  	border-left: 1px #1f6aa3 solid;
+  	border-right: 1px #1f6aa3 solid;
+  	border-top: 1px #1f6aa3 solid;
+  }
+  .doc-list{
+  	width: 100%;
+  	color: #8c9093;
+  	font-size: 14px;
+  	margin-top: 5px;
+  }
+  .doc-list li{
+  	height: 25px;
+  	line-height: 25px;
+  	margin-left: 10px;
+  }
+  .disk-action{
+  	width: 100%;
+  	margin-top: 10px;
+  	height: 40px;
+  }
+  .disk-action li{
+  	width: 97px;
+  	height: 27px;
+  	text-align:center;
+  	line-height:30px;
+  	border: 1px #a7a7a7 solid;
+  	float: left;
+  	margin-left: 10px;
+  }
+  .allfile-top{
+  	width:100%;
+  	height: 30px;
+  	line-height: 30px;
+	border-top: 1px #d2d2d2 solid;
+	border-bottom: 1px #d2d2d2 solid;
+  }
+  .allfile-top span{
+  	margin-left: 30px;
+  }
+  .doc-conten-top{
+  	height: 40px;
+  	background-color: #e7f4fc;
+  	line-height: 40px;
+  	border-bottom: 1px #d2d2d2 solid;
+  }
+  .doc-conten-top span{
+  	margin-left: 10px;
+  }
+  .doc-conten-top input{
+  	margin-left: 5px;
+  }
+  .doc-conten-list li{
+  	height: 38px;
+  	line-height:38px;
+  	border-bottom: 1px #d2d2d2 solid;
+  }
+  .doc-conten-list li div{
+  	float: left;
+  	margin-left: 10px;
+  }
+  .doc-conten-list li input{
+  	float: left;
+  	margin-top: 13px;
+  	margin-left: 5px;
+  }
+  .daiban s{
+  	background:url("../img/daiban.png") no-repeat;
+  }
+  .message s{
+  	background:url("../img/xiaoxi.png") no-repeat;
+  }
+  .kanban s{
+  	background:url("../img/yeji.png") no-repeat;
+  }  
+  .yujing s{
+  	background:url("../img/yujing.png") no-repeat;
+  }
+  .wangpan s{
+  	background:url("../img/wangpan.png") no-repeat;
+  }

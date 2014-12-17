@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="cqpersonwork" class="com.v6.portal.pws.cq.personwork.PageInitCmd" singleton="false"> 
+		<property name="forwards">
+	    	<map>
+	        	<entry key="goPersonWork" value="pws/cq/personwork/personwork.jsp" />
+			</map>
+		</property>	    
+	</bean>
+
+</beans>

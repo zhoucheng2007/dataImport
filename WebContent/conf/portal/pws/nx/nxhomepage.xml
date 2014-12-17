@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+     <bean id="nxmianpage" class="com.v6.portal.pws.nx.PageInitCmd" singleton="false">
+	    <property name="forwards">
+	    	<map>
+	        	<entry key="goHomePage" value="pws/nx/nxindex.jsp" />
+	        	<entry key="getZhiBiaoDetail" value="pws/nx/zhibiaolist.jsp"/>
+	        	<entry key="getCommList" value="pws/nx/comlink.jsp"/>
+	        	<entry key="toMoreBacklog" value="pws/nx/backlog.jsp"/>
+			</map>
+		</property>	    
+    </bean>
+</beans>
+

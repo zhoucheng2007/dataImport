@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!--***** 浮动框查询类 configuration ***** -->
+	<bean id="floatBoxCmd" class="com.v6.base.floatbox.FloatBoxCmd"
+		singleton="false">
+		<property name="forwards">
+			<map>
+				<entry key="floatboxforward">
+					<ref bean="floatboxforward" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="floatboxforward" class="org.loushang.waf.mvc.ServletDispatcherForward">
+		<property name="mappings">
+			<props>
+				<prop key="employee">jsp/pub/floatbox/employee.jsp</prop>
+				<prop key="cust">jsp/pub/floatbox/cust.jsp</prop>
+				<prop key="item">jsp/pub/floatbox/item.jsp</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
+
