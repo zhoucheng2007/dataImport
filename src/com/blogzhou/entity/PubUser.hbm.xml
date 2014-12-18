@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-9-24 15:31:13 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+ <class name="com.blogzhou.entity.PubUsers" schema="DB2INST1" table="PUB_USERS">
+  <id name="userid" type="string">
+   <column length="30" name="USER_ID"/>
+   <generator class="assigned"/>
+  </id>
+  <property   name="userTypeCode" type="string">
+   <column length="10" name="USER_TYPE_CODE"/>
+  </property>
+  <property   name="userName" type="string">
+   <column length="30" name="USER_NAME" not-null="true"/>
+  </property>
+  <property   name="password" type="string">
+   <column length="128" name="PASSWORD" not-null="true"/>
+  </property>
+  <property   name="accountStatus" type="char">
+   <column length="2" name="ACCOUNT_STATUS" not-null="true"/>
+  </property>
+  <property   name="isSys" type="char">
+   <column length="1" name="IS_SYS" not-null="true"/>
+  </property>
+  <property   name="createTime" type="string">
+   <column length="17" name="CREATE_TIME" not-null="true"/>
+  </property>
+  <property   name="lockTime" type="string">
+   <column length="17" name="LOCK_TIME"/>
+  </property>
+  <property   name="expiredTime" type="string">
+   <column length="17" name="EXPIRED_TIME"/>
+  </property>
+  <property   name="pwdUptTime" type="string">
+   <column length="17" name="PWD_UPT_TIME"/>
+  </property>
+  <property   name="pwdTime" type="string">
+   <column length="17" name="PWD_TIME"/>
+  </property>
+  <property   name="idNum" type="integer">
+   <column name="ID_NUM"/>
+  </property>
+ </class>
+</hibernate-mapping>

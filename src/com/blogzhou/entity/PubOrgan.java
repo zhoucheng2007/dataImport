@@ -25,7 +25,6 @@ public class PubOrgan implements java.io.Serializable {
 	}
 
 
-
 	public void setPubOrganType(String pubOrganType) {
 		this.pubOrganType = pubOrganType;
 	}

@@ -39,6 +39,8 @@ public abstract class BaseDao<T> {
 			currentSession.beginTransaction();
 			currentSession.saveOrUpdate(instance);
 			currentSession.getTransaction().commit(); 
+			currentSession.flush();
+			currentSession.clear();
 			log.debug("attach successful");
 		} catch (RuntimeException re) {
 			log.error("attach failed", re);

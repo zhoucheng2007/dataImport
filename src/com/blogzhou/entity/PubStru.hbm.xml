@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2014-9-24 15:31:13 by Hibernate Tools 4.0.0 -->
 <hibernate-mapping>
-    <class name="com.blogzhou.entity.PubStru" table="PUB_STRU_BAK" schema="DB2INST1">
+    <class name="com.blogzhou.entity.PubStru" table="PUB_STRU" schema="DB2INST1">
         <id name="struId" type="string">
             <column name="STRU_ID" length="30" />
             <generator class="assigned" />

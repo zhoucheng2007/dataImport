@@ -55,7 +55,7 @@ public class HibernateSessionFactory {
 				if (sessionFactory == null) { 
 					try { 
 					cfg.configure(CONFIG_FILE_LOCATION); 
-					ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings( cfg.getProperties()).buildServiceRegistry(); 
+					ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings( cfg.getProperties()).build(); 
 
 					sessionFactory = cfg.buildSessionFactory(serviceRegistry); 
 					} catch (Exception e) { 
