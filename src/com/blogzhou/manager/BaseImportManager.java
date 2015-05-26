@@ -1,6 +1,5 @@
 package com.blogzhou.manager;
 
-import java.io.InputStream;
 import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -14,7 +13,6 @@ public  abstract  class BaseImportManager {
 			   if(cell==null){
 				   return value;
 			   }
-	        //�򵥵Ĳ��������  
 	        switch(cell.getCellType())  
 	        {  
 	            case HSSFCell.CELL_TYPE_STRING://�ַ�  
@@ -39,10 +37,10 @@ public  abstract  class BaseImportManager {
 	            default:  
 	                break;  
 	        }  
-	        System.out.println(value);
+	        //System.out.println(value);
 	        return value;  
 	    }  
 	
-	   public abstract List<PubStru> importEmployeeByPoi();
+	  public abstract List<PubStru> importEmployeeByPoi();
 	   
 }

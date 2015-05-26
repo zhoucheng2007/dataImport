@@ -11,13 +11,8 @@ import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 
-import com.blogzhou.HibernateSessionFactory;
 import com.blogzhou.entity.PubUsers;
-import com.ibm.db2.jcc.am.p;
 
 /**
  * Home object for domain model class PubStru.
@@ -48,8 +43,8 @@ public class PubUsersDao extends BaseDao<PubUsers>{
 
 	
 	/*
-	 * 获取所有的组织机构对象 
-	 * @ Return 数据库中所有的对象
+	 * 鑾峰彇鎵�湁鐨勭粍缁囨満鏋勫璞�
+	 * @ Return 鏁版嵁搴撲腑鎵�湁鐨勫璞�
 	 * @ 
 	 */
     
@@ -67,12 +62,12 @@ public class PubUsersDao extends BaseDao<PubUsers>{
 				
 		long begin = System.currentTimeMillis();   
 		Class.forName("com.ibm.db2.jcc.DB2Driver");
-		//2.获取数据库连接
+		//2.鑾峰彇鏁版嵁搴撹繛鎺�
 		Connection conn=(Connection) DriverManager.getConnection("jdbc:db2://10.36.98.232:50000/v6db", "db2inst1", "db2inst1"); 
 		Statement sta=conn.createStatement();
 		int i=0;       
 		try {
-			//3.通过Connection对象创建Statement对象
+			//3.閫氳繃Connection瀵硅薄鍒涘缓Statement瀵硅薄
 			HashMap<String, String> userNameMap=new HashMap<String, String>();
 			userNameMap.put("XIONGYUFENG", "XIONGYUFENG");
 			userNameMap.put("WANQUN", "WANQUN");
@@ -108,16 +103,12 @@ public class PubUsersDao extends BaseDao<PubUsers>{
 				
 				String rolesql="INSERT INTO PUB_USER_ROLE (RULE_ID, RULE_TYPE, TARGET, ROLE_ID) VALUES ('"+s+"', '00', '"+pubUsers.getUserid()+"', 'PUBLIC')";
                 
-				System.out.println("更新用户："+sql);
-				System.out.println("执行员工用户："+useremployeesql);
-				System.out.println("执行政策："+policysql);
-				System.out.println("更新角色："+rolesql);
 				sta.executeUpdate(sql);
 				sta.executeUpdate(useremployeesql);
 				sta.executeUpdate(policysql);
 				sta.executeUpdate(rolesql);
 				i++;
-	            if(i%100==0){   //每一千条刷新并写入数据库  
+	            if(i%100==0){   //姣忎竴鍗冩潯鍒锋柊骞跺啓鍏ユ暟鎹簱  
 	            	conn.commit();  
 	            } 
 			}

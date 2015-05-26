@@ -84,8 +84,7 @@ public class testPubUserImport {
 		
 			userNameMap.put(userid, userid);	
 			pubUsers.setUserid(userid);
-			
-			
+						
 			String userTypeCode="00";
 			pubUsers.setUserTypeCode(userTypeCode);
 			pubUsers.setPassword("79b2cf0337180351d2dcc5ee9d625481");
@@ -93,10 +92,7 @@ public class testPubUserImport {
 			pubUsers.setAccountStatus(c);
 			char s=0;
 			pubUsers.setIsSys(s);
-			pubUsers.setCreateTime("20141218 09:49:06");
-			
-			
-			
+			pubUsers.setCreateTime("20141218 09:49:06");									
 			
 			String corporationid=getCorporation(pubStru,pubStruMap,pubOrganMap);
 			pubUsers.setCorporationid(corporationid);
@@ -161,7 +157,5 @@ public class testPubUserImport {
 		}
 		
 		return corpoid;
-	}
-	
-	
+	}		
 }

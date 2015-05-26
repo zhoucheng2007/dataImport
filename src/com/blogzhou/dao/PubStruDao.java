@@ -46,13 +46,13 @@ public class PubStruDao extends BaseDao<PubStru>{
 
 	
 	/*
-	 * 获取所有的组织机构对象 
-	 * @ Return 数据库中所有的对象
+	 * 鑾峰彇鎵�湁鐨勭粍缁囨満鏋勫璞�
+	 * @ Return 鏁版嵁搴撲腑鎵�湁鐨勫璞�
 	 * @ 
 	 */
     
 	public List<PubStru> getAll() {
-		String hql="from PubStru";
+		String hql="from PubStru where pubStruType='00'";
 		try {
 			List<PubStru> results = getByHql(hql);
 			return results;

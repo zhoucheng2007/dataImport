@@ -2,19 +2,8 @@ package com.blogzhou.dao;
 
 // Generated 2014-9-24 15:31:15 by Hibernate Tools 4.0.0
 
-import java.util.List;
-
-import javax.naming.InitialContext;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.hibernate.LockMode;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.criterion.Example;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
 
 import com.blogzhou.entity.PubStruExt;
 
