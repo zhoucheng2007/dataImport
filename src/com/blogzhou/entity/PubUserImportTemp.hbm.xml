@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.blogzhou.entity.PubUserImportTemp" table="PUB_USER_IMPORT_TEMP" schema="DB2INST1">
+        <property name="userName" type="string">
+            <column name="STRU_TYPE" length="200" />
+        </property>
+        <property name="userId" type="string">
+            <column name="ORGAN_ID" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>
